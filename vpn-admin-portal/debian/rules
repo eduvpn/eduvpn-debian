@@ -2,21 +2,20 @@
 
 define REQUIRES
 require_once '/usr/share/php/SURFnet/VPN/Common/autoload.php';
+require_once '/usr/share/php/fkooman/SeCookie/autoload.php';
 endef
 
 # easier to use this as a shell variable
 export REQUIRES
 
 override_dh_auto_build:
-	mkdir vendor
-	phpab -o vendor/autoload.php -b vendor src
-	echo "$${REQUIRES}" >> vendor/autoload.php
+	phpab -o src/autoload.php src
+	echo "$${REQUIRES}" >> src/autoload.php
 
 override_dh_auto_test:
-	phpab -o tests/autoload.php src tests
-	echo "$${REQUIRES}" >> tests/autoload.php
+	phpab -o tests/autoload.php tests
+	echo "require_once 'src/autoload.php';" >> tests/autoload.php
 	phpunit --bootstrap=tests/autoload.php
 
 %:
 	dh $@ --with phpcomposer
-
