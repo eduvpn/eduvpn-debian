@@ -1,6 +1,0 @@
-# Compulsory line, this is a version 3 file
-version=3
-
-opts=filenamemangle=s/.+\/v?(\d\S+)\.tar\.gz/password_compat-$1\.tar\.gz/ \
-  https://github.com/ircmaxell/password_compat/tags .*/v?(\d\S+)\.tar\.gz
-

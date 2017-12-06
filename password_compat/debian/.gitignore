@@ -1,5 +1,0 @@
-debhelper-build-stamp
-files
-*.debhelper.log
-*.substvars
-php-ircmaxell-password-compat/
