@@ -1,8 +1,0 @@
-Installation instructions for apache2 (recommended)
-===================================================
-
-* install package ($ sudo apt-get install php-saml-ds)
-* install webserver with php ($ sudo apt install apache2 libapache2-mod-php)
-* enable headers mod ($ sudo a2enmod headers)
-* enable config ($ sudo a2enconf php-saml-ds)
-* reload webserver ($ sudo service apache2 reload)

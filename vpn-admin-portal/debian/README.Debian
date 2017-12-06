@@ -1,8 +1,0 @@
-Installation instructions for apache2 (recommended)
-===================================================
-
-* install package ($ sudo apt-get install vpn-admin-portal)
-* install webserver with php ($ sudo apt install apache2 libapache2-mod-php)
-* enable modules ($ sudo a2enmod rewrite headers)
-* enable config ($ sudo a2enconf vpn-admin-portal)
-* reload webserver ($ sudo service apache2 reload)
