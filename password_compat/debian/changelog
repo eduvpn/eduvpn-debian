@@ -1,3 +1,10 @@
+password-compat (1.0.4-5) stable; urgency=medium
+
+  * Cleanup package
+  * Run unit tests
+
+ -- François Kooman <fkooman@tuxed.net>  Wed, 06 Dec 2017 19:11:11 +0100
+
 password-compat (1.0.4-4) stable; urgency=medium
 
   * fix lintian warnings and errors
