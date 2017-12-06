@@ -22,5 +22,3 @@ uscan --destdir=build --download-current-version
   aptly repo add ${REPO} ../*.deb
   aptly repo add ${REPO} ../*.dsc
 )
-
-../repo_update.sh
