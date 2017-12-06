@@ -1,14 +1,19 @@
 Source: vpn-server-node
 Section: php
 Priority: optional
-Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
-Build-Depends: debhelper (>= 9), dh-exec, phpunit, pkg-php-tools, phpab,
- php-psr-log, php-eduvpn-common, php-symfony-translation,
+Maintainer: François Kooman <fkooman@tuxed.net>
+Build-Depends: 
+ debhelper (>= 9), 
+ dh-exec, 
+ phpunit, 
+ pkg-php-tools, 
+ phpab,
+ php-psr-log, 
+ php-eduvpn-common, 
+ php-symfony-translation,
  php-symfony-phpunit-bridge
 Standards-Version: 3.9.8
 Homepage: https://github.com/eduvpn/vpn-server-node
-Vcs-Git: git://github.com/eduvpn-debian/vpn-server-node.git
-Vcs-Browser: https://github.com/eduvpn-debian/vpn-server-node/
 
 Package: vpn-server-node
 Architecture: all
@@ -19,7 +24,4 @@ Depends:
  php-cli,
  php-symfony-phpunit-bridge
 Suggests: ${phpcomposer:Debian-suggest}
-Description: OpenVPN node controller
- This should be an extended description but the upstream project doesn't
- have one.
-
+Description: VPN Server Node

@@ -1,3 +1,10 @@
+vpn-server-node (1.0.5-1) stable; urgency=medium
+
+  * update to 1.0.5
+  * package cleanup
+
+ -- François Kooman <fkooman@tuxed.net>  Wed, 06 Dec 2017 20:26:25 +0100
+
 vpn-server-node (1.0.4-2) stable; urgency=medium
 
   * add missing dependency
