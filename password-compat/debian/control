@@ -1,0 +1,18 @@
+Source: password-compat
+Section: php
+Priority: optional
+Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
+Build-Depends: debhelper (>= 9), pkg-php-tools
+Standards-Version: 3.9.8
+Homepage: https://github.com/ircmaxell/password_compat/
+Vcs-Git: git://github.com/eduvpn-debian/password_compat.git
+Vcs-Browser: https://github.com/eduvpn-debian/password_compat/
+
+Package: php-ircmaxell-password-compat
+Architecture: all
+Depends: ${misc:Depends}, ${phpcomposer:Debian-require}
+Suggests: ${phpcomposer:Debian-suggest}
+Description: Compatibility with the password_* functions that ship with PHP 5.5
+ This library is intended to provide forward compatibility with the password_*
+ functions that ship with PHP 5.5. See the RFC for more detailed information.
+
