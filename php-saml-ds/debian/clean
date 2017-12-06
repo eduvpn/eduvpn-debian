@@ -1,3 +1,2 @@
-vendor/
 src/autoload.php
 tests/autoload.php
