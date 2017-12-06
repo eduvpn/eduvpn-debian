@@ -12,6 +12,7 @@ uscan --destdir=build --download-current-version
   cp -r ../../debian .
 
   # install build dependencies
+  sudo apt-get update
   sudo mk-build-deps -i -r debian/control
 
   # build and sign package
