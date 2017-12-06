@@ -5,4 +5,3 @@ var/lib/vpn-user-portal usr/share/vpn-user-portal/data
 /usr/share/vpn-user-portal/bin/foreign-key-list-fetcher.php usr/bin/vpn-user-portal-foreign-key-list-fetcher
 /usr/share/vpn-user-portal/bin/init.php usr/bin/vpn-user-portal-init
 /usr/share/vpn-user-portal/bin/show-public-key.php usr/bin/vpn-user-portal-show-public-key
-

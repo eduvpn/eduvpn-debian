@@ -1,7 +1,7 @@
 Source: vpn-user-portal
 Section: web
 Priority: optional
-Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
+Maintainer: François Kooman <fkooman@tuxed.net>
 Build-Depends:
  debhelper (>= 9),
  dh-exec,
@@ -24,14 +24,10 @@ Build-Depends:
  php-mbstring,
  php-fkooman-secookie
 Standards-Version: 3.9.8
-Homepage: https://github.com/eduvpn/vpn-for-web
-Vcs-Git: git://github.com/eduvpn-debian/vpn-for-web.git
-Vcs-Browser: https://github.com/eduvpn-debian/vpn-for-web/
+Homepage: https://github.com/eduvpn/vpn-user-portal
 
 Package: vpn-user-portal
 Architecture: all
-# TODO: generates wrong dependencies
-#Depends: ${misc:Depends}, ${phpcomposer:Debian-require}
 Depends: ${misc:Depends},
  php-common,
  php-bacon-qr-code,
@@ -48,6 +44,4 @@ Depends: ${misc:Depends},
  php-twig-extensions,
  php-cli
 Suggests: ${phpcomposer:Debian-suggest}
-Description: eduVPN user portal
- The eduVPN user portal project
-
+Description: VPN User Portal

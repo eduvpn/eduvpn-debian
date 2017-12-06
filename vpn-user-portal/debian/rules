@@ -17,9 +17,8 @@ override_dh_auto_build:
 
 override_dh_auto_test:
 	phpab -o tests/autoload.php tests
-	echo "require_once dirname(__DIR__).'/src/autoload.php';" >> tests/autoload.php
+	echo "require_once 'src/autoload.php';" >> tests/autoload.php
 	phpunit --bootstrap=tests/autoload.php
 
 %:
 	dh $@ --with phpcomposer
-
