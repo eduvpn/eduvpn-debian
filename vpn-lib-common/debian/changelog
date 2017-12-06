@@ -1,8 +1,9 @@
 vpn-lib-common (1.1.1-1) stable; urgency=medium
  
   * update to 1.1.1
- 
- -- F. Kooman <fkooman@debian>  Wed, 06 Dec 2017 15:18:13 +0100
+  * cleanup package
+
+ -- François Kooman <fkooman@tuxed.net>  Wed, 06 Dec 2017 15:18:13 +0100
 
 vpn-lib-common (1.0.6-1) stable; urgency=medium
 

@@ -15,12 +15,9 @@ override_dh_auto_build:
 	echo "$${REQUIRES}" >> lib/Twig/Extensions/autoload.php
 
 override_dh_auto_test:
-	phpab -o test/autoload.php test lib
-	echo "$${REQUIRES}" >> test/autoload.php
-
+	phpab -o test/autoload.php test
+	echo "require_once 'lib/Twig/Extensions/autoload.php';" >> test/autoload.php
 	phpunit --bootstrap=test/autoload.php
 
 %:
 	dh $@ --with phpcomposer
-
-

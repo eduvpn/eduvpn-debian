@@ -1,14 +1,16 @@
 Source: vpn-lib-common
 Section: php
 Priority: optional
-Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
-Build-Depends: debhelper (>= 9),
+Maintainer: François Kooman <fkooman@tuxed.net>
+Build-Depends: 
+ debhelper (>= 9),
  phpunit,
  phpab,
  pkg-php-tools,
  php-psr-log,
  php-fkooman-secookie,
  php-twig,
+ php-ldap,
  php-twig-extensions,
  php-mbstring,
  php-libsodium,
@@ -23,20 +25,16 @@ Build-Depends: debhelper (>= 9),
  php-symfony-polyfill-php56,
 Standards-Version: 3.9.8
 Homepage: https://github.com/eduvpn/vpn-lib-common
-Vcs-Git: git://github.com/eduvpn-debian/vpn-lib-common.git
-Vcs-Browser: https://github.com/eduvpn-debian/vpn-lib-common/
 
 Package: php-eduvpn-common
 Architecture: all
 Depends:
  ${misc:Depends},
-# ${phpcomposer:Debian-dependes}  # disabled
-# pkg-php-tools has problems with _ in php packages
-# manually listing dependencies:
  php-common,
  php-curl,
  php-json,
  php-mbstring,
+ php-ldap,
  php-fkooman-secookie,
  php-constant-time,
  php-random-compat,
@@ -48,4 +46,3 @@ Depends:
  php-symfony-translation
 Suggests: ${phpcomposer:Debian-suggest}
 Description: Common VPN library
- VPN related code shared between eduVPN projects.

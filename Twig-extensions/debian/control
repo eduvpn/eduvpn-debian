@@ -1,19 +1,23 @@
 Source: twig-extensions
 Section: php
 Priority: optional
-Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
-Build-Depends: debhelper (>= 9), phpunit, phpab, pkg-php-tools,
- php-symfony-translation, php-symfony-phpunit-bridge,
- php-symfony-polyfill-mbstring, php-twig
+Maintainer: François Kooman <fkooman@tuxed.net>
+Build-Depends: 
+ debhelper (>= 9), 
+ phpunit, 
+ phpab, 
+ pkg-php-tools,
+ php-symfony-translation, 
+ php-symfony-phpunit-bridge,
+ php-symfony-polyfill-mbstring, 
+ php-twig
 Standards-Version: 3.9.8
 Homepage: https://github.com/twigphp/Twig-extensions
-Vcs-Git: git://github.com/eduvpn-debian/Twig-extenions.git
-Vcs-Browser: https://github.com/eduvpn-debian/Twig-extenions/
 
 Package: php-twig-extensions
 Architecture: all
-Depends: ${misc:Depends}, ${phpcomposer:Debian-require}
+Depends: 
+ ${misc:Depends}, 
+ ${phpcomposer:Debian-require}
 Suggests: ${phpcomposer:Debian-suggest}
 Description: Twig extensions
- Twig Extensions that do not belong to the core but can be nonetheless
- interesting to share with other developers.

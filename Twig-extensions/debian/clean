@@ -3,4 +3,3 @@ vendor/
 lib/Twig/Extensions/autoload.php
 test/autoload.php
 composer.lock
-
