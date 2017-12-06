@@ -17,8 +17,8 @@ used for the key:
 Add the (temporary) repository to your apt sources so dependencies can be 
 resolved during (chained) build:
 
-    $ echo "deb file://${HOME}/.aptly/public stretch main" >> /etc/apt/sources.list
-    $ echo "deb-src file://${HOME}/.aptly/public stretch main" >> /etc/apt/sources.list
+    $ echo "deb file://${HOME}/.aptly/public stretch main"     | sudo tee -a /etc/apt/sources.list
+    $ echo "deb-src file://${HOME}/.aptly/public stretch main" | sudo tee -a /etc/apt/sources.list
 
 Start the build:
 
