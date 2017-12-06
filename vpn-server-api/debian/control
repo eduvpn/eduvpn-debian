@@ -1,7 +1,7 @@
 Source: vpn-server-api
 Section: web
 Priority: optional
-Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
+Maintainer: François Kooman <fkooman@tuxed.net>
 Build-Depends:
  debhelper (>= 9),
  dh-exec,
@@ -16,12 +16,11 @@ Build-Depends:
  php-fkooman-oauth2-server
 Standards-Version: 3.9.8
 Homepage: https://github.com/eduvpn/vpn-server-api
-Vcs-Git: git://github.com/eduvpn-debian/vpn-server-api.git
-Vcs-Browser: https://github.com/eduvpn-debian/vpn-server-api/
 
 Package: vpn-server-api
 Architecture: all
-Depends: ${misc:Depends},
+Depends: 
+ ${misc:Depends},
  php-cli,
  php-common,
  php-christian-riesen-otp,
@@ -32,11 +31,7 @@ Depends: ${misc:Depends},
  php-fkooman-oauth2-client,
  php-fkooman-secookie,
  php-fkooman-yubitwee,
- php-paragonie-constant-time-encoding,
- easy-rsa,
+ php-constant-time,
  openvpn
 Suggests: ${phpcomposer:Debian-suggest}
-Description: eduVPN server API
- This should be a longer description but the original source doesn't have
- a longer description.
-
+Description: VPN Server API

@@ -1,6 +1,5 @@
 etc/vpn-server-api usr/share/vpn-server-api/config
 var/lib/vpn-server-api usr/share/vpn-server-api/data
-usr/share/easy-rsa usr/share/vpn-server-api/easy-rsa
 usr/share/vpn-server-api/bin/housekeeping.php usr/bin/vpn-server-api-housekeeping
 usr/share/vpn-server-api/bin/init.php usr/bin/vpn-server-api-init
 usr/share/vpn-server-api/bin/stats.php usr/bin/vpn-server-api-stats

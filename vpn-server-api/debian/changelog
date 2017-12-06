@@ -1,3 +1,10 @@
+vpn-server-api (1.2.0-1) stable; urgency=medium
+
+  * update to 1.2.0
+  * package cleanup
+
+ -- François Kooman <fkooman@tuxed.net>  Wed, 06 Dec 2017 20:18:28 +0100
+
 vpn-server-api (1.0.6-1) stable; urgency=medium
 
   * New upstream version 1.0.6
