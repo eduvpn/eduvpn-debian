@@ -2,6 +2,7 @@
 
 define REQUIRES
 require_once '/usr/share/php/ParagonIE/ConstantTime/autoload.php';
+require_once __DIR__.'/sodium_compat.php';
 endef
 
 # easier to use this as a shell variable
@@ -12,11 +13,9 @@ override_dh_auto_build:
 	echo "$${REQUIRES}" >> src/autoload.php
 
 override_dh_auto_test:
-	phpab -o tests/autoload.php tests src
-	echo "$${REQUIRES}" >> tests/autoload.php
+	phpab -o tests/autoload.php tests
+	echo "require_once dirname(__DIR__).'/src/autoload.php';" >> tests/autoload.php
 	phpunit --bootstrap=tests/autoload.php
 
 %:
 	dh $@ --with phpcomposer
-
-
