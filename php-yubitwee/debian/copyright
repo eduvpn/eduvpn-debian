@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: php-yubitwee
-Source: https://github.com/eduvpn-debian/php-yubitwee
+Source: https://github.com/fkooman/php-yubitwee
 
 Files: *
 Copyright: 2017 François Kooman <fkooman@tuxed.net>

@@ -1,17 +1,8 @@
-php-oauth2-server (2.1.0-4.1) UNRELEASED; urgency=medium
+php-oauth2-server (2.1.0-1) stable; urgency=medium
 
-  * Non-maintainer upload.
-  * 
-  * 
-  * 
+  * update to 2.1.0
 
- -- F. Kooman <eduvpn+debian@surfnet.nl>  Wed, 06 Dec 2017 15:45:52 +0100
-
-php-oauth2-server (2.1.0-2) stable; urgency=medium
-
-  * update to 2.1.0 
-
- -- F. Kooman <eduvpn+debian@surfnet.nl>  Wed, 06 Dec 2017 15:41:39 +0100
+ -- François Kooman <fkooman@tuxed.net>  Wed, 06 Dec 2017 18:02:58 +0100
 
 php-oauth2-server (1.1.0-3) stable; urgency=medium
 

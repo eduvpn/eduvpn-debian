@@ -4,7 +4,8 @@ override_dh_auto_build:
 	phpab -o src/autoload.php src
 
 override_dh_auto_test:
-	phpab -o tests/autoload.php src tests
+	phpab -o tests/autoload.php tests
+	echo "require_once 'src/autoload.php';" >> tests/autoload.php
 	phpunit --bootstrap=tests/autoload.php
 
 %:

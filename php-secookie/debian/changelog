@@ -1,3 +1,9 @@
+php-secookie (2.0.0-3) stable; urgency=medium
+
+  * Clean up package
+
+ -- François Kooman <fkooman@tuxed.net>  Wed, 06 Dec 2017 17:55:16 +0100
+
 php-secookie (2.0.0-2) stable; urgency=medium
 
   * fix lintian errors and warnings
