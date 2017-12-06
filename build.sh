@@ -9,5 +9,6 @@ uscan --destdir=build --download-current-version
   tar -xzf ${NAME}-${VERSION}.tar.gz
   cd ${NAME}-${VERSION}
   cp -r ../../debian .
+  mk-build-deps --install debian/control
   debuild -uc -us
 )
