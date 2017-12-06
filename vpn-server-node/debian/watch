@@ -1,0 +1,6 @@
+# Compulsory line, this is a version 3 file
+version=3
+
+opts=filenamemangle=s/.+\/v?(\d\S+)\.tar\.gz/vpn-server-node-$1\.tar\.gz/ \
+  https://github.com/eduvpn/vpn-server-node/tags .*/v?(\d\S+)\.tar\.gz
+

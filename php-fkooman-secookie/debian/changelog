@@ -1,0 +1,38 @@
+php-secookie (2.0.0-2) stable; urgency=medium
+
+  * fix lintian errors and warnings
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Fri, 13 Oct 2017 15:05:07 +0200
+
+php-secookie (2.0.0-1) stable; urgency=medium
+
+  [ Gijs Molenaar ]
+  * New upstream version 2.0.0
+
+  [ Gijs Molenaar (launchpad ppa build key) ]
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Mon, 02 Oct 2017 16:14:25 +0200
+
+php-secookie (1.0.2-2) stable; urgency=medium
+
+  * fix arch
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Thu, 31 Aug 2017 12:11:05 +0200
+
+php-secookie (1.0.2-1) stable; urgency=medium
+
+  * New upstream version 1.0.2
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Thu, 17 Aug 2017 11:08:49 +0200
+
+php-secookie (1.0.0-1) stable; urgency=medium
+
+  * new upstream release
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Fri, 30 Jun 2017 14:29:42 +0200
+
+php-secookie (0.1.0-1) stable; urgency=medium
+
+  * initial release
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Fri, 16 Jun 2017 14:44:06 +0000

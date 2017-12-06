@@ -1,0 +1,17 @@
+Source: baconqrcode
+Section: web
+Priority: optional
+Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
+Build-Depends: debhelper (>= 9), phpunit, pkg-php-tools, phpab
+Standards-Version: 3.9.8
+Homepage: https://github.com/Bacon/BaconQrCode
+Vcs-Git: git://github.com/eduvpn-debian/BaconQrCode.git
+Vcs-Browser: https://github.com/eduvpn-debian/BaconQrCode/
+
+Package: php-bacon-qr-code
+Architecture: all
+Depends: ${misc:Depends}, ${phpcomposer:Debian-require}, php-gd
+Suggests: ${phpcomposer:Debian-suggest}
+Description: QR Code Generator for PHP
+ Port of QR code portion of the ZXing library. It currently only features the
+ encoder part, but could later receive the decoder part as well.

@@ -1,0 +1,38 @@
+Source: php-oauth2-server
+Section: php
+Priority: optional
+Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
+Build-Depends:
+ debhelper (>= 9),
+ pkg-php-tools,
+ phpunit,
+ phpab,
+ php-common,
+ php-json,
+ php-libsodium | php-sodium,
+ php-paragonie-constant-time-encoding,
+ php-sqlite3,
+ php-paragonie-random-compat,
+ php-symfony-polyfill-php56
+Standards-Version: 3.9.8
+Homepage: https://github.com/fkooman/php-oauth2-server
+Vcs-Git: git://github.com/eduvpn-debian/php-oauth2-server.git
+Vcs-Browser: https://github.com/eduvpn-debian/php-oauth2-server/
+
+Package: php-fkooman-oauth2-server
+Architecture: all
+Depends:
+ ${misc:Depends},
+ php-common,
+ php-json,
+ php-libsodium | php-sodium,
+ php-paragonie-constant-time-encoding,
+ php-sqlite3,
+ php-paragonie-random-compat,
+ php-symfony-polyfill-php56
+Suggests: ${phpcomposer:Debian-suggest}
+Description: ${phpcomposer:description}
+ Very simple OAuth 2.0 server for integration in your own application. It has
+ minimal dependencies, but still tries to be secure. The main purpose is to be
+ compatible with PHP 5.4.  If you are not bound to PHP 5.4, use the OAuth 2.0
+ server of the League of Extraordinary Packages.

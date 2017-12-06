@@ -1,0 +1,6 @@
+README.md 
+CHANGES.md
+composer.json
+config/config.php.example
+config/firewall.php.example
+debian/README.Debian

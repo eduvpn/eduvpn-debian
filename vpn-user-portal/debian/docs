@@ -1,0 +1,5 @@
+README.md 
+CHANGES.md
+composer.json
+config/config.php.example
+debian/README.Debian

@@ -1,0 +1,9 @@
+Installation instructions for apache2 (recommended)
+===================================================
+
+* install package ($ sudo apt-get install vpn-user-portal)
+* install webserver with php ($ sudo apt install apache2 libapache2-mod-php)
+* enable apache config ($ sudo a2enconf vpn-user-portal)
+* enable modules ($ sudo a2enmod rewrite headers)
+* reload apache ($ sudo systemctl reload apache2)
+* initialise ($ sudo -u www-data /usr/bin/vpn-user-portal-init)

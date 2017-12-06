@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+define REQUIRES
+require_once '/usr/share/php/SURFnet/VPN/Common/autoload.php';
+endef
+
+# easier to use this as a shell variable
+export REQUIRES
+
+override_dh_auto_build:
+	mkdir vendor
+	phpab -o vendor/autoload.php -b vendor src
+	echo "$${REQUIRES}" >> vendor/autoload.php
+
+override_dh_auto_test:
+	phpab -o tests/autoload.php src tests
+	echo "$${REQUIRES}" >> tests/autoload.php
+	phpunit --bootstrap=tests/autoload.php
+
+%:
+	dh $@ --with phpcomposer
+

@@ -1,0 +1,12 @@
+#!/usr/bin/dh-exec --with=install
+
+debian/apache.conf => /etc/apache2/conf-available/vpn-admin-portal.conf
+config/config.php.example => /etc/vpn-admin-portal/default/config.php
+
+bin /usr/share/vpn-admin-portal/
+src /usr/share/vpn-admin-portal/
+web /usr/share/vpn-admin-portal/
+locale /usr/share/vpn-admin-portal/
+web /usr/share/vpn-admin-portal/
+views /usr/share/vpn-admin-portal/
+vendor /usr/share/vpn-admin-portal/

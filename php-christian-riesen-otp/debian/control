@@ -1,0 +1,26 @@
+Source: otp
+Section: php
+Priority: optional
+Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
+Build-Depends:
+ debhelper (>= 9),
+ phpab,
+ phpunit,
+ pkg-php-tools,
+ php-paragonie-constant-time-encoding,
+ php-paragonie-random-compat
+Standards-Version: 3.9.8
+Homepage: https://github.com/ChristianRiesen/otp
+Vcs-Git: git://github.com/eduvpn-debian/otp.git
+Vcs-Browser: https://github.com/eduvpn-debian/otp/
+
+Package: php-christian-riesen-otp
+Architecture: all
+Depends: ${misc:Depends},
+ php-common,
+ php-paragonie-constant-time-encoding,
+ php-paragonie-random-compat
+Suggests: ${phpcomposer:Debian-suggest}
+Description: ${phpcomposer:description}
+ Implements hotp according to RFC4226 and totp according to RFC6238
+ (only sha1 algorithm).

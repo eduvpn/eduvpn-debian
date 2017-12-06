@@ -1,0 +1,62 @@
+php-saml-ds (1.0.8-2) stable; urgency=medium
+
+  * fix lintian errors and warnings
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Fri, 13 Oct 2017 17:23:52 +0200
+
+php-saml-ds (1.0.8-1) stable; urgency=medium
+
+  [ Gijs Molenaar ]
+  * New upstream version 1.0.8
+
+  [ Gijs Molenaar (launchpad ppa build key) ]
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Mon, 02 Oct 2017 17:32:10 +0200
+
+php-saml-ds (1.0.5-3) stable; urgency=medium
+
+  * purge template cache on upgrade
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Mon, 02 Oct 2017 17:27:17 +0200
+
+php-saml-ds (1.0.5-2) stable; urgency=medium
+
+  * fix arch
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Thu, 31 Aug 2017 12:10:32 +0200
+
+php-saml-ds (1.0.5-1) stable; urgency=medium
+
+  * New upstream version 1.0.5
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Thu, 17 Aug 2017 11:11:06 +0200
+
+php-saml-ds (1.0.2-3) stable; urgency=medium
+
+  * fix path to php socket
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Fri, 04 Aug 2017 12:12:50 +0200
+
+php-saml-ds (1.0.2-2) stable; urgency=medium
+
+  * add all docs
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Wed, 02 Aug 2017 14:33:16 +0200
+
+php-saml-ds (1.0.2-1) stable; urgency=medium
+
+  * new upstream release
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Sat, 29 Jul 2017 10:57:41 +0200
+
+php-saml-ds (1.0.1-1) stable; urgency=medium
+
+  * new upstream release
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Tue, 25 Jul 2017 10:38:24 +0200
+
+php-saml-ds (0.3.0-1) stable; urgency=medium
+
+  * initial release
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Fri, 23 Jun 2017 14:00:43 +0000

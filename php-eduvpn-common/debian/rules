@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+
+define REQUIRES
+require_once '/usr/share/php/fkooman/SeCookie/autoload.php';
+require_once '/usr/share/php/Psr/Log/autoload.php';
+require_once '/usr/share/php/password_compat/password.php';
+require_once '/usr/share/php/fkooman/SeCookie/autoload.php';
+require_once '/usr/share/php/Twig/autoload.php';
+require_once '/usr/share/php/Twig/Extensions/autoload.php';
+endef
+
+# easier to use this as a shell variable
+export REQUIRES
+
+override_dh_auto_build:
+	phpab -o src/autoload.php src
+	echo "$${REQUIRES}" >> src/autoload.php
+
+override_dh_auto_test:
+	phpab -o tests/autoload.php src tests
+	echo "$${REQUIRES}" >> tests/autoload.php
+	phpunit --bootstrap=tests/autoload.php
+
+%:
+	dh $@ --with phpcomposer
+
+

@@ -1,0 +1,18 @@
+#!/usr/bin/dh-exec --with=install
+
+debian/apache.conf => /etc/apache2/conf-available/vpn-user-portal.conf
+
+bin/add-user.php => /usr/bin/vpn-user-portal-add-user
+bin/foreign-key-list-fetcher.php => /usr/bin/vpn-user-portal-foreign-key-list-fetcher
+bin/init.php => /usr/bin/vpn-user-portal-init
+bin/show-public-key.php => /usr/bin/vpn-user-portal-show-public-key
+
+config/config.php.example => /etc/vpn-user-portal/default/config.php
+
+src/* /usr/share/vpn-user-portal/src/SURFnet/VPN/Portal/
+
+bin /usr/share/vpn-user-portal/
+locale /usr/share/vpn-user-portal/
+views /usr/share/vpn-user-portal/
+web /usr/share/vpn-user-portal/
+tmp/vendor /usr/share/vpn-user-portal/

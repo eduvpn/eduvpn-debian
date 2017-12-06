@@ -1,0 +1,9 @@
+#!/usr/bin/dh-exec --with=install
+
+config/config.php.example => /etc/vpn-server-node/default/config.php
+config/firewall.php.example => /etc/vpn-server-node/firewall.php
+
+bin /usr/share/vpn-server-node/
+libexec /usr/share/vpn-server-node/
+src /usr/share/vpn-server-node/
+tmp/vendor /usr/share/vpn-server-node/

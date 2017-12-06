@@ -1,0 +1,36 @@
+#!/bin/sh
+# postrm script for vpn-user-portal
+#
+# see: dh_installdeb(1)
+
+set -e
+
+if [ -f /usr/share/debconf/confmodule ]; then
+        . /usr/share/debconf/confmodule
+fi
+
+
+
+case "$1" in
+    failed-upgrade|abort-install|abort-upgrade|disappear|remove)
+    ;;
+
+    upgrade)
+        echo "removing old template cache..."
+        rm -rf /var/lib/vpn-user-portal/*/tpl/*
+    ;;
+    
+    purge)
+        rm -rf /var/lib/vpn-user-portal
+    ;;
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0
+
+

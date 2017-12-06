@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+define REQUIRES
+require_once '/usr/share/php/ParagonIE/ConstantTime/autoload.php';
+require_once '/usr/share/php/random_compat/autoload.php';
+endef
+
+# easier to use this as a shell variable
+export REQUIRES
+
+override_dh_auto_build:
+	phpab -o src/autoload.php src
+	echo "$${REQUIRES}" >> src/autoload.php
+
+override_dh_auto_test:
+	phpab -o tests/autoload.php tests src
+	echo "$${REQUIRES}" >> tests/autoload.php
+	phpunit --bootstrap=tests/autoload.php
+
+%:
+	dh $@ --with phpcomposer

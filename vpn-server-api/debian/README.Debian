@@ -1,0 +1,8 @@
+Installation instructions for apache2 (recommended)
+===================================================
+
+* install package ($ sudo apt-get install vpn-server-api)
+* install webserver with php ($ sudo apt install apache2 libapache2-mod-php)
+* enable apachage config ($ sudo a2enconf vpn-server-api)
+* reload apache ($ sudo systemctl reload apache2)
+* initialise ($ sudo -u www-data /usr/bin/vpn-server-api-init )

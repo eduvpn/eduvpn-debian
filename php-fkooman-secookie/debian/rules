@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+override_dh_auto_build:
+	phpab -o src/autoload.php src
+
+override_dh_auto_test:
+	phpab -o tests/autoload.php src tests
+	phpunit --bootstrap=tests/autoload.php
+
+%:
+	dh $@ --with phpcomposer

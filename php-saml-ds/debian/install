@@ -1,0 +1,13 @@
+#!/usr/bin/dh-exec --with=install
+
+debian/apache.conf => /etc/apache2/conf-available/php-saml-ds.conf
+
+bin/generate.php => /usr/bin/php-saml-ds-generate
+
+config/config.php.example => /etc/php-saml-ds/config.php
+
+src /usr/share/php-saml-ds/
+views /usr/share/php-saml-ds/
+web /usr/share/php-saml-ds/
+vendor /usr/share/php-saml-ds/
+bin /usr/share/php-saml-ds/

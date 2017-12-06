@@ -1,0 +1,53 @@
+Source: vpn-lib-common
+Section: php
+Priority: optional
+Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
+Build-Depends: debhelper (>= 9),
+ phpunit,
+ phpab,
+ pkg-php-tools,
+ php-psr-log,
+ php-fkooman-secookie,
+ php-twig,
+ php-twig-extensions,
+ php-ircmaxell-password-compat,
+ php-mbstring,
+ php-libsodium,
+ php-symfony-translation,
+ php-symfony-phpunit-bridge,
+ php-common,
+ php-curl,
+ php-json,
+ php-fkooman-secookie,
+ php-paragonie-constant-time-encoding,
+ php-paragonie-random-compat,
+ php-symfony-polyfill-php56,
+Standards-Version: 3.9.8
+Homepage: https://github.com/eduvpn/vpn-lib-common
+Vcs-Git: git://github.com/eduvpn-debian/vpn-lib-common.git
+Vcs-Browser: https://github.com/eduvpn-debian/vpn-lib-common/
+
+Package: php-eduvpn-common
+Architecture: all
+Depends:
+ ${misc:Depends},
+# ${phpcomposer:Debian-dependes}  # disabled
+# pkg-php-tools has problems with _ in php packages
+# manually listing dependencies:
+ php-common,
+ php-curl,
+ php-json,
+ php-mbstring,
+ php-fkooman-secookie,
+ php-ircmaxell-password-compat,
+ php-paragonie-constant-time-encoding,
+ php-paragonie-random-compat,
+ php-common,
+ php-psr-log,
+ php-symfony-polyfill-php56,
+ php-twig,
+ php-twig-extensions,
+ php-symfony-translation
+Suggests: ${phpcomposer:Debian-suggest}
+Description: Common VPN library
+ VPN related code shared between eduVPN projects.

@@ -1,0 +1,31 @@
+Source: php-yubitwee
+Section: php
+Priority: optional
+Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
+Build-Depends: debhelper (>= 9),
+ phpunit,
+ phpab,
+ pkg-php-tools,
+ php-paragonie-constant-time-encoding,
+ php-ircmaxell-password-compat,
+ php-symfony-polyfill-php56
+Standards-Version: 3.9.8
+Homepage: https://github.com/eduvpn-debian/php-yubitwee
+Vcs-Git: git://github.com/eduvpn-debian/php-yubitwee.git
+Vcs-Browser: https://github.com/eduvpn-debian/php-yubitwee/
+
+Package: php-fkooman-yubitwee
+Architecture: all
+Depends: ${misc:Depends},
+ php-common,
+ php-curl,
+ php-paragonie-constant-time-encoding,
+ php-ircmaxell-password-compat,
+ php-symfony-polyfill-php56
+Suggests: ${phpcomposer:Debian-suggest}
+Description: ${phpcomposer:description}
+ A very simple, secure YubiKey OTP Validator with pluggable HTTP client.
+ The correct thing to be doing is using U2F, so do not use this library if
+ you are writing new software, please investigate U2F as that will be more
+ secure than using the proprietary YubiCo solution for verifying hardware
+ tokens!

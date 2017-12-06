@@ -1,0 +1,5 @@
+etc/php-saml-ds usr/share/php-saml-ds/config
+var/lib/php-saml-ds usr/share/php-saml-ds/data
+usr/share/php-saml-ds/bin/generate.php usr/bin/php-saml-ds-generate
+
+

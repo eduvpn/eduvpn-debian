@@ -1,0 +1,33 @@
+baconqrcode (1.0.3-1) stable; urgency=medium
+
+  [ Gijs Molenaar ]
+  * New upstream version 1.0.3
+
+  [ Gijs Molenaar (launchpad ppa build key) ]
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Tue, 24 Oct 2017 07:44:16 +0200
+
+baconqrcode (1.0.1-4) stable; urgency=medium
+
+  * fix lintian errors and warnings
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Fri, 13 Oct 2017 13:47:22 +0200
+
+baconqrcode (1.0.1-3) stable; urgency=medium
+
+  * fix architecture
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Thu, 31 Aug 2017 12:01:02 +0200
+
+baconqrcode (1.0.1-2) stable; urgency=medium
+
+  * add missing php-gd dependency
+  * correct install path
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Mon, 07 Aug 2017 14:15:27 +0200
+
+baconqrcode (1.0.1-1) stable; urgency=medium
+
+  * initial release
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Fri, 23 Jun 2017 12:30:44 +0000
