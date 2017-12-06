@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+sudo apt-get install build-essential devscripts aptly
 
 PACKAGE_LIST=(\
     BaconQrCode \
@@ -16,7 +18,7 @@ PACKAGE_LIST=(\
     vpn-admin-portal \
 )
 
-../repo_setup.sh
+./repo_setup.sh
 
 for f in "${PACKAGE_LIST[@]}"
 do
@@ -24,5 +26,5 @@ do
         cd ${f}
         ../build.sh
     )
-    ../repo_update.sh
+    ./repo_update.sh
 done
