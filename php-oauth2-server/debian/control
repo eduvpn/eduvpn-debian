@@ -10,9 +10,9 @@ Build-Depends:
  php-common,
  php-json,
  php-libsodium | php-sodium,
- php-paragonie-constant-time-encoding,
+ php-constant-time,
  php-sqlite3,
- php-paragonie-random-compat,
+ php-random-compat,
  php-symfony-polyfill-php56
 Standards-Version: 3.9.8
 Homepage: https://github.com/fkooman/php-oauth2-server
@@ -26,9 +26,9 @@ Depends:
  php-common,
  php-json,
  php-libsodium | php-sodium,
- php-paragonie-constant-time-encoding,
+ php-constant-time,
  php-sqlite3,
- php-paragonie-random-compat,
+ php-random-compat,
  php-symfony-polyfill-php56
 Suggests: ${phpcomposer:Debian-suggest}
 Description: ${phpcomposer:description}

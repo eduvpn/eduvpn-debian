@@ -1,3 +1,9 @@
+php-oauth2-client (6.0.1-1) stable; urgency=medium
+
+  * update to 6.0.1
+
+ -- F. Kooman <eduvpn+debian@surfnet.nl>  Wed, 06 Dec 2017 11:34:58 +0100
+
 php-oauth2-client (5.0.1-2) stable; urgency=medium
 
   * fix lintian errors and warnings

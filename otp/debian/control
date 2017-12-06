@@ -7,8 +7,8 @@ Build-Depends:
  phpab,
  phpunit,
  pkg-php-tools,
- php-paragonie-constant-time-encoding,
- php-paragonie-random-compat
+ php-constant-time,
+ php-random-compat
 Standards-Version: 3.9.8
 Homepage: https://github.com/ChristianRiesen/otp
 Vcs-Git: git://github.com/eduvpn-debian/otp.git
@@ -18,8 +18,8 @@ Package: php-christian-riesen-otp
 Architecture: all
 Depends: ${misc:Depends},
  php-common,
- php-paragonie-constant-time-encoding,
- php-paragonie-random-compat
+ php-constant-time,
+ php-random-compat
 Suggests: ${phpcomposer:Debian-suggest}
 Description: ${phpcomposer:description}
  Implements hotp according to RFC4226 and totp according to RFC6238

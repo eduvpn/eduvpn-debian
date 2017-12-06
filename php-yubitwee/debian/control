@@ -6,8 +6,8 @@ Build-Depends: debhelper (>= 9),
  phpunit,
  phpab,
  pkg-php-tools,
- php-paragonie-constant-time-encoding,
- php-ircmaxell-password-compat,
+ php-constant-time,
+ php-random-compat,
  php-symfony-polyfill-php56
 Standards-Version: 3.9.8
 Homepage: https://github.com/eduvpn-debian/php-yubitwee
@@ -19,8 +19,8 @@ Architecture: all
 Depends: ${misc:Depends},
  php-common,
  php-curl,
- php-paragonie-constant-time-encoding,
- php-ircmaxell-password-compat,
+ php-constant-time,
+ php-random-compat,
  php-symfony-polyfill-php56
 Suggests: ${phpcomposer:Debian-suggest}
 Description: ${phpcomposer:description}

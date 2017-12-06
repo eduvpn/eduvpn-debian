@@ -1,0 +1,16 @@
+Source: php-oauth2-client
+Section: php
+Priority: optional
+Maintainer: F. Kooman <fkooman@tuxed.net>
+Build-Depends: debhelper (>= 9), phpunit, php-constant-time,
+ php-symfony-polyfill-php56, php-random-compat, pkg-php-tools, phpab,
+ php-sqlite3
+Standards-Version: 3.9.8
+Homepage: https://github.com/eduvpn-debian/php-oauth2-client
+
+Package: php-fkooman-oauth2-client
+Architecture: all
+Depends: ${misc:Depends}, php-common, php-curl, php-json, php-random-compat,
+ php-common
+Suggests: ${phpcomposer:Debian-suggest}
+Description: ${phpcomposer:description}

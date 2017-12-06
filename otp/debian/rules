@@ -2,7 +2,7 @@
 
 define REQUIRES
 require_once '/usr/share/php/ParagonIE/ConstantTime/autoload.php';
-require_once '/usr/share/php/random_compat/autoload.php';
+require_once '/usr/share/php/random_compat/random.php';
 endef
 
 # easier to use this as a shell variable
