@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -ve
 
 sudo apt-get install build-essential devscripts aptly
 
@@ -23,7 +23,7 @@ PACKAGE_LIST=(\
 for f in "${PACKAGE_LIST[@]}"
 do
     (
-        cd ${f}
+        cd "${f}" || exit
         ../build.sh
     )
     ./repo_update.sh
