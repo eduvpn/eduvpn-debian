@@ -2,7 +2,7 @@
 
 REPO=eduVPN
 NAME=$(basename "${PWD}")
-VERSION=$(cat debian/changelog | head -1 | cut -d "\(" -f 2 | cut -d "\)" -f 1 | cut -d '-' -f 1)
+VERSION=$(cat debian/changelog | head -1 | cut -d "(" -f 2 | cut -d ")" -f 1 | cut -d '-' -f 1)
 rm -rf build
 mkdir -p build
 uscan --destdir=build --download-current-version

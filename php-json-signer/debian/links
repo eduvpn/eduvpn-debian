@@ -1,1 +1,1 @@
-usr/share/php-json-signer/bin/json-signer.php usr/bin/php-json-signer
+usr/share/php-json-signer/bin/app.php usr/bin/php-json-signer
