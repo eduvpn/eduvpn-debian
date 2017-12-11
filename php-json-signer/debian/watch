@@ -1,0 +1,6 @@
+# Compulsory line, this is a version 3 file
+version=3
+
+opts=filenamemangle=s/.+\/v?(\d\S+)\.tar\.gz/php-json-signer-$1\.tar\.gz/ \
+  https://github.com/fkooman/php-json-signer/tags .*/v?(\d\S+)\.tar\.gz
+

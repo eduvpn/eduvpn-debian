@@ -1,0 +1,23 @@
+Source: php-json-signer
+Section: php
+Priority: extra
+Maintainer: François Kooman <fkooman@tuxed.net>
+Build-Depends:
+ debhelper (>= 9),
+ phpab,
+ php-sodium | php-libsodium
+ phpunit,
+ pkg-php-tools,
+ dh-exec,
+ php-constant-time
+Standards-Version: 3.9.8
+Homepage: https://github.com/fkooman/php-json-signer
+
+Package: php-json-signer
+Architecture: all
+Depends: 
+ ${misc:Depends}, 
+ php-sodium | php-libsodium
+ php-constant-time
+Suggests: ${phpcomposer:Debian-suggest}
+Description: ${phpcomposer:description}
