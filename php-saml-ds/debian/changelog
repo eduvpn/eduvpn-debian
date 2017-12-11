@@ -1,3 +1,9 @@
+php-saml-ds (1.0.8-4) UNRELEASED; urgency=medium
+
+  * add `config/config.php.example` to docs
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 11 Dec 2017 09:53:41 +0100
+
 php-saml-ds (1.0.8-3) stable; urgency=medium
 
   * package cleanup
