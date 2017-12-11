@@ -1,6 +1,4 @@
 #!/usr/bin/dh-exec --with=install
 
 bin/app.php => /usr/bin/php-json-signer
-
-src /usr/share/php-json-signer/
-bin /usr/share/php-json-signer/
+src/* /usr/share/php/fkooman/JsonSigner/

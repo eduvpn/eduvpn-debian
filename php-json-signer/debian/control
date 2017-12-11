@@ -7,7 +7,7 @@ Build-Depends:
  phpab,
  php-libsodium | php-sodium,
  phpunit,
- pkg-php-tools,
+ pkg-php-tools (>= 1.7~),
  dh-exec,
  php-constant-time
 Standards-Version: 3.9.8
@@ -18,6 +18,11 @@ Architecture: all
 Depends: 
  ${misc:Depends}, 
  php-libsodium | php-sodium,
+ php-cli,
  php-constant-time
 Suggests: ${phpcomposer:Debian-suggest}
 Description: ${phpcomposer:description}
+ This application can be used to sign JSON files, by adding some fields that
+ can be used to determine their time of signing and the sequence number. The
+ signature is "detached" so no complicated file syntax is needed to store the
+ signature in the file itself.
