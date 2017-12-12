@@ -16,6 +16,7 @@ PACKAGE_LIST=(\
     vpn-user-portal \
     vpn-server-node \
     vpn-admin-portal \
+    php-json-signer \
 )
 
 ./repo_setup.sh
