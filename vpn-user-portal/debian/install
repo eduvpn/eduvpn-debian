@@ -9,8 +9,8 @@ bin/show-public-key.php => /usr/bin/vpn-user-portal-show-public-key
 
 config/config.php.example => /etc/vpn-user-portal/default/config.php
 
-src /usr/share/vpn-user-portal/
-bin /usr/share/vpn-user-portal/
+src/* /usr/share/php/SURFnet/VPN/Portal/
+
 locale /usr/share/vpn-user-portal/
 views /usr/share/vpn-user-portal/
 web /usr/share/vpn-user-portal/
