@@ -1,5 +1,7 @@
 #!/bin/bash -ve
 
+REPO_DIR=${HOME}/.aptly/public
+
 sudo apt-get install build-essential devscripts aptly
 
 PACKAGE_LIST=(\
@@ -29,3 +31,10 @@ do
     )
     ./repo_update.sh
 done
+
+# Create Archive
+DATETIME=$(date +%Y%m%d%H%M%S)
+(
+    cd "${REPO_DIR}" || exit
+    tar -cJf "${HOME}/debRepo-${DATETIME}.tar.xz" .
+)
