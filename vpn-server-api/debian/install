@@ -3,7 +3,13 @@
 debian/apache.conf => /etc/apache2/conf-available/vpn-server-api.conf
 config/config.php.example => /etc/vpn-server-api/default/config.php
 
-src /usr/share/vpn-server-api/
-bin /usr/share/vpn-server-api/
+src/* /usr/share/php/SURFnet/VPN/Server/
 web /usr/share/vpn-server-api/
 easy-rsa /usr/share/vpn-server-api/
+
+bin/housekeeping.php => /usr/bin/vpn-server-api-housekeeping
+bin/init.php => /usr/bin/vpn-server-api-init
+bin/show-instance-info.php => /usr/bin/vpn-server-api-show-instance-info
+bin/stats.php  status.php => /usr/bin/vpn-server-api-stats
+bin/update-api-secrets.php => /usr/bin/vpn-server-api-update-api-secrets
+bin/update-ip.php => /usr/bin/vpn-server-api-update-ip

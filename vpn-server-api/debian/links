@@ -1,8 +1,2 @@
 etc/vpn-server-api usr/share/vpn-server-api/config
 var/lib/vpn-server-api usr/share/vpn-server-api/data
-usr/share/vpn-server-api/bin/housekeeping.php usr/bin/vpn-server-api-housekeeping
-usr/share/vpn-server-api/bin/init.php usr/bin/vpn-server-api-init
-usr/share/vpn-server-api/bin/stats.php usr/bin/vpn-server-api-stats
-usr/share/vpn-server-api/bin/status.php usr/bin/vpn-server-api-status
-usr/share/vpn-server-api/bin/update-api-secrets.php usr/bin/vpn-server-api-update-api-secrets
-usr/share/vpn-server-api/bin/update-ip.php usr/bin/vpn-server-api-update-ip

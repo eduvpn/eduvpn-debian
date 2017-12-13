@@ -1,3 +1,10 @@
+vpn-server-api (1.2.1-1) stable; urgency=medium
+
+  * update to 1.2.1
+  * cleanup autoloading
+
+ -- François Kooman <fkooman@fralen-tuxed-net>  Wed, 13 Dec 2017 13:12:02 +0100
+
 vpn-server-api (1.2.0-1) stable; urgency=medium
 
   * update to 1.2.0

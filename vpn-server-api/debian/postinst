@@ -13,7 +13,6 @@ case "$1" in
     configure)
         chown www-data:www-data /var/lib/vpn-server-api
         chmod 700 /var/lib/vpn-server-api
-        chmod 755 /usr/share/vpn-server-api/bin/*
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
