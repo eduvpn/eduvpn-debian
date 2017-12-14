@@ -8,6 +8,7 @@ Build-Depends:
  phpunit,
  pkg-php-tools,
  php-constant-time,
+ php-symfony-polyfill-php56,
  php-random-compat
 Standards-Version: 3.9.8
 Homepage: https://github.com/ChristianRiesen/otp
@@ -18,6 +19,7 @@ Depends:
  ${misc:Depends},
  php-common,
  php-constant-time,
+ php-symfony-polyfill-php56,
  php-random-compat
 Suggests: ${phpcomposer:Debian-suggest}
 Description: ${phpcomposer:description}
