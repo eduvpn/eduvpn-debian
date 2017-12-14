@@ -8,8 +8,6 @@ Build-Depends:
  pkg-php-tools,
  phpab,
  php-constant-time,
- php-random-compat,
- php-symfony-polyfill-php56,
  php-sqlite3
 Standards-Version: 3.9.8
 Homepage: https://github.com/fkooman/php-oauth2-client
@@ -21,7 +19,6 @@ Depends:
  php-common,
  php-curl,
  php-json,
- php-random-compat,
  php-common
 Suggests: ${phpcomposer:Debian-suggest}
 Description: ${phpcomposer:description}

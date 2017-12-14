@@ -1,7 +1,6 @@
 #!/usr/bin/make -f
 
 define REQUIRES
-require_once '/usr/share/php/random_compat/random.php';
 require_once '/usr/share/php/ParagonIE/ConstantTime/autoload.php';
 endef
 
