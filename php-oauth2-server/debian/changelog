@@ -1,3 +1,10 @@
+php-oauth2-server (2.1.0-2) stable; urgency=medium
+
+  * remove unneeded polyfills
+  * prefer php-sodium to php-libsodium
+
+ -- François Kooman <fkooman@tuxed.net>  Thu, 14 Dec 2017 14:01:40 +0100
+
 php-oauth2-server (2.1.0-1) stable; urgency=medium
 
   * update to 2.1.0

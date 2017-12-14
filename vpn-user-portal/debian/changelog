@@ -1,3 +1,10 @@
+vpn-user-portal (1.4.2-3) stable; urgency=medium
+
+  * remove unneeded polyfills
+  * prefer php-sodium to php-libsodium
+
+ -- François Kooman <fkooman@tuxed.net>  Thu, 14 Dec 2017 14:04:15 +0100
+
 vpn-user-portal (1.4.2-1) stable; urgency=medium
 
   * update to 1.4.2

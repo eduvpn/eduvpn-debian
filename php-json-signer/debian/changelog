@@ -1,3 +1,9 @@
+php-json-signer (3.0.2-2) stable; urgency=medium
+
+  * prefer php-sodium before php-libsodium
+
+ -- François Kooman <fkooman@tuxed.net>  Thu, 14 Dec 2017 14:00:05 +0100
+
 php-json-signer (3.0.2-1) stable; urgency=medium
 
   * update to 3.0.2

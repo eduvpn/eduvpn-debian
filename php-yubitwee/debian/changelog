@@ -1,3 +1,9 @@
+php-yubitwee (1.1.0-4) stable; urgency=medium
+
+  * remove unneeded polyfills
+
+ -- François Kooman <fkooman@tuxed.net>  Thu, 14 Dec 2017 14:02:34 +0100
+
 php-yubitwee (1.1.0-3) stable; urgency=medium
 
   * Clean up package
