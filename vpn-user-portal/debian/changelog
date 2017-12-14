@@ -10,7 +10,7 @@ vpn-user-portal (1.4.2-1) stable; urgency=medium
   * update to 1.4.2
   * modified autoloading
 
- -- François Kooman <fkooman@fralen-tuxed-net>  Tue, 12 Dec 2017 17:59:01 +0100
+ -- François Kooman <fkooman@tuxed.net>  Tue, 12 Dec 2017 17:59:01 +0100
 
 vpn-user-portal (1.4.1-1) stable; urgency=medium
 
