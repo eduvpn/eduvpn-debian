@@ -11,4 +11,4 @@ bin/server-config.php => /usr/bin/vpn-server-node-server-config
 
 libexec/client-connect.php => /usr/lib/vpn-server-node/client-connect
 libexec/client-disconnect.php => /usr/lib/vpn-server-node/client-disconnect
-libexec/client-verify-otp.php => /usr/lib/vpn-server-node/verify-otp
+libexec/verify-otp.php => /usr/lib/vpn-server-node/verify-otp

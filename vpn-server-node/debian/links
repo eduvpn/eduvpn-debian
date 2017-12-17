@@ -1,13 +1,2 @@
 etc/vpn-server-node usr/share/vpn-server-node/config
 etc/openvpn/server usr/share/vpn-server-node/openvpn-config
-
-# legacy libexec symlinks
-usr/lib/vpn-server-node/client-connect usr/share/vpn-server-node/libexec/client-connect.php 
-usr/lib/vpn-server-node/client-disconnect usr/share/vpn-server-node/libexec/client-disconnect.php
-usr/lib/vpn-server-node/verify-otp usr/share/vpn-server-node/libexec/verify-otp.php
-usr/lib/vpn-server-node/client-connect usr/libexec/vpn-server-node/client-connect
-usr/lib/vpn-server-node/client-disconnect usr/libexec/vpn-server-node/client-disconnect
-usr/lib/vpn-server-node/verify-otp usr/libexec/vpn-server-node/verify-otp
-usr/lib/vpn-server-node/client-connect usr/libexec/vpn-server-node-client-connect
-usr/lib/vpn-server-node/client-disconnect usr/libexec/vpn-server-node-client-disconnect
-usr/lib/vpn-server-node/verify-otp usr/libexec/vpn-server-node-verify-otp

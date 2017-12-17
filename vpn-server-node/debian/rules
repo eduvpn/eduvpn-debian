@@ -17,5 +17,9 @@ override_dh_auto_test:
 	echo "require_once 'src/autoload.php';" >> tests/autoload.php
 	phpunit --bootstrap=tests/autoload.php
 
+override_dh_fixperms:
+	dh_fixperms
+	chmod 0755 debian/vpn-server-node/usr/lib/vpn-server-node/*
+
 %:
 	dh $@ --with phpcomposer
