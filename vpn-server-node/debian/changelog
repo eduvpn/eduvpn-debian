@@ -1,3 +1,10 @@
+vpn-server-node (1.0.7-1) stable; urgency=medium
+
+  * update to 1.0.7
+  * cleanup autoloading
+
+ -- François Kooman <fkooman@tuxed.net>  Sun, 17 Dec 2017 21:24:49 +0100
+
 vpn-server-node (1.0.6-1) stable; urgency=medium
 
   * update to 1.0.6
