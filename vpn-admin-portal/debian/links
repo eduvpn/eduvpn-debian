@@ -1,3 +1,2 @@
 etc/vpn-admin-portal usr/share/vpn-admin-portal/config
 var/lib/vpn-admin-portal usr/share/vpn-admin-portal/data
-usr/share/vpn-admin-portal/bin/add-user.php usr/bin/vpn-admin-portal-add-user
