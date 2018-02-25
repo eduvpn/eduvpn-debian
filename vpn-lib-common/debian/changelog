@@ -1,3 +1,9 @@
+vpn-lib-common (1.1.6-1) stable; urgency=medium
+
+  * update to 1.1.6
+
+ -- François Kooman <fkooman@tuxed.net>  Sun, 25 Feb 2018 16:09:37 +0100
+
 vpn-lib-common (1.1.3-1) stable; urgency=medium
 
   * update to 1.1.3

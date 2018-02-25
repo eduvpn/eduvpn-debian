@@ -1,3 +1,9 @@
+vpn-admin-portal (1.5.0-1) stable; urgency=medium
+
+  * update to 1.5.0 
+
+ -- François Kooman <fkooman@tuxed.net>  Sun, 25 Feb 2018 16:11:47 +0100
+
 vpn-admin-portal (1.4.1-1) stable; urgency=medium
 
   * update to 1.4.1
