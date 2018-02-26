@@ -1,3 +1,9 @@
+vpn-user-portal (1.5.1-1) stable; urgency=medium
+
+  * update to 1.5.1
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 26 Feb 2018 15:35:26 +0100
+
 vpn-user-portal (1.5.0-1) stable; urgency=medium
 
   * update to 1.5.0

@@ -1,3 +1,9 @@
+vpn-server-api (1.2.5-1) stable; urgency=medium
+
+  * update to 1.2.5
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 26 Feb 2018 15:35:00 +0100
+
 vpn-server-api (1.2.4-1) stable; urgency=medium
 
   * update to 1.2.4

@@ -6,6 +6,7 @@ bin/add-user.php => /usr/bin/vpn-user-portal-add-user
 bin/foreign-key-list-fetcher.php => /usr/bin/vpn-user-portal-foreign-key-list-fetcher
 bin/init.php => /usr/bin/vpn-user-portal-init
 bin/show-public-key.php => /usr/bin/vpn-user-portal-show-public-key
+bin/generate-voucher.php => /usr/bin/vpn-user-portal-generate-voucher
 
 config/config.php.example => /etc/vpn-user-portal/default/config.php
 
