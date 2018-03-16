@@ -18,6 +18,7 @@ Build-Depends:
  php-symfony-phpunit-bridge,
  php-common,
  php-curl,
+ php-radius,
  php-json,
  php-fkooman-secookie,
  php-constant-time
@@ -30,6 +31,7 @@ Depends:
  ${misc:Depends},
  php-common,
  php-curl,
+ php-radius,
  php-json,
  php-mbstring,
  php-sodium | php-libsodium,
