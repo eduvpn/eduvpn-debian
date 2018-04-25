@@ -19,5 +19,8 @@ override_dh_auto_test:
 	echo "require_once 'src/autoload.php';" >> tests/autoload.php
 	phpunit --bootstrap=tests/autoload.php
 
+# Be sure not to compress
+override_dh_compress:
+
 %:
 	dh $@ --with phpcomposer
