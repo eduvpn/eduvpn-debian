@@ -1,0 +1,9 @@
+Source: vpn-portal-artwork
+Section: web
+Priority: optional
+Maintainer: Mart van Santen <mart@greenhost.nl>
+
+Package: vpn-portal-artwork
+Architecture: all
+Description: EduVPN artwork for Let's Connect
+

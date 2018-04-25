@@ -1,0 +1,59 @@
+#!/usr/bin/make -f
+# Copyright 1994,1995 by Ian Jackson.                                            
+# Copyright 1998-2003 James Troup                                                
+# I hereby give you perpetual unlimited permission to copy,                      
+# modify and relicense this file, provided that you do not remove                
+# my name from the file itself.  (I assert my moral right of                     
+# paternity under the Copyright, Designs and Patents Act 1988.)                  
+# This file may have to be extensively modified    
+
+install_dir=install -d -m 755
+install_file=install -m 644
+install_secret=install -m 600
+install_script=install -m 755
+install_binary=install -m 755 -s
+
+VERSION := $(shell dpkg-parsechangelog | grep ^Version: | cut -d' ' -f2)
+
+build:
+
+clean:
+	$(checkdir)
+	-rm -f *.bak *~ */*~ debian/files* debian/*substvars
+
+binary-indep: checkroot
+	-rm -rf debian/tmp
+	$(install_dir) debian/tmp/DEBIAN/
+
+	$(install_dir) debian/tmp/usr/share/vpn-user-portal/views/eduVPN
+	$(install_dir) debian/tmp/usr/share/vpn-user-portal/web/css/eduVPN
+	$(install_dir) debian/tmp/usr/share/vpn-user-portal/web/img/eduVPN
+	$(install_dir) debian/tmp/usr/share/vpn-admin-portal/views/eduVPN
+	$(install_dir) debian/tmp/usr/share/vpn-admin-portal/web/css/eduVPN
+	$(install_dir) debian/tmp/usr/share/vpn-admin-portal/web/img/eduVPN
+
+
+	$(install_file) css/eduVPN.css debian/tmp/usr/share/vpn-admin-portal/web/css/eduVPN/eduVPN.css
+	$(install_file) img/eduVPN.png debian/tmp/usr/share/vpn-admin-portal/web/img/eduVPN/eduVPN.png
+	$(install_file) css/eduVPN.css debian/tmp/usr/share/vpn-user-portal/web/css/eduVPN/eduVPN.css
+	$(install_file) img/eduVPN.png debian/tmp/usr/share/vpn-user-portal/web/img/eduVPN/eduVPN.png
+
+	$(install_file) views/vpn-admin-portal/base.twig debian/tmp/usr/share/vpn-admin-portal/views/eduVPN/base.twig
+	$(install_file) views/vpn-user-portal/base.twig debian/tmp/usr/share/vpn-user-portal/views/eduVPN/base.twig
+	$(install_file) views/vpn-user-portal/menu.twig debian/tmp/usr/share/vpn-user-portal/views/eduVPN/menu.twig
+
+	cd debian/tmp; find -type f \! -regex '.*/DEBIAN/.*' -printf '%P\0' | xargs -r0 md5sum >DEBIAN/md5sums
+
+	dpkg-gencontrol -pvpn-portal-artwork -isp
+	chown -R root.root debian/tmp
+	chmod -R go=rX debian/tmp
+	dpkg --build debian/tmp ..
+
+binary-arch: checkroot build
+
+binary: binary-indep
+
+checkroot:
+	test root = "`whoami`"
+
+.PHONY: binary binary-arch binary-indep clean checkroot build
