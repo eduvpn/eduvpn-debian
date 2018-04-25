@@ -1,7 +1,7 @@
 #!/usr/bin/dh-exec --with=install
 
 debian/apache.conf => /etc/apache2/conf-available/vpn-server-api.conf
-config/config.php.example => /etc/vpn-server-api/default/config.php
+config/config.php.example => /usr/share/doc/vpn-server-api/config.php.example
 
 src/* /usr/share/php/SURFnet/VPN/Server/
 web /usr/share/vpn-server-api/

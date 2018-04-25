@@ -13,6 +13,31 @@ case "$1" in
     configure)
         chown www-data:www-data /var/lib/vpn-server-api
         chmod 700 /var/lib/vpn-server-api
+
+	if [ ! -d /etc/vpn-server-api/ ]; then
+		install -d -m 750 /etc/vpn-server-api
+	fi
+
+	# Make sure ownership is allright
+	chown -R root:www-data /etc/vpn-server-api
+	chmod 750 /etc/vpn-server-api
+
+	# Check if we are upgrading, the upgrade
+	# file is written by preinst upgrade
+	if [ -f /etc/vpn-server-api/.upgrade ]; then
+		echo "Upgrade, not touching configuration"
+		rm  /etc/vpn-server-api/.upgrade
+	else
+		# This is a new installation. Try to create default config
+		if [ ! -d /etc/vpn-server-api/default ]; then
+			echo "New installation, creating default configuration"
+			install -d -m 755 /etc/vpn-server-api/default
+			install -m 644 /usr/share/doc/vpn-server-api/config.php.example \
+				       /etc/vpn-server-api/default/config.php
+		else
+			echo "New installation, but existing default configuration found. Not updating"
+		fi
+	fi
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

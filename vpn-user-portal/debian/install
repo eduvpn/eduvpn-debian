@@ -8,7 +8,7 @@ bin/init.php => /usr/bin/vpn-user-portal-init
 bin/show-public-key.php => /usr/bin/vpn-user-portal-show-public-key
 bin/generate-voucher.php => /usr/bin/vpn-user-portal-generate-voucher
 
-config/config.php.example => /etc/vpn-user-portal/default/config.php
+config/config.php.example => /usr/share/doc/vpn-user-portal/config.php.example
 
 src/* /usr/share/php/SURFnet/VPN/Portal/
 

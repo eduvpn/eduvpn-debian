@@ -1,7 +1,7 @@
 #!/usr/bin/dh-exec --with=install
 
 debian/apache.conf => /etc/apache2/conf-available/vpn-admin-portal.conf
-config/config.php.example => /etc/vpn-admin-portal/default/config.php
+config/config.php.example => /usr/share/doc/vpn-admin-portal/config.php.example
 
 bin/add-user.php => /usr/bin/vpn-admin-portal-add-user
 
