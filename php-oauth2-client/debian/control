@@ -18,7 +18,7 @@ Architecture: all
 Depends:
  ${misc:Depends},
  php-common,
- php-psr-log
+ php-psr-log,
  php-curl,
  php-json,
  php-common
