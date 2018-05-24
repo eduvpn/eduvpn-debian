@@ -1,3 +1,9 @@
+php-oauth2-client (7.1.2-1.1) stable; urgency=medium
+
+  * add php-psr-log dependency
+
+ -- François Kooman <fkooman@tuxed.net>  Thu, 24 May 2018 17:17:53 +0200
+
 php-oauth2-client (7.1.2-1) stable; urgency=medium
 
   * update to 7.1.2

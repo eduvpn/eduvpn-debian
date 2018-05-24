@@ -7,6 +7,7 @@ Build-Depends:
  phpunit,
  pkg-php-tools,
  phpab,
+ php-psr-log,
  php-constant-time,
  php-sqlite3
 Standards-Version: 3.9.8
@@ -17,6 +18,7 @@ Architecture: all
 Depends:
  ${misc:Depends},
  php-common,
+ php-psr-log
  php-curl,
  php-json,
  php-common
