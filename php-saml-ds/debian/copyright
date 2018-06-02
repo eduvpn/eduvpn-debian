@@ -1,6 +1,6 @@
 Format: http://dep.debian.net/deps/dep5
 Upstream-Name: php-saml-ds
-Source: https://github.com/fkooman/php-saml-ds
+Source: https://git.tuxed.net/fkooman/php-saml-ds
 
 Files: *
 Copyright: François Kooman

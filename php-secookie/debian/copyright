@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: php-secookie
-Source: https://github.com/fkooman/php-secookie
+Source: https://git.tuxed.net/fkooman/php-secookie
 
 Files: *
 Copyright:  2016, 2017 François Kooman <fkooman@tuxed.net>

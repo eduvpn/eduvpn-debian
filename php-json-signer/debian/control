@@ -11,7 +11,7 @@ Build-Depends:
  dh-exec,
  php-constant-time
 Standards-Version: 3.9.8
-Homepage: https://github.com/fkooman/php-json-signer
+Homepage: https://git.tuxed.net/fkooman/php-json-signer
 
 Package: php-json-signer
 Architecture: all

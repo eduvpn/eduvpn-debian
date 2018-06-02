@@ -11,7 +11,7 @@ Build-Depends:
  php-fkooman-secookie,
  php-twig
 Standards-Version: 3.9.8
-Homepage: https://github.com/fkooman/php-saml-ds
+Homepage: https://git.tuxed.net/fkooman/php-saml-ds
 
 Package: php-saml-ds
 Architecture: all

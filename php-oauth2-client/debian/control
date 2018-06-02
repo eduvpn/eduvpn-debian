@@ -11,7 +11,7 @@ Build-Depends:
  php-constant-time,
  php-sqlite3
 Standards-Version: 3.9.8
-Homepage: https://github.com/fkooman/php-oauth2-client
+Homepage: https://git.tuxed.net/fkooman/php-oauth2-client
 
 Package: php-fkooman-oauth2-client
 Architecture: all

@@ -1,6 +1,2 @@
-# Compulsory line, this is a version 3 file
-version=3
-
-opts=filenamemangle=s/.+\/v?(\d\S+)\.tar\.gz/php-oauth2-server-$1\.tar\.gz/ \
-  https://github.com/fkooman/php-oauth2-server/tags .*/v?(\d\S+)\.tar\.gz
-
+version=4
+https://git.tuxed.net/fkooman/php-oauth2-server /fkooman/php-oauth2-server/snapshot/php-oauth2-server-(.+)\.tar\.gz

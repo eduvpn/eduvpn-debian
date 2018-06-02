@@ -9,7 +9,7 @@ Build-Depends:
  pkg-php-tools,
  php-constant-time
 Standards-Version: 3.9.8
-Homepage: https://github.com/fkooman/php-yubitwee
+Homepage: https://git.tuxed.net/fkooman/php-yubitwee
 
 Package: php-fkooman-yubitwee
 Architecture: all

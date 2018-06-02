@@ -8,7 +8,7 @@ Build-Depends:
  phpab, 
  pkg-php-tools
 Standards-Version: 3.9.8
-Homepage: https://github.com/fkooman/php-secookie
+Homepage: https://git.tuxed.net/fkooman/php-secookie
 
 Package: php-fkooman-secookie
 Architecture: all
