@@ -11,7 +11,7 @@ Build-Depends:
 Standards-Version: 3.9.8
 Homepage: https://git.tuxed.net/fkooman/php-openvpn-connection-manager
 
-Package: php-LC-openvpn-connection-manager
+Package: php-lc-openvpn-connection-manager
 Architecture: all
 Depends:
  ${misc:Depends},
