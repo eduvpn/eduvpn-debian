@@ -1,0 +1,21 @@
+Source: php-openvpn-connection-manager
+Section: php
+Priority: optional
+Maintainer: François Kooman <fkooman@tuxed.net>
+Build-Depends:
+ debhelper (>= 9),
+ phpunit,
+ pkg-php-tools,
+ phpab,
+ php-psr-log
+Standards-Version: 3.9.8
+Homepage: https://git.tuxed.net/fkooman/php-openvpn-connection-manager
+
+Package: php-LC-openvpn-connection-manager
+Architecture: all
+Depends:
+ ${misc:Depends},
+ php-common,
+ php-psr-log
+Suggests: ${phpcomposer:Debian-suggest}
+Description: ${phpcomposer:description}

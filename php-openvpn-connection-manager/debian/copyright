@@ -1,0 +1,7 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: php-openvpn-connection-manager
+Source: https://git.tuxed.net/fkooman/php-openvpn-connection-manager
+
+Files: *
+Copyright: 2016-2018, The Commons Conservancy eduVPN Programme
+License: AGPLv3+
