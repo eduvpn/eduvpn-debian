@@ -20,3 +20,8 @@ Depends:
  php-constant-time
 Suggests: ${phpcomposer:Debian-suggest}
 Description: ${phpcomposer:description}
+  A very simple, secure YubiKey OTP Validator with pluggable HTTP client.
+  The correct thing to be doing is using U2F, so do not use this library if
+  you are writing new software, please investigate U2F as that will be more
+  secure than using the proprietary YubiCo solution for verifying hardware
+  tokens!
