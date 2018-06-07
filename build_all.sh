@@ -13,6 +13,7 @@ PACKAGE_LIST=(\
     php-secookie \
     Twig-extensions \
     php-saml-ds \
+    php-openvpn-connection-manager \
     vpn-lib-common \
     vpn-server-api \
     vpn-user-portal \
