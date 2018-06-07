@@ -1,0 +1,61 @@
+#!/bin/sh
+# postinst script for vpn-server-node
+#
+# see: dh_installdeb(1)
+
+set -e
+
+if [ -f /usr/share/debconf/confmodule ]; then
+        . /usr/share/debconf/confmodule
+fi
+
+case "$1" in
+    configure)
+
+	if [ ! -d /etc/vpn-server-node/ ]; then
+		install -d -m 750 /etc/vpn-server-node
+	fi
+
+	# Make sure ownership is allright
+	chown -R root:nogroup /etc/vpn-server-node
+	chmod 750 /etc/vpn-server-node
+
+	# Check if we are upgrading, the upgrade
+	# file is written by preinst upgrade
+	if [ -f /etc/vpn-server-node/.upgrade ]; then
+		echo "Upgrade, not touching configuration"
+		rm  /etc/vpn-server-node/.upgrade
+	else
+		# This is a new installation. Try to create default config
+		if [ ! -d /etc/vpn-server-node/default ]; then
+			echo "New installation, creating default configuration"
+			install -d -m 755 /etc/vpn-server-node/default
+			install -m 644 /usr/share/doc/vpn-server-node/config.php.example \
+				       /etc/vpn-server-node/default/config.php
+		else
+			echo "New installation, but existing default configuration found. Not updating"
+		fi
+
+		# This is a new installation. Try to create default config
+		if [ ! -f /etc/vpn-server-node/firewall.php ]; then
+			echo "New installation, creating firewall configuration"
+			install -d -m 755 /etc/vpn-server-node/default
+			install -m 644 /usr/share/doc/vpn-server-node/firewall.php.example \
+				       /etc/vpn-server-node/firewall.php
+		else
+			echo "New installation, but existing firewall configuration found. Not updating"
+		fi
+
+	fi
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#

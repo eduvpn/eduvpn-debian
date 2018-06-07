@@ -1,5 +1,5 @@
 #!/bin/sh
-# postrm script for php-saml-ds
+# postrm script for vpn-server-api
 #
 # see: dh_installdeb(1)
 

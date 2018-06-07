@@ -13,6 +13,33 @@ case "$1" in
     configure)
         chown www-data:www-data /var/lib/vpn-admin-portal
         chmod 700 /var/lib/vpn-admin-portal
+
+	if [ ! -d /etc/vpn-admin-portal/ ]; then
+		install -d -m 750 /etc/vpn-admin-portal
+	fi
+
+	# Make sure ownership is allright
+	chown -R root:www-data /etc/vpn-admin-portal
+	chmod 750 /etc/vpn-admin-portal
+
+	# Check if we are upgrading, the upgrade
+	# file is written by preinst upgrade
+	if [ -f /etc/vpn-admin-portal/.upgrade ]; then
+		echo "Upgrade, not touching configuration"
+		rm  /etc/vpn-admin-portal/.upgrade
+	else
+		# This is a new installation. Try to create default config
+		if [ ! -d /etc/vpn-admin-portal/default ]; then
+			echo "New installation, creating default configuration"
+			install -d -m 755 /etc/vpn-admin-portal/default
+			install -m 644 /usr/share/doc/vpn-admin-portal/config.php.example \
+				       /etc/vpn-admin-portal/default/config.php
+		else
+			echo "New installation, but existing default configuration found. Not updating"
+		fi
+	fi
+
+
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
