@@ -22,7 +22,7 @@ resolved during (chained) build:
 
 Start the build:
 
-    $ wget https://github.com/fkooman/eduvpn-debian/archive/master.tar.gz
+    $ wget https://github.com/eduVPN/eduvpn-debian/archive/master.tar.gz
     $ tar -xzf master.tar.gz
     $ cd eduvpn-debian-master
     $ ./build_all.sh
