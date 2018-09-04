@@ -1,3 +1,10 @@
+php-otp-verifier (0.2.0-2) stable; urgency=medium
+
+  * switch to static tar
+  * verify PGP signature
+
+ -- François Kooman <fkooman@tuxed-net>  Tue, 04 Sep 2018 15:39:31 +0200
+
 php-otp-verifier (0.2.0-1) stable; urgency=medium
 
   * initial package

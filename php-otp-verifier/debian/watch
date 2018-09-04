@@ -1,2 +1,3 @@
 version=4
-https://git.tuxed.net/fkooman/php-otp-verifier /fkooman/php-otp-verifier/snapshot/php-otp-verifier-(.+)\.tar\.gz
+opts="pgpsigurlmangle=s/$/.asc/" \
+https://software.tuxed.net/php-otp-verifier/download.html files/php-otp-verifier-(.+)\.tar\.xz
