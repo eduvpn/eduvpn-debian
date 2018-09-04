@@ -1,0 +1,19 @@
+Source: php-sqlite-migrate
+Section: php
+Priority: optional
+Maintainer: François Kooman <fkooman@tuxed.net>
+Build-Depends:
+ debhelper (>= 9),
+ phpunit,
+ pkg-php-tools,
+ phpab
+Standards-Version: 3.9.8
+Homepage: https://git.tuxed.net/fkooman/php-sqlite-migrate
+
+Package: php-fkooman-sqlite-migrate
+Architecture: all
+Depends:
+ ${misc:Depends},
+ php-common
+Suggests: ${phpcomposer:Debian-suggest}
+Description: ${phpcomposer:description}

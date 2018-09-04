@@ -9,6 +9,7 @@ PACKAGE_LIST=(\
     php-oauth2-client \
     php-yubitwee \
     php-otp-verifier \
+    php-sqlite-migrate \
     php-oauth2-server \
     php-secookie \
     Twig-extensions \

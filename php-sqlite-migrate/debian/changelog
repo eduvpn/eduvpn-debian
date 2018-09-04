@@ -1,0 +1,5 @@
+php-otp-verifier (0.1.1-1) stable; urgency=medium
+
+  * initial package
+
+ -- François Kooman <fkooman@tuxed.net>  Tue, 04 Sep 2018 12:09:39 +0200
