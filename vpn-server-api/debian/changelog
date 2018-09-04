@@ -1,3 +1,13 @@
+vpn-server-api (1.4.3-1) stable; urgency=medium
+
+  * update to 1.4.3
+  * add fkooman/otp-verifier as dependency
+  * add fkooman/sqlite-migrate as dependency
+  * remove christian-riesen/otp dependency
+  * install schema directory for database migrations
+
+ -- François Kooman <fkooman@tuxed.net>  Tue, 04 Sep 2018 12:33:29 +0200
+
 vpn-server-api (1.2.13-1.2) stable; urgency=medium
 
   * UNRELEASED

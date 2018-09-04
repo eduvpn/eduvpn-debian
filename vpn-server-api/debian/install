@@ -6,6 +6,7 @@ config/config.php.example => /usr/share/doc/vpn-server-api/config.php.example
 src/* /usr/share/php/SURFnet/VPN/Server/
 web /usr/share/vpn-server-api/
 easy-rsa /usr/share/vpn-server-api/
+schema /usr/share/vpn-server-api/
 
 bin/housekeeping.php => /usr/bin/vpn-server-api-housekeeping
 bin/init.php => /usr/bin/vpn-server-api-init
