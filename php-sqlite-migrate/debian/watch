@@ -1,2 +1,3 @@
 version=4
-https://git.tuxed.net/fkooman/php-sqlite-migrate /fkooman/php-sqlite-migrate/snapshot/php-sqlite-migrate-(.+)\.tar\.gz
+opts="pgpsigurlmangle=s/$/.asc/" \
+https://software.tuxed.net/php-sqlite-migrate/download.html files/php-sqlite-migrate-(.+)\.tar\.xz
