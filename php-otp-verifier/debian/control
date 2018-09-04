@@ -1,0 +1,21 @@
+Source: php-otp-verifier
+Section: php
+Priority: optional
+Maintainer: François Kooman <fkooman@tuxed.net>
+Build-Depends:
+ debhelper (>= 9),
+ phpunit,
+ pkg-php-tools,
+ phpab,
+ php-constant-time
+Standards-Version: 3.9.8
+Homepage: https://git.tuxed.net/fkooman/php-otp-verifier
+
+Package: php-fkooman-otp-verifier
+Architecture: all
+Depends:
+ ${misc:Depends},
+ php-common,
+ php-constant-time
+Suggests: ${phpcomposer:Debian-suggest}
+Description: ${phpcomposer:description}

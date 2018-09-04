@@ -8,7 +8,7 @@ PACKAGE_LIST=(\
     BaconQrCode \
     php-oauth2-client \
     php-yubitwee \
-    otp \
+    php-otp-verifier \
     php-oauth2-server \
     php-secookie \
     Twig-extensions \
