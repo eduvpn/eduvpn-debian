@@ -1,2 +1,3 @@
 version=4
-https://git.tuxed.net/LC/php-openvpn-connection-manager /LC/php-openvpn-connection-manager/snapshot/php-openvpn-connection-manager-(.+)\.tar\.gz
+opts="pgpsigurlmangle=s/$/.asc/" \
+https://software.tuxed.net/php-openvpn-connection-manager/download.html files/php-openvpn-connection-manager-(.+)\.tar\.xz
