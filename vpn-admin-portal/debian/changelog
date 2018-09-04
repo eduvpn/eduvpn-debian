@@ -1,3 +1,13 @@
+vpn-admin-portal (1.7.0-2) stable; urgency=medium
+
+  * debian/watch: use releases, not tags.  update version from 3 to 4.
+  * debian/watch, debian/upstream/signing-key.asc: enabled pgpsigurlmangle option
+    and stored pgp key 6237BAF1418A907DAA98EAA79C5EDD645A571EB2 in
+    signing-key.asc in order to have upstream tarball release signatures
+    automagically verified by uscan.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Tue, 04 Sep 2018 16:02:21 +0200
+
 vpn-admin-portal (1.7.0-1) stable; urgency=medium
 
   * update to 1.7.0
