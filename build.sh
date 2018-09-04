@@ -8,7 +8,17 @@ mkdir -p build
 uscan --destdir=build --download-current-version
 (
   cd build
-  tar -xzf "${NAME}-${VERSION}.tar.gz"
+  if [ -f "${NAME}-${VERSION}.tar.gz" ]
+  then
+    tar -xzf "${NAME}-${VERSION}.tar.gz"
+  elif [ -f "${NAME}-${VERSION}.tar.xz" ] 
+  then
+    tar -xJf "${NAME}-${VERSION}.tar.xz"
+  else
+    echo "unable to unpack file"
+    exit 1
+  fi
+
   cd "${NAME}-${VERSION}"
   cp -r ../../debian .
 
