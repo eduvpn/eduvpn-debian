@@ -19,6 +19,7 @@ Build-Depends:
  php-common,
  php-curl,
  php-radius,
+ php-sqlite3,
  php-json,
  php-fkooman-secookie,
  php-constant-time
