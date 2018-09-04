@@ -1,5 +1,5 @@
 diff --git a/bin/certificate-info.php b/bin/certificate-info.php
-index fc0eae6..9149a2a 100644
+index ea27af3..3e873c5 100644
 --- a/bin/certificate-info.php
 +++ b/bin/certificate-info.php
 @@ -8,9 +8,9 @@
@@ -12,8 +12,8 @@ index fc0eae6..9149a2a 100644
 -require_once sprintf('%s/vendor/autoload.php', $baseDir);
 +require_once '/usr/share/php/SURFnet/VPN/Node/autoload.php';
  
- use SURFnet\VPN\Common\Config;
  use SURFnet\VPN\Common\FileIO;
+ 
 diff --git a/bin/generate-firewall.php b/bin/generate-firewall.php
 index e688d3e..31aa6f4 100644
 --- a/bin/generate-firewall.php
@@ -79,7 +79,7 @@ index 5217bc5..fe674d7 100644
  use SURFnet\VPN\Common\Config;
  use SURFnet\VPN\Common\Http\InputValidation;
 diff --git a/libexec/verify-otp.php b/libexec/verify-otp.php
-index bedd67a..16b120d 100644
+index 5603bf0..9116324 100644
 --- a/libexec/verify-otp.php
 +++ b/libexec/verify-otp.php
 @@ -8,9 +8,9 @@
@@ -95,7 +95,7 @@ index bedd67a..16b120d 100644
  use SURFnet\VPN\Common\Config;
  use SURFnet\VPN\Common\Http\InputValidation;
 diff --git a/src/OpenVpn.php b/src/OpenVpn.php
-index e249194..0b67628 100644
+index 022f3c3..bea75d1 100644
 --- a/src/OpenVpn.php
 +++ b/src/OpenVpn.php
 @@ -19,7 +19,7 @@ use SURFnet\VPN\Common\ProfileConfig;
@@ -108,7 +108,7 @@ index e249194..0b67628 100644
      // https://github.com/fac/auth-script-openvpn
      const AUTH_SCRIPT_OPENVPN = '/usr/lib64/openvpn/plugins/openvpn-plugin-auth-script.so';
 diff --git a/tests/data/default-internet-0.conf b/tests/data/default-internet-0.conf
-index e954375..db33da3 100644
+index 1a68d15..9acad6e 100644
 --- a/tests/data/default-internet-0.conf
 +++ b/tests/data/default-internet-0.conf
 @@ -9,8 +9,8 @@ auth SHA256
