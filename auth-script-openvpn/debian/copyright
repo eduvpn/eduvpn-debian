@@ -1,5 +1,5 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: openvpn-plugin-auth-script
+Upstream-Name: auth-script-openvpn
 Source: https://github.com/fkooman/auth-script-openvpn
 
 # Author: Caius Durling, http://caius.name/, dev@caius.name
