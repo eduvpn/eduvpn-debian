@@ -1,0 +1,14 @@
+
+We use the code from https://github.com/fkooman/auth-script-openvpn/, which is
+a fork of https://github.com/fac/auth-script-openvpn .
+
+Since there haven't been any upstream releases marked as such, we are not
+shipping a debian/watch file.
+
+Recreate .orig.tar.xz by running:
+
+wget 'https://github.com/fkooman/auth-script-openvpn/archive/f81d7d031b9b544dde860a3aac29aacbd02e08ef/openvpn-plugin-auth-script-02e08ef.tar.gz'
+zcat openvpn-plugin-auth-script-02e08ef.tar.gz >openvpn-plugin-auth-script-0.0~git02e08ef.tar
+xz openvpn-plugin-auth-script-0.0~git02e08ef.tar
+
+.

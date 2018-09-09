@@ -1,0 +1,3 @@
+version=4
+opts="pgpsigurlmangle=s/$/.asc/" \
+https://github.com/fkooman/@PACKAGE@/releases /eduvpn/@PACKAGE@/releases/download/(.+)/@PACKAGE@-(?:.+)\.tar\.xz
