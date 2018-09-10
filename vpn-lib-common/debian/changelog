@@ -1,3 +1,9 @@
+vpn-lib-common (1.2.1-1) stable; urgency=medium
+
+  * update to 1.2.1
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 10 Sep 2018 22:53:58 +0200
+
 vpn-lib-common (1.2.0-2) stable; urgency=medium
 
   * debian/watch: use releases, not tags.  update version from 3 to 4.

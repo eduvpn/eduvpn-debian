@@ -1,3 +1,9 @@
+vpn-server-api (1.4.4-1) stable; urgency=medium
+
+  * update to 1.4.4
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 10 Sep 2018 22:55:48 +0200
+
 vpn-server-api (1.4.3-2) stable; urgency=medium
 
   * debian/watch: use releases, not tags.  update version from 3 to 4.
