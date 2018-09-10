@@ -7,6 +7,7 @@ Build-Depends:
  phpunit,
  pkg-php-tools,
  phpab,
+ php-sqlite3,
  php-constant-time
 Standards-Version: 3.9.8
 Homepage: https://git.tuxed.net/fkooman/php-otp-verifier
@@ -16,6 +17,7 @@ Architecture: all
 Depends:
  ${misc:Depends},
  php-common,
+ php-sqlite3,
  php-constant-time
 Suggests: ${phpcomposer:Debian-suggest}
 Description: ${phpcomposer:description}
