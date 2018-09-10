@@ -1,124 +1,90 @@
 diff --git a/bin/certificate-info.php b/bin/certificate-info.php
-index ea27af3..3e873c5 100644
+index faf4177..a408817 100644
 --- a/bin/certificate-info.php
 +++ b/bin/certificate-info.php
-@@ -8,9 +8,9 @@
+@@ -8,8 +8,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
+-require_once dirname(__DIR__).'/vendor/autoload.php';
 -$baseDir = dirname(__DIR__);
-+$baseDir = '/usr/share/vpn-server-node';
- /** @psalm-suppress UnresolvableInclude */
--require_once sprintf('%s/vendor/autoload.php', $baseDir);
 +require_once '/usr/share/php/SURFnet/VPN/Node/autoload.php';
++$baseDir = '/usr/share/vpn-server-node';
  
  use SURFnet\VPN\Common\FileIO;
  
 diff --git a/bin/generate-firewall.php b/bin/generate-firewall.php
-index e688d3e..31aa6f4 100644
+index a30375f..b048a67 100644
 --- a/bin/generate-firewall.php
 +++ b/bin/generate-firewall.php
-@@ -8,9 +8,9 @@
+@@ -8,8 +8,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
+-require_once dirname(__DIR__).'/vendor/autoload.php';
 -$baseDir = dirname(__DIR__);
-+$baseDir = '/usr/share/vpn-server-node';
- /** @psalm-suppress UnresolvableInclude */
--require_once sprintf('%s/vendor/autoload.php', $baseDir);
 +require_once '/usr/share/php/SURFnet/VPN/Node/autoload.php';
++$baseDir = '/usr/share/vpn-server-node';
  
  use SURFnet\VPN\Common\CliParser;
  use SURFnet\VPN\Common\Config;
 diff --git a/bin/server-config.php b/bin/server-config.php
-index 39553d5..f19e5eb 100644
+index b1a9e8d..4f857e8 100644
 --- a/bin/server-config.php
 +++ b/bin/server-config.php
-@@ -8,9 +8,9 @@
+@@ -8,8 +8,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
+-require_once dirname(__DIR__).'/vendor/autoload.php';
 -$baseDir = dirname(__DIR__);
-+$baseDir = '/usr/share/vpn-server-node';
- /** @psalm-suppress UnresolvableInclude */
--require_once sprintf('%s/vendor/autoload.php', $baseDir);
 +require_once '/usr/share/php/SURFnet/VPN/Node/autoload.php';
++$baseDir = '/usr/share/vpn-server-node';
  
  use SURFnet\VPN\Common\CliParser;
  use SURFnet\VPN\Common\Config;
 diff --git a/libexec/client-connect.php b/libexec/client-connect.php
-index ee811e3..0fe84da 100644
+index eef1fb6..58f7106 100644
 --- a/libexec/client-connect.php
 +++ b/libexec/client-connect.php
-@@ -8,9 +8,9 @@
+@@ -8,8 +8,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
+-require_once dirname(__DIR__).'/vendor/autoload.php';
 -$baseDir = dirname(__DIR__);
-+$baseDir = '/usr/share/vpn-server-node';
- /** @psalm-suppress UnresolvableInclude */
--require_once sprintf('%s/vendor/autoload.php', $baseDir);
 +require_once '/usr/share/php/SURFnet/VPN/Node/autoload.php';
++$baseDir = '/usr/share/vpn-server-node';
  
  use SURFnet\VPN\Common\Config;
- use SURFnet\VPN\Common\Http\InputValidation;
+ use SURFnet\VPN\Common\Http\Exception\InputValidationException;
 diff --git a/libexec/client-disconnect.php b/libexec/client-disconnect.php
-index 5217bc5..fe674d7 100644
+index 49deea7..8c48fe7 100644
 --- a/libexec/client-disconnect.php
 +++ b/libexec/client-disconnect.php
-@@ -8,9 +8,9 @@
+@@ -8,8 +8,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
+-require_once dirname(__DIR__).'/vendor/autoload.php';
 -$baseDir = dirname(__DIR__);
-+$baseDir = '/usr/share/vpn-server-node';
- /** @psalm-suppress UnresolvableInclude */
--require_once sprintf('%s/vendor/autoload.php', $baseDir);
 +require_once '/usr/share/php/SURFnet/VPN/Node/autoload.php';
++$baseDir = '/usr/share/vpn-server-node';
  
  use SURFnet\VPN\Common\Config;
- use SURFnet\VPN\Common\Http\InputValidation;
+ use SURFnet\VPN\Common\Http\Exception\InputValidationException;
 diff --git a/libexec/verify-otp.php b/libexec/verify-otp.php
-index 5603bf0..9116324 100644
+index 592d169..5df65d8 100644
 --- a/libexec/verify-otp.php
 +++ b/libexec/verify-otp.php
-@@ -8,9 +8,9 @@
+@@ -8,8 +8,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
+-require_once dirname(__DIR__).'/vendor/autoload.php';
 -$baseDir = dirname(__DIR__);
-+$baseDir = '/usr/share/vpn-server-node';
- /** @psalm-suppress UnresolvableInclude */
--require_once sprintf('%s/vendor/autoload.php', $baseDir);
 +require_once '/usr/share/php/SURFnet/VPN/Node/autoload.php';
++$baseDir = '/usr/share/vpn-server-node';
  
  use SURFnet\VPN\Common\Config;
- use SURFnet\VPN\Common\Http\InputValidation;
-diff --git a/src/OpenVpn.php b/src/OpenVpn.php
-index 022f3c3..bea75d1 100644
---- a/src/OpenVpn.php
-+++ b/src/OpenVpn.php
-@@ -19,7 +19,7 @@ use SURFnet\VPN\Common\ProfileConfig;
- class OpenVpn
- {
-     // CentOS
--    const LIBEXEC_DIR = '/usr/libexec/vpn-server-node';
-+    const LIBEXEC_DIR = '/usr/lib/vpn-server-node';
- 
-     // https://github.com/fac/auth-script-openvpn
-     const AUTH_SCRIPT_OPENVPN = '/usr/lib64/openvpn/plugins/openvpn-plugin-auth-script.so';
-diff --git a/tests/data/default-internet-0.conf b/tests/data/default-internet-0.conf
-index 1a68d15..9acad6e 100644
---- a/tests/data/default-internet-0.conf
-+++ b/tests/data/default-internet-0.conf
-@@ -9,8 +9,8 @@ auth SHA256
- ca tls/default/internet/ca.crt
- cert tls/default/internet/server.crt
- cipher AES-256-CBC
--client-connect /usr/libexec/vpn-server-node/client-connect
--client-disconnect /usr/libexec/vpn-server-node/client-disconnect
-+client-connect /usr/lib/vpn-server-node/client-connect
-+client-disconnect /usr/lib/vpn-server-node/client-disconnect
- comp-lzo no
- dev tun-1-1-0
- dev-type tun
+ use SURFnet\VPN\Common\Http\Exception\InputValidationException;
