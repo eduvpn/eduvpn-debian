@@ -1,0 +1,6 @@
+views/vpn-user-portal usr/share/vpn-user-portal/views/eduVPN
+views/vpn-admin-portal usr/share/vpn-admin-portal/views/eduVPN
+css usr/share/vpn-user-portal/web/css/eduVPN
+css usr/share/vpn-admin-portal/web/css/eduVPN
+img usr/share/vpn-user-portal/web/img/eduVPN
+img usr/share/vpn-admin-portal/web/img/eduVPN
