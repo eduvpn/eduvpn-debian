@@ -1,5 +1,7 @@
 vpn-portal-artwork-eduvpn (1.2.3-1) unstable; urgency=medium
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * UNRELEASED
+  * debian/copyright: FIXME: AGPLv3+, add headers as in d/copyright to upstream sources
+  * Initial release.
 
- -- Joost van Baal-Ilić <joostvb@perun.local.network>  Wed, 19 Sep 2018 15:27:23 +0000
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 19 Sep 2018 15:27:23 +0000
