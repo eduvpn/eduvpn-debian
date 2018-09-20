@@ -12,6 +12,16 @@ License: <special license>
  <Including paragraphs>
 
 
+Files: blah
+Copyright: *No copyright*
+License: AGPL-3+
+Comment:
+ No license header present in listed files. Assuming license
+ from LICENSE file.  See also
+ https://github.com/eduvpn/vpn-portal-artwork/issues/1 .
+
+
+
 
 
 Copyright (C) <year>  <name of author>
