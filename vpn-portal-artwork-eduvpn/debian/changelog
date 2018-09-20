@@ -1,20 +1,11 @@
 vpn-portal-artwork-eduvpn (1.2.3-1) unstable; urgency=medium
 
   * UNRELEASED
-  * FIXME: build as of yet untested.
   * FIXME:
-     W: vpn-portal-artwork-eduvpn source: syntax-error-in-dep5-copyright line
-       17: Cannot parse line "Copyright (C) <year>  <name of author>"
-     W: vpn-portal-artwork-eduvpn: new-package-should-close-itp-bug
-     E: vpn-portal-artwork-eduvpn: helper-templates-in-copyright
-     W: vpn-portal-artwork-eduvpn: copyright-has-url-from-dh_make-boilerplate
-     E: vpn-portal-artwork-eduvpn: copyright-contains-dh_make-todo-boilerplate
      E: vpn-portal-artwork-eduvpn: description-synopsis-is-duplicated
      E: vpn-portal-artwork-eduvpn: section-is-dh_make-template
      W: vpn-portal-artwork-eduvpn: maintainer-script-empty postinst
      W: vpn-portal-artwork-eduvpn: maintainer-script-empty postrm
-  * debian/copyright: FIXME: AGPLv3+, add headers as in d/copyright to upstream
-    sources
   * Initial release.
 
  -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 19 Sep 2018 15:27:23 +0000
