@@ -1,6 +1,5 @@
 #!/bin/sh
 # postrm script for vpn-portal-artwork-eduvpn
-#
 # see: dh_installdeb(1)
 
 set -e
