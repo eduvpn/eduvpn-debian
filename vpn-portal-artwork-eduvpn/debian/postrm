@@ -19,7 +19,13 @@ set -e
 
 
 case "$1" in
-    purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+    purge|remove|upgrade)
+        # clear template cache
+        rm -r /var/lib/vpn-user-portal/*/tpl/* || :
+        rm -r /var/lib/vpn-admin-portal/*/tpl/* || :
+    ;;
+
+    failed-upgrade|abort-install|abort-upgrade|disappear)
     ;;
 
     *)

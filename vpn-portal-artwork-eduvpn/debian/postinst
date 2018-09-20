@@ -19,6 +19,9 @@ set -e
 
 case "$1" in
     configure)
+        # clear template cache
+        rm -r /var/lib/vpn-user-portal/*/tpl/* || :
+        rm -r /var/lib/vpn-admin-portal/*/tpl/* || :
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
