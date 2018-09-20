@@ -4,9 +4,6 @@ vpn-portal-artwork-eduvpn (1.2.3-1) unstable; urgency=medium
   * FIXME:
      E: vpn-portal-artwork-eduvpn: description-synopsis-is-duplicated
      E: vpn-portal-artwork-eduvpn: section-is-dh_make-template
-    caching stuff:
-     W: vpn-portal-artwork-eduvpn: maintainer-script-empty postinst
-     W: vpn-portal-artwork-eduvpn: maintainer-script-empty postrm
     signature:
      joostvb@perun:~/git/eduvpn-debian-joostvb-gh/vpn-portal-artwork-eduvpn% uscan --destdir=build --download-current-version --verbose
 

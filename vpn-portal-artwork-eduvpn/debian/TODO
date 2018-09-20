@@ -10,3 +10,4 @@ vpn-admin-portal and vpn-user-portal's directories (
 - why are we at https://github.com/eduvpn/vpn-portal-artwork while we're named
   vpn-portal-artwork-eduVPN !?
 
+- debian/copyright: fix this once there's a new upstream which _does_ ship license.
