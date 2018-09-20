@@ -13,4 +13,6 @@ Package: vpn-portal-artwork-eduvpn
 Architecture: all
 Depends: ${misc:Depends}
 Description: VPN Portal Artwork for eduVPN
- VPN Portal Artwork for eduVPN.
+ VPN Portal Artwork eduVPN enhances the vpn-admin-portal and vpn-user-portal
+ packages by providing eduVPN themed artwork: CSS stylesheets, pictures and
+ .twig files with links to https://www.eduvpn.nl/ .
