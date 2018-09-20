@@ -1,14 +1,6 @@
 vpn-portal-artwork-eduvpn (1.2.3-1) unstable; urgency=medium
 
   * UNRELEASED
-  * FIXME:
-    signature:
-     joostvb@perun:~/git/eduvpn-debian-joostvb-gh/vpn-portal-artwork-eduvpn% uscan --destdir=build --download-current-version --verbose
-
-     uscan info: Start checking for common possible upstream OpenPGP signature files
-     uscan info: End checking for common possible upstream OpenPGP signature files
-     uscan info: Missing OpenPGP signature.
-
   * Initial release.
 
  -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 19 Sep 2018 15:27:23 +0000
