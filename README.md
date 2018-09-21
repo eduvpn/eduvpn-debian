@@ -14,13 +14,22 @@ used for the key:
 
     $ gpg -a --export vpn@example.org | sudo apt-key add -
 
+# Repository
+
 Add the (temporary) repository to your apt sources so dependencies can be 
 resolved during (chained) build:
+
+## Debian
 
     $ echo "deb file://${HOME}/.aptly/public stretch main"     | sudo tee -a /etc/apt/sources.list
     $ echo "deb-src file://${HOME}/.aptly/public stretch main" | sudo tee -a /etc/apt/sources.list
 
-Start the build:
+## Ubuntu
+
+    $ echo "deb file://${HOME}/.aptly/public bionic main"     | sudo tee -a /etc/apt/sources.list
+    $ echo "deb-src file://${HOME}/.aptly/public bionic main" | sudo tee -a /etc/apt/sources.list
+
+# Build
 
     $ wget https://github.com/eduVPN/eduvpn-debian/archive/master.tar.gz
     $ tar -xzf master.tar.gz
