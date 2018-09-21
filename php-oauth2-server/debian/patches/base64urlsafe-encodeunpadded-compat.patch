@@ -1,0 +1,62 @@
+diff --git a/src/OAuthServer.php b/src/OAuthServer.php
+index 8ee4245..ee49a27 100644
+--- a/src/OAuthServer.php
++++ b/src/OAuthServer.php
+@@ -550,12 +550,15 @@ class OAuthServer
+             // compare code_challenge with expected value
+             $strCmp = \hash_equals(
+                 $codeInfo['code_challenge'],
+-                Base64UrlSafe::encodeUnpadded(
+-                    \hash(
+-                        'sha256',
+-                        $postData['code_verifier'],
+-                        true
+-                    )
++                \rtrim(
++                    Base64UrlSafe::encode(
++                        \hash(
++                            'sha256',
++                            $postData['code_verifier'],
++                            true
++                        )
++                    ),
++                    '='
+                 )
+             );
+ 
+diff --git a/src/SodiumSigner.php b/src/SodiumSigner.php
+index 3b54ae4..2597169 100644
+--- a/src/SodiumSigner.php
++++ b/src/SodiumSigner.php
+@@ -68,8 +68,11 @@ class SodiumSigner implements SignerInterface
+      */
+     public function sign(array $listOfClaims)
+     {
+-        return Base64UrlSafe::encodeUnpadded(
+-            \sodium_crypto_sign(Util::encodeJson($listOfClaims), $this->secretKey)
++        return \rtrim(
++            Base64UrlSafe::encode(
++                \sodium_crypto_sign(Util::encodeJson($listOfClaims), $this->secretKey)
++            ),
++            '='
+         );
+     }
+ 
+diff --git a/tests/TestSigner.php b/tests/TestSigner.php
+index 8f4f036..8edbe7f 100644
+--- a/tests/TestSigner.php
++++ b/tests/TestSigner.php
+@@ -41,8 +41,11 @@ class TestSigner implements SignerInterface
+      */
+     public function sign(array $listOfClaims)
+     {
+-        return Base64UrlSafe::encodeUnpadded(
+-            Util::encodeJson($listOfClaims)
++        return \rtrim(
++            Base64UrlSafe::encode(
++                Util::encodeJson($listOfClaims)
++            ),
++            '='
+         );
+     }
+ 
