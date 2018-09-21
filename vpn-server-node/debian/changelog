@@ -1,3 +1,9 @@
+vpn-server-node (1.0.20-1) stable; urgency=medium
+
+  * update to 1.0.20
+
+ -- François Kooman <fkooman@tuxed.net>  Fri, 21 Sep 2018 13:05:04 +0200
+
 vpn-server-node (1.0.19-2) stable; urgency=medium
 
   * update autoload patch
