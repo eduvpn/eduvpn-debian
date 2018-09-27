@@ -21,7 +21,9 @@ PACKAGE_LIST=(\
     vpn-server-node \
     vpn-admin-portal \
     php-json-signer \
+    vpn-portal-artwork \
 )
+
 
 ./repo_setup.sh
 
