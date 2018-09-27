@@ -2,7 +2,7 @@
 
 REPO_DIR=${HOME}/.aptly/public
 
-sudo apt-get -y install build-essential devscripts aptly
+sudo apt-get -y install build-essential devscripts aptly equivs
 
 PACKAGE_LIST=(\
     BaconQrCode \
