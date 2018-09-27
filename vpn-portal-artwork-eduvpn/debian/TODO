@@ -1,0 +1,22 @@
+- fix download / verification  of pgp signature:
+   joostvb@perun:~/git/eduvpn-debian-joostvb-gh/vpn-portal-artwork-eduvpn% uscan --destdir=build --download-current-version --verbose
+
+   uscan info: Start checking for common possible upstream OpenPGP signature files
+   uscan info: End checking for common possible upstream OpenPGP signature files
+   uscan info: Missing OpenPGP signature.
+
+ W: vpn-portal-artwork-eduvpn changes: orig-tarball-missing-upstream-signature vpn-portal-artwork-eduvpn_1.2.3.orig.tar.xz
+ W: vpn-portal-artwork-eduvpn source: debian-watch-could-verify-download debian/upstream/signing-key.asc
+
+- postinst,postrm: should _we_ deal with clearing cache?  likely this would better
+be handled by the application which actually _writes_ to the cache.
+
+- debian/install: couldn't vpn-admin-portal and vpn-user-portal consult something like
+/usr/share/vpn-portal-artwork-eduvpn ?  it feels wrong we are writing in
+vpn-admin-portal and vpn-user-portal's directories (
+/usr/share/{vpn-user-portal,vpn-admin-portal} )
+
+- why are we at https://github.com/eduvpn/vpn-portal-artwork while we're named
+  vpn-portal-artwork-eduVPN !?
+
+- debian/copyright: fix this once there's a new upstream which _does_ ship license.
