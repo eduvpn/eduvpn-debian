@@ -1,3 +1,9 @@
+vpn-portal-artwork-eduvpn (1.2.3-2) stable; urgency=medium
+
+  * fix PGP verification
+
+ -- François Kooman <fkooman@tuxed.net>  Thu, 27 Sep 2018 18:06:04 +0200
+
 vpn-portal-artwork-eduvpn (1.2.3-1+deb9u1) stretch; urgency=medium
 
   * Backport to stretch:
