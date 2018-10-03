@@ -1,7 +1,14 @@
-openvpn-plugin-auth-script (0.1.0-1) unstable; urgency=medium
+openvpn-plugin-auth-script (0.1.0-1+deb9u1) stretch; urgency=medium
 
   * UNRELEASED
   * TODO: debian/README.Source : update/remove
+  * Backport to stretch:
+     - debian/control: relax debhelper dependency from 11 to 10.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 03 Oct 2018 16:19:34 +0200
+
+openvpn-plugin-auth-script (0.1.0-1) unstable; urgency=medium
+
   * New upstream release.
     - debian/watch: added.
     - debian/upstream/signing-key.asc: added.
