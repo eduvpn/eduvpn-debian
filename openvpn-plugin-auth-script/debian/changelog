@@ -3,8 +3,9 @@ openvpn-plugin-auth-script (0.1.0-1) unstable; urgency=medium
   * UNRELEASED
   * TODO: debian/README.Source : update/remove
   * New upstream release.
-  * debian/watch: added.
-  * debian/upstream/signing-key.asc: added.
+    - debian/watch: added.
+    - debian/upstream/signing-key.asc: added.
+    - debian/patches: removed since meson-install.diff is merged upstream.
 
  -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 03 Oct 2018 10:40:59 +0200
 
