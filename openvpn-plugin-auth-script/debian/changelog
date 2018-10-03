@@ -1,6 +1,7 @@
 openvpn-plugin-auth-script (0.1.0-1) unstable; urgency=medium
 
   * UNRELEASED
+  * TODO: debian/README.Source : update/remove
   * New upstream release.
   * debian/watch: added.
   * debian/upstream/signing-key.asc: added.
