@@ -1,3 +1,12 @@
+openvpn-plugin-auth-script (0.1.0-1) unstable; urgency=medium
+
+  * UNRELEASED
+  * New upstream release.
+  * debian/watch: added.
+  * debian/upstream/signing-key.asc: added.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 03 Oct 2018 10:40:59 +0200
+
 openvpn-plugin-auth-script (0.0~git02e08ef-2) unstable; urgency=medium
 
   * debian/docs: install examples/external_script and README.md
