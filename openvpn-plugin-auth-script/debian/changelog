@@ -1,0 +1,18 @@
+openvpn-plugin-auth-script (0.0~git02e08ef-2) unstable; urgency=medium
+
+  * debian/docs: install examples/external_script and README.md
+  * debian/README.source: add note on upstream non-release.
+  * debian/copyright: filled the blanks.
+  * debian/control: specify Section: net.
+  * debian/control: rename binary package to openvpn-auth-script, cf.
+    openvpn-auth-ldap and openvpn-auth-radius.
+  * debian/patches/meson-install.diff: make sure we install
+    openvpn-plugin-auth-script.so in usr/lib/openvpn/ .
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 03 Oct 2018 10:17:37 +0200
+
+openvpn-plugin-auth-script (0.0~git02e08ef-1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 30 Aug 2018 08:48:47 +0000
