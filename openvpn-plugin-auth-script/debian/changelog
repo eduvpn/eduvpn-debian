@@ -1,6 +1,5 @@
 openvpn-plugin-auth-script (0.1.0-1+deb9u1) stretch; urgency=medium
 
-  * UNRELEASED
   * debian/README.Source: add note on debhelper from stretch-backports needed for
     building on stretch build hosts.
 
