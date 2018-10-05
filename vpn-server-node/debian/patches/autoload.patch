@@ -89,7 +89,7 @@ index 592d169..5df65d8 100644
  use SURFnet\VPN\Common\Config;
  use SURFnet\VPN\Common\Http\Exception\InputValidationException;
 diff --git a/src/OpenVpn.php b/src/OpenVpn.php
-index f3b9452..6cc9173 100644
+index b7d953f..200d6cf 100644
 --- a/src/OpenVpn.php
 +++ b/src/OpenVpn.php
 @@ -19,7 +19,7 @@ use SURFnet\VPN\Common\ProfileConfig;
@@ -99,8 +99,8 @@ index f3b9452..6cc9173 100644
 -    const LIBEXEC_DIR = '/usr/libexec/vpn-server-node';
 +    const LIBEXEC_DIR = '/usr/lib/vpn-server-node';
  
-     // https://github.com/fac/auth-script-openvpn
-     const AUTH_SCRIPT_OPENVPN = '/usr/lib64/openvpn/plugins/openvpn-plugin-auth-script.so';
+     /** @var string */
+     private $vpnConfigDir;
 diff --git a/tests/data/default-internet-0.conf b/tests/data/default-internet-0.conf
 index bf60e37..2f02e93 100644
 --- a/tests/data/default-internet-0.conf
