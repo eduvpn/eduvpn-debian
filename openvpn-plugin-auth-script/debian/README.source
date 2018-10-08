@@ -1,4 +1,4 @@
-In order to build, this package needs
+In order to build, some versions of this package needs
 /usr/share/perl5/Debian/Debhelper/Buildsystem/meson.pm, which is shipped with
 debhelper 10.3 released May 2017.  Package debhelper 10.2.5 (as shipped with
 Debian stretch) is not good enough.  Package debhelper >= 11.3.5~bpo9+1, as

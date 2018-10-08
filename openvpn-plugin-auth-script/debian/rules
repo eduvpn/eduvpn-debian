@@ -6,7 +6,8 @@
 # see FEATURE AREAS in dpkg-buildflags(1)
 #export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
-# explicitly state "meson" : ignore presence of Makefile
+export CFLAGS = -I/usr/include/openvpn
+
 %:
-	dh $@ --buildsystem=meson
+	dh $@
 
