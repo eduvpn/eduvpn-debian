@@ -1,0 +1,12 @@
+In order to build, some versions of this package needs
+/usr/share/perl5/Debian/Debhelper/Buildsystem/meson.pm, which is shipped with
+debhelper 10.3 released May 2017.  Package debhelper 10.2.5 (as shipped with
+Debian stretch) is not good enough.  Package debhelper >= 11.3.5~bpo9+1, as
+shipped with stretch-backports, works fine for us.  If you're trying to build
+this package on a build host running Debian stretch, then, in order to get your
+build system find that package, be sure to add "deb
+http://deb.debian.org/debian stretch-backports main" to your build hosts
+/etc/apt/sources.list .
+
+We use the code from https://github.com/fkooman/auth-script-openvpn/, which is
+a fork of https://github.com/fac/auth-script-openvpn .

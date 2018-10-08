@@ -1,0 +1,20 @@
+Source: openvpn-plugin-auth-script
+Section: net
+Priority: optional
+Maintainer: Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>
+Build-Depends: debhelper (>= 10), openvpn
+Standards-Version: 4.1.3
+Homepage: https://github.com/fkooman/auth-script-openvpn
+#Vcs-Browser: https://salsa.debian.org/debian/openvpn-plugin-auth-script
+#Vcs-Git: https://salsa.debian.org/debian/openvpn-plugin-auth-script.git
+
+Package: openvpn-auth-script
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: OpenVPN plugin to auth connections using non-blocking external script
+ Runs an external script to decide whether to authenticate a user or not.
+ Useful for checking 2FA on VPN auth attempts as it doesn't block the main
+ openvpn process, unlike passing the script to --auth-user-pass-verify flag.
+ .
+ The idea of the plugin is to do as little as possible, and let the external
+ binary do all the heavy lifting itself.
