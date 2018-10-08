@@ -23,6 +23,7 @@ PACKAGE_LIST=(\
     php-json-signer \
     vpn-portal-artwork-eduVPN \
     vpn-portal-artwork-LC \
+    auth-script-openvpn \
 )
 
 ./repo_setup.sh
