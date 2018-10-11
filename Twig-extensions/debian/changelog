@@ -1,9 +1,3 @@
-twig-extensions (1.4.1-1) stable; urgency=medium
-
-  * update to 1.4.1
-
- -- François Kooman <fkooman@tuxed.net>  Thu, 11 Oct 2018 17:15:50 +0200
-
 twig-extensions (1.3.0-5) stable; urgency=medium
 
   * cleanup package
