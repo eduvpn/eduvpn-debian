@@ -1,3 +1,9 @@
+baconqrcode (1.0.3-3) stable; urgency=medium
+
+  * fix running PHPUnit tests on newer versions of PHPUnit
+
+ -- François Kooman <fkooman@tuxed.net>  Thu, 11 Oct 2018 14:01:08 +0200
+
 baconqrcode (1.0.3-2) stable; urgency=medium
 
   * Clean up package
