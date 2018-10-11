@@ -2,7 +2,6 @@
 
 KEY=eduvpn+debian@surfnet.nl
 DIST=stretch
-#DIST=bionic
 REPO=eduVPN
 
 aptly publish drop ${DIST} || true
