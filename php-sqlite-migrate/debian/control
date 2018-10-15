@@ -6,6 +6,7 @@ Build-Depends:
  debhelper (>= 9),
  phpunit,
  pkg-php-tools,
+ php-sqlite3,
  phpab
 Standards-Version: 3.9.8
 Homepage: https://git.tuxed.net/fkooman/php-sqlite-migrate
@@ -14,6 +15,7 @@ Package: php-fkooman-sqlite-migrate
 Architecture: all
 Depends:
  ${misc:Depends},
- php-common
+ php-common,
+ php-sqlite3
 Suggests: ${phpcomposer:Debian-suggest}
 Description: ${phpcomposer:description}
