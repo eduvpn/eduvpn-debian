@@ -1,3 +1,9 @@
+php-json-signer (3.0.2-5) stable; urgency=medium
+
+  * only depend on php-libsodium
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 15 Oct 2018 11:25:58 +0200
+
 php-json-signer (3.0.2-4) stable; urgency=medium
 
   * debian/watch: upstream downloads moved from git.tuxed.net to

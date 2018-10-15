@@ -19,7 +19,7 @@ Build-Depends:
  php-constant-time,
  php-eduvpn-common,
  php-json,
- php-sodium | php-libsodium,
+ php-libsodium,
  php-mbstring,
  php-fkooman-secookie
 Standards-Version: 3.9.8
@@ -32,7 +32,7 @@ Depends: ${misc:Depends},
  php-bacon-qr-code,
  php-eduvpn-common,
  php-json,
- php-sodium | php-libsodium,
+ php-libsodium,
  php-mbstring,
  php-fkooman-oauth2-client,
  php-fkooman-oauth2-server,

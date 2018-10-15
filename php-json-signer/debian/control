@@ -5,7 +5,7 @@ Maintainer: François Kooman <fkooman@tuxed.net>
 Build-Depends:
  debhelper (>= 9),
  phpab,
- php-sodium | php-libsodium,
+ php-libsodium,
  phpunit,
  pkg-php-tools (>= 1.7~),
  dh-exec,
@@ -17,7 +17,7 @@ Package: php-json-signer
 Architecture: all
 Depends: 
  ${misc:Depends}, 
- php-sodium | php-libsodium,
+ php-libsodium,
  php-cli,
  php-constant-time
 Suggests: ${phpcomposer:Debian-suggest}
