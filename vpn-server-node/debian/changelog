@@ -1,3 +1,9 @@
+vpn-server-node (1.1.0-1) stable; urgency=medium
+
+  * update to 1.1.0
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 15 Oct 2018 14:23:12 +0200
+
 vpn-server-node (1.0.22-1) stable; urgency=medium
 
   * update to 1.0.22
