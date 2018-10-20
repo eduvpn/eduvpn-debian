@@ -1,3 +1,9 @@
+php-otp-verifier (0.2.1-1) stable; urgency=medium
+
+  * update to 0.2.1
+
+ -- François Kooman <fkooman@tuxed.net>  Sat, 20 Oct 2018 12:28:35 +0200
+
 php-otp-verifier (0.2.0-2) stable; urgency=medium
 
   * switch to static tar
