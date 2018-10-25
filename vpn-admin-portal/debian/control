@@ -12,7 +12,8 @@ Build-Depends:
  pkg-php-tools, 
  phpab, 
  fonts-roboto-fontface, 
- php-gd
+ php-gd,
+ php-symfony-phpunit-bridge
 Standards-Version: 3.9.8
 Homepage: https://github.com/eduvpn/vpn-admin-portal
 
