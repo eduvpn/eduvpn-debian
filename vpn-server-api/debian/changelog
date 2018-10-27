@@ -3,6 +3,7 @@ vpn-server-api (1.4.5-2) stable; urgency=medium
   * debian/copyright: most upstream files are licensed using AGPL-3.0, some
     using GPL-2.0.  Reflect this in d/copyright (and quote full AGPL-3.0 text
     there).
+  * debian/copyright: fix Source and Upstream-Name fields.
 
  -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Sat, 27 Oct 2018 13:01:49 +0200
 
