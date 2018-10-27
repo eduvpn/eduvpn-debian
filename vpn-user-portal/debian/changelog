@@ -1,3 +1,10 @@
+vpn-user-portal (1.8.3-2) stable; urgency=medium
+
+  * debian/copyright: upstream files are licensed using AGPL-3.0.  Reflect this
+    in d/copyright (and quote full AGPL-3.0 text there).
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Sat, 27 Oct 2018 13:19:28 +0200
+
 vpn-user-portal (1.8.3-1) stable; urgency=medium
 
   * update to 1.8.3
