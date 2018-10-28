@@ -1,3 +1,10 @@
+php-oauth2-server (3.0.2-3) stable; urgency=medium
+
+  * debian/control: Add myself to Uploaders, similar to other packages in the
+    eduvpn suite.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Sun, 28 Oct 2018 10:35:46 +0100
+
 php-oauth2-server (3.0.2-2) stable; urgency=medium
 
   * only depend on php-libsodium

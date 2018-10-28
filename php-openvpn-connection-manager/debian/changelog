@@ -1,3 +1,11 @@
+php-openvpn-connection-manager (1.0.2-3) stable; urgency=medium
+
+  * debian/control: Add myself to Uploaders, similar to other packages in the
+    eduvpn suite.  This cleans up lintian source warnings:
+    "changelog-should-mention-nmu" and "source-nmu-has-incorrect-version-number".
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Sun, 28 Oct 2018 10:36:16 +0100
+
 php-openvpn-connection-manager (1.0.2-2) stable; urgency=medium
 
   * debian/watch: upstream downloads moved from git.tuxed.net to
