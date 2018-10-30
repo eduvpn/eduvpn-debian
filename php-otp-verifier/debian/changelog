@@ -1,3 +1,10 @@
+php-otp-verifier (0.2.1-2) stable; urgency=medium
+
+  * debian/control: Add myself to Uploaders, similar to other packages in the
+    eduvpn suite.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Sun, 28 Oct 2018 10:37:13 +0100
+
 php-otp-verifier (0.2.1-1) stable; urgency=medium
 
   * update to 0.2.1

@@ -1,6 +1,14 @@
+php-secookie (2.0.1-3) stable; urgency=medium
+
+  * debian/control: Add myself to Uploaders, similar to other packages in the
+    eduvpn suite.  This cleans up lintian source warnings:
+    "changelog-should-mention-nmu" and "source-nmu-has-incorrect-version-number".
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Sun, 28 Oct 2018 10:39:33 +0100
+
 php-secookie (2.0.1-2) stable; urgency=medium
 
-   * debian/watch: upstream downloads moved from git.tuxed.net to
+  * debian/watch: upstream downloads moved from git.tuxed.net to
     software.tuxed.net.
   * debian/watch, debian/upstream/signing-key.asc: enabled pgpsigurlmangle option
     and ran "gpg --export --export-options export-minimal
@@ -30,10 +38,7 @@ php-secookie (2.0.0-2) stable; urgency=medium
 
 php-secookie (2.0.0-1) stable; urgency=medium
 
-  [ Gijs Molenaar ]
   * New upstream version 2.0.0
-
-  [ Gijs Molenaar (launchpad ppa build key) ]
 
  -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Mon, 02 Oct 2017 16:14:25 +0200
 

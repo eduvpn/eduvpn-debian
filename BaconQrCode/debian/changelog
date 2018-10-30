@@ -1,3 +1,9 @@
+baconqrcode (1.0.3-4) stable; urgency=medium
+
+  * debian/control: Add myself to Uploaders, similar to other packages in the eduvpn suite.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Sun, 28 Oct 2018 10:30:11 +0100
+
 baconqrcode (1.0.3-3) stable; urgency=medium
 
   * fix running PHPUnit tests on newer versions of PHPUnit
@@ -12,10 +18,7 @@ baconqrcode (1.0.3-2) stable; urgency=medium
 
 baconqrcode (1.0.3-1) stable; urgency=medium
 
-  [ Gijs Molenaar ]
   * New upstream version 1.0.3
-
-  [ Gijs Molenaar (launchpad ppa build key) ]
 
  -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Tue, 24 Oct 2017 07:44:16 +0200
 
