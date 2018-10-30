@@ -1,3 +1,9 @@
+vpn-admin-portal (1.7.2-1) stable; urgency=medium
+
+  * update to 1.7.2
+
+ -- François Kooman <fkooman@tuxed.net>  Tue, 30 Oct 2018 12:04:14 +0100
+
 vpn-admin-portal (1.7.1-2) stable; urgency=medium
 
   * debian/copyright: upstream files are licensed using AGPL-3.0.  Reflect this
