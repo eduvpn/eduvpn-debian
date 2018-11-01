@@ -5,7 +5,7 @@ Maintainer: François Kooman <fkooman@tuxed.net>
 Uploaders: Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>
 Build-Depends:
  debhelper (>= 9),
- pkg-php-tools,
+ pkg-php-tools (>= 1.7~),
  phpunit,
  phpab,
  php-common,

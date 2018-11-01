@@ -7,7 +7,7 @@ Build-Depends:
  debhelper (>= 9), 
  phpunit, 
  phpab, 
- pkg-php-tools
+ pkg-php-tools (>= 1.7~)
 Standards-Version: 3.9.8
 Homepage: https://git.tuxed.net/fkooman/php-secookie
 

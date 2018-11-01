@@ -6,7 +6,7 @@ Uploaders: Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>
 Build-Depends:
  debhelper (>= 9),
  phpunit,
- pkg-php-tools,
+ pkg-php-tools (>= 1.7~),
  php-sqlite3,
  phpab
 Standards-Version: 3.9.8

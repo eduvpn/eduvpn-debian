@@ -7,7 +7,7 @@ Build-Depends:
  dh-exec,
  phpab,
  phpunit,
- pkg-php-tools,
+ pkg-php-tools (>= 1.7~),
  php-common,
  php-fkooman-oauth2-client,
  php-eduvpn-common,
