@@ -1,10 +1,17 @@
+php-oauth2-client (7.1.3-4) stable; urgency=medium
+
+  * debian/changelog: cosmetics (thanks lintian).
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 01 Nov 2018 14:29:05 +0100
+
 php-oauth2-client (7.1.3-3) stable; urgency=medium
 
   * debian/control: Add myself to Uploaders, similar to other packages in the
     eduvpn suite.  This cleans up lintian source warnings:
-    "changelog-should-mention-nmu" and "source-nmu-has-incorrect-version-number".
+    "changelog-should-mention-nmu" and
+    "source-nmu-has-incorrect-version-number".
 
- -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Tue, 04 Sep 2018 15:19:53 +0200
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Sun, 28 Oct 2018 10:35:46 +0100
 
 php-oauth2-client (7.1.3-2) stable; urgency=medium
 
@@ -40,7 +47,7 @@ php-oauth2-client (7.0.0-1) stable; urgency=medium
 
   * update to 7.0.0
 
- -- François Kooman <fkooman@tuxed-net>  Thu, 12 Apr 2018 11:26:05 +0200
+ -- François Kooman <fkooman@tuxed.net>  Thu, 12 Apr 2018 11:26:05 +0200
 
 php-oauth2-client (6.0.1-2) stable; urgency=medium
 
@@ -63,10 +70,7 @@ php-oauth2-client (5.0.1-2) stable; urgency=medium
 
 php-oauth2-client (5.0.1-1) stable; urgency=medium
 
-  [ Gijs Molenaar ]
   * New upstream version 5.0.1
-
-  [ Gijs Molenaar (launchpad ppa build key) ]
 
  -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Mon, 02 Oct 2017 16:50:49 +0200
 
