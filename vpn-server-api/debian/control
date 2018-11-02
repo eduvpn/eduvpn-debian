@@ -14,8 +14,6 @@ Build-Depends:
  php-fkooman-yubitwee,
  php-lc-openvpn-connection-manager,
  php-eduvpn-common (>= 1.0.5),
- php-symfony-translation,
- php-symfony-phpunit-bridge,
  php-fkooman-oauth2-server
 Standards-Version: 3.9.8
 Homepage: https://github.com/eduvpn/vpn-server-api

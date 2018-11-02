@@ -1,3 +1,9 @@
+vpn-server-api (1.4.5-4) stable; urgency=medium
+
+  * remove redundant dependencies
+
+ -- François Kooman <fkooman@tuxed.net>  Fri, 02 Nov 2018 18:57:42 +0100
+
 vpn-server-api (1.4.5-3) stable; urgency=medium
 
   * debian/control: make pkg-php-tools Build-Depends versioned, since we use

@@ -14,8 +14,6 @@ Build-Depends:
  php-twig-extensions,
  php-mbstring,
  php-libsodium,
- php-symfony-translation,
- php-symfony-phpunit-bridge,
  php-common,
  php-curl,
  php-radius,
@@ -43,6 +41,5 @@ Depends:
  php-psr-log,
  php-twig,
  php-twig-extensions,
- php-symfony-translation
 Suggests: ${phpcomposer:Debian-suggest}
 Description: Common VPN library

@@ -12,9 +12,7 @@ Build-Depends:
  php-fkooman-oauth2-client,
  php-eduvpn-common,
  php-fkooman-oauth2-server,
- php-symfony-phpunit-bridge,
  php-twig-extensions,
- php-symfony-translation,
  php-bacon-qr-code,
  php-constant-time,
  php-eduvpn-common,
@@ -38,7 +36,6 @@ Depends: ${misc:Depends},
  php-fkooman-oauth2-server,
  php-fkooman-secookie,
  php-constant-time,
- php-symfony-phpunit-bridge,
  php-twig-extensions,
  php-cli
 Suggests: ${phpcomposer:Debian-suggest}

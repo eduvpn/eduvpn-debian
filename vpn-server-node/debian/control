@@ -8,10 +8,8 @@ Build-Depends:
  phpunit, 
  pkg-php-tools (>= 1.7~), 
  phpab,
- php-psr-log, 
- php-eduvpn-common, 
- php-symfony-translation,
- php-symfony-phpunit-bridge
+ php-psr-log,
+ php-eduvpn-common,
 Standards-Version: 3.9.8
 Homepage: https://github.com/eduvpn/vpn-server-node
 
@@ -22,6 +20,7 @@ Depends:
  ${phpcomposer:Debian-require},
  openvpn,
  php-cli,
- php-symfony-phpunit-bridge
+ php-psr-log,
+ php-eduvpn-common
 Suggests: ${phpcomposer:Debian-suggest}
 Description: VPN Server Node
