@@ -2,6 +2,7 @@
 
 define REQUIRES
 require_once '/usr/share/php/Twig/autoload.php';
+require_once '/usr/share/php/Symfony/Component/Translation/autoload.php';
 endef
 
 # easier to use this as a shell variable
@@ -14,7 +15,6 @@ override_dh_auto_build:
 override_dh_auto_test:
 	phpab -o test/autoload.php test
 	echo "require_once 'lib/Twig/Extensions/autoload.php';" >> test/autoload.php
-	echo "require_once '/usr/share/php/Symfony/Component/Translation/autoload.php';" >> test/autoload.php
 
 	phpunit --bootstrap=test/autoload.php
 
