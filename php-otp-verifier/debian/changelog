@@ -1,3 +1,11 @@
+php-otp-verifier (0.2.1-3) stable; urgency=medium
+
+  * debian/control: make pkg-php-tools Build-Depends versioned, since we use
+    Composer package support: we need >= 1.7~.  NB: Debian jessie (current
+    oldstable) ships with pkg-php-tools 1.28.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 01 Nov 2018 16:04:39 +0100
+
 php-otp-verifier (0.2.1-2) stable; urgency=medium
 
   * debian/control: Add myself to Uploaders, similar to other packages in the

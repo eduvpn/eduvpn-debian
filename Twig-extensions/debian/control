@@ -7,7 +7,7 @@ Build-Depends:
  debhelper (>= 9), 
  phpunit, 
  phpab, 
- pkg-php-tools,
+ pkg-php-tools (>= 1.7~),
  php-symfony-translation, 
  php-symfony-phpunit-bridge,
  php-symfony-polyfill-mbstring, 

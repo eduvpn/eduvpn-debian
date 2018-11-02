@@ -1,3 +1,11 @@
+vpn-server-node (1.1.1-3) stable; urgency=medium
+
+  * debian/control: make pkg-php-tools Build-Depends versioned, since we use
+    Composer package support: we need >= 1.7~.  NB: Debian jessie (current
+    oldstable) ships with pkg-php-tools 1.28.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 01 Nov 2018 16:10:23 +0100
+
 vpn-server-node (1.1.1-2) stable; urgency=medium
 
   * debian/copyright: upstream files are licensed using AGPL-3.0.  Reflect this

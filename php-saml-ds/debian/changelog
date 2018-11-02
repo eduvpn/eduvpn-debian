@@ -1,3 +1,11 @@
+php-saml-ds (1.0.12-5) stable; urgency=medium
+
+  * debian/control: make pkg-php-tools Build-Depends versioned, since we use
+    Composer package support: we need >= 1.7~.  NB: Debian jessie (current
+    oldstable) ships with pkg-php-tools 1.28.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 01 Nov 2018 16:05:29 +0100
+
 php-saml-ds (1.0.12-4) stable; urgency=medium
 
   * debian/copyright: refer to /usr/share/common-licenses/Apache-2.0, cleanup.
