@@ -9,8 +9,6 @@ Build-Depends:
  phpab, 
  pkg-php-tools (>= 1.7~),
  php-symfony-translation, 
- php-symfony-phpunit-bridge,
- php-symfony-polyfill-mbstring, 
  php-twig
 Standards-Version: 3.9.8
 Homepage: https://github.com/twigphp/Twig-extensions
@@ -19,6 +17,7 @@ Package: php-twig-extensions
 Architecture: all
 Depends: 
  ${misc:Depends}, 
- ${phpcomposer:Debian-require}
+ ${phpcomposer:Debian-require},
+ php-twig
 Suggests: ${phpcomposer:Debian-suggest}
 Description: Twig extensions
