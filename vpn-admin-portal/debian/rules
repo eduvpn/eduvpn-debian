@@ -1,6 +1,7 @@
 #!/usr/bin/make -f
 
 define REQUIRES
+require_once '/usr/share/php/Twig/autoload.php';
 require_once '/usr/share/php/SURFnet/VPN/Common/autoload.php';
 require_once '/usr/share/php/fkooman/SeCookie/autoload.php';
 endef

@@ -6,13 +6,17 @@ Build-Depends:
  debhelper (>= 9), 
  dh-exec, 
  phpunit, 
+ phpab,
+ pkg-php-tools,
+ php-date,
+ php-gd,
+ php-pdo,
+ php-sqlite3,
+ php-spl,
  php-fkooman-secookie, 
  php-twig,
  php-eduvpn-common, 
- pkg-php-tools, 
- phpab, 
- fonts-roboto-fontface, 
- php-gd
+ fonts-roboto-fontface
 Standards-Version: 3.9.8
 Homepage: https://github.com/eduvpn/vpn-admin-portal
 
@@ -21,7 +25,14 @@ Architecture: all
 Depends: 
  ${misc:Depends}, 
  ${phpcomposer:Debian-require}, 
- fonts-roboto-fontface,
- php-cli
+ php-date,
+ php-gd,
+ php-pdo,
+ php-sqlite3,
+ php-spl,
+ php-fkooman-secookie,
+ php-twig,
+ php-eduvpn-common,
+ fonts-roboto-fontface
 Suggests: ${phpcomposer:Debian-suggest}
 Description: VPN Admin Portal

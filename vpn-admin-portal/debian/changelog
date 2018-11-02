@@ -1,3 +1,10 @@
+vpn-admin-portal (1.7.2-2) stable; urgency=medium
+
+  * add php-twig to autoloader
+  * fix dependencies
+
+ -- François Kooman <fkooman@tuxed.net>  Fri, 02 Nov 2018 17:29:42 +0100
+
 vpn-admin-portal (1.7.2-1) stable; urgency=medium
 
   * update to 1.7.2
