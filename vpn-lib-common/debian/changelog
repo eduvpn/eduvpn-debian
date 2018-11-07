@@ -1,6 +1,15 @@
+vpn-lib-common (1.2.2-6) stable; urgency=medium
+
+  * debian/control: Add myself to Uploaders, similar to other packages in the
+    eduVPN suite.  This silences lintian source warnings
+    "changelog-should-mention-nmu" and
+    "source-nmu-has-incorrect-version-number".
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 07 Nov 2018 17:02:37 +0100
+
 vpn-lib-common (1.2.2-5) stable; urgency=medium
 
-  * remove redundant dependencies 
+  * remove redundant dependencies
 
  -- François Kooman <fkooman@tuxed.net>  Fri, 02 Nov 2018 18:55:32 +0100
 
