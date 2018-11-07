@@ -12,6 +12,10 @@ vpn-user-portal (1.8.3-5) stable; urgency=medium
   * debian/lintian-overrides: added; with binary-without-manpage
     usr/bin/vpn-user-portal-*.  Those manpages are not planned to be written
     soonish.
+  * debian/{rules,postinst}: get rid of "override_dh_compress": we _do_ want
+    changelogs to get installed in compressed form.  Adjust postinst to deal
+    sane with compressed
+    /usr/share/doc/vpn-user-portal/config.php.example.gz .
 
  -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 07 Nov 2018 15:18:58 +0100
 
@@ -72,13 +76,11 @@ vpn-user-portal (1.8.0-2) stable; urgency=medium
 
 vpn-user-portal (1.8.0-1) stable; urgency=medium
 
-  * update to 1.8.0 
+  * update to 1.8.0
 
  -- François Kooman <fkooman@tuxed.net>  Tue, 04 Sep 2018 13:38:41 +0200
 
 vpn-user-portal (1.6.10-2) stable; urgency=medium
-
-  * UNRELEASED
 
   [ frozen-sky, in https://github.com/eduvpn/eduvpn-debian/pull/6 ]
   * Moved example configs to doc folders.
@@ -251,19 +253,13 @@ vpn-user-portal (1.0.10-1) stable; urgency=medium
 
 vpn-user-portal (1.0.8-1) stable; urgency=medium
 
-  [ Gijs Molenaar ]
   * New upstream version 1.0.8
-
-  [ Gijs Molenaar (launchpad ppa build key) ]
 
  -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Wed, 25 Oct 2017 17:28:55 +0200
 
 vpn-user-portal (1.0.7-1) stable; urgency=medium
 
-  [ Gijs Molenaar ]
   * New upstream version 1.0.7
-
-  [ Gijs Molenaar (launchpad ppa build key) ]
 
  -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Fri, 20 Oct 2017 10:09:54 +0200
 
@@ -294,11 +290,8 @@ vpn-user-portal (1.0.1-2) stable; urgency=medium
 
 vpn-user-portal (1.0.1-1) stable; urgency=medium
 
-  [ Gijs Molenaar ]
   * fix lintian warnings
   * New upstream version 1.0.1
-
-  [ Gijs Molenaar (launchpad ppa build key) ]
 
  -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Thu, 31 Aug 2017 11:50:44 +0200
 
