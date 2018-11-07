@@ -7,7 +7,8 @@ vpn-user-portal (1.8.3-5) stable; urgency=medium
     '. /usr/share/debconf/confmodule'.
   * debian/control: Add myself to Uploaders, similar to other packages in the
     eduvpn suite.  This silences lintian source warnings:
-    "changelog-should-mention-nmu" and "source-nmu-has-incorrect-version-number".
+    "changelog-should-mention-nmu" and
+    "source-nmu-has-incorrect-version-number".
   * debian/lintian-overrides: added; with binary-without-manpage
     usr/bin/vpn-user-portal-*.  Those manpages are not planned to be written
     soonish.
