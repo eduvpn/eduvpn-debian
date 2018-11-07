@@ -1,0 +1,5 @@
+vpn-user-portal: binary-without-manpage usr/bin/vpn-user-portal-add-user
+vpn-user-portal: binary-without-manpage usr/bin/vpn-user-portal-foreign-key-list-fetcher
+vpn-user-portal: binary-without-manpage usr/bin/vpn-user-portal-generate-voucher
+vpn-user-portal: binary-without-manpage usr/bin/vpn-user-portal-init
+vpn-user-portal: binary-without-manpage usr/bin/vpn-user-portal-show-public-key

@@ -5,10 +5,6 @@
 
 set -e
 
-if [ -f /usr/share/debconf/confmodule ]; then
-        . /usr/share/debconf/confmodule
-fi
-
 case "$1" in
     failed-upgrade|abort-install|abort-upgrade|disappear|remove)
     ;;
@@ -17,7 +13,7 @@ case "$1" in
         echo "removing old template cache..."
         rm -rf /var/lib/vpn-user-portal/*/tpl/*
     ;;
-    
+
     purge)
         rm -rf /var/lib/vpn-user-portal
     ;;
