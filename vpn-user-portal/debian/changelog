@@ -2,7 +2,8 @@ vpn-user-portal (1.8.3-5) stable; urgency=medium
 
   * debian/docs: remove explicit CHANGES.md since implicitly dealt with by
     dh_installchangelogs.
-  * debian/preinst: add missing debhelper token, remove unused
+  * debian/preinst: add missing debhelper token.
+  * debian/{postrm,postinst,preinst}: remove unused
     '. /usr/share/debconf/confmodule'.
 
  -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 07 Nov 2018 15:18:58 +0100
