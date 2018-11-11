@@ -1,3 +1,9 @@
+vpn-server-node (1.1.2-1) stable; urgency=medium
+
+  * update to 1.1.2
+
+ -- François Kooman <fkooman@tuxed.net>  Sun, 11 Nov 2018 20:59:19 +0100
+
 vpn-server-node (1.1.1-5) stable; urgency=medium
 
   * debian/control: Add myself to Uploaders, similar to other packages in the

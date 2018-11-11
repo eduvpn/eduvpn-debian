@@ -1,3 +1,9 @@
+vpn-lib-common (1.2.3-1) stable; urgency=medium
+
+  * update to 1.2.3
+
+ -- François Kooman <fkooman@tuxed.net>  Sun, 11 Nov 2018 20:59:54 +0100
+
 vpn-lib-common (1.2.2-6) stable; urgency=medium
 
   * debian/control: Add myself to Uploaders, similar to other packages in the
