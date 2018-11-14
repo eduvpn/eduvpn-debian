@@ -18,7 +18,8 @@ Package: php-saml-ds
 Architecture: all
 Depends: 
  ${misc:Depends}, 
- ${phpcomposer:Debian-require}
+ ${phpcomposer:Debian-require},
+ php-cli
 Suggests: ${phpcomposer:Debian-suggest}
 Description: SAML Discovery Service written in PHP
  The php-saml-ds SAML Discovery Service follows the Identity Provider Discovery
