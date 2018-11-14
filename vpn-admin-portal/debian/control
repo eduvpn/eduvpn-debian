@@ -8,7 +8,7 @@ Build-Depends:
  dh-exec, 
  phpunit, 
  phpab,
- pkg-php-tools,
+ pkg-php-tools (>= 1.7~),
  php-date,
  php-gd,
  php-pdo,

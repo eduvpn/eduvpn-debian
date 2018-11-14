@@ -9,6 +9,8 @@ vpn-admin-portal (1.7.2-5) stable; urgency=medium
   * debian/lintian-overrides: added; with binary-without-manpage
     usr/bin/vpn-admin-portal-add-user.  This manpage is not planned to be
     written soonish.
+  * debian/control: make pkg-php-tools Build-Depends versioned, since we use
+    Composer package support: we need >= 1.7~.
   * debian/{rules,postinst}: get rid of "override_dh_compress": we _do_ want
     changelogs to get installed in compressed form.  Adjust postinst to deal
     sane with compressed
