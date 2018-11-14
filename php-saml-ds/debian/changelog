@@ -3,6 +3,7 @@ php-saml-ds (1.0.12-6) stable; urgency=medium
   * UNRELEASED
   * debian/lintian-overrides: added: for the time being, we will not ship a
     php-saml-ds-generate manpage.
+  * debian/control: added hand crafted description (from upstream README.md).
 
  -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 14 Nov 2018 14:39:44 +0100
 

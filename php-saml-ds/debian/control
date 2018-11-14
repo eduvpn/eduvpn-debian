@@ -20,4 +20,14 @@ Depends:
  ${misc:Depends}, 
  ${phpcomposer:Debian-require}
 Suggests: ${phpcomposer:Debian-suggest}
-Description: ${phpcomposer:description}
+Description: SAML Discovery Service written in PHP
+ The php-saml-ds SAML Discovery Service follows the Identity Provider Discovery
+ Service Protocol and Profile (mod_auth_mellon supports this).  It features:
+  - Logo support, extracted from (eduGAIN) metadata;
+  - Most browsers are supported;
+  - JS not required (works perfectly well with JS disabled);
+  - Keyboard navigation using TAB to select (next/previous) IdP;
+  - Filter (keyword) support, i.e. only show entries that (string) match the
+    filter you provide, also without JS.
+ .
+
