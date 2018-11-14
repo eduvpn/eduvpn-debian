@@ -1,6 +1,8 @@
 vpn-admin-portal (1.7.2-5) stable; urgency=medium
 
   * UNRELEASED.
+  * debian/docs: remove explicit CHANGES.md since implicitly dealt with by
+    dh_installchangelogs.
   * debian/{rules,postinst}: get rid of "override_dh_compress": we _do_ want
     changelogs to get installed in compressed form.  Adjust postinst to deal
     sane with compressed
