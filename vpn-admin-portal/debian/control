@@ -25,6 +25,7 @@ Architecture: all
 Depends: 
  ${misc:Depends}, 
  ${phpcomposer:Debian-require}, 
+ php-cli,
  php-date,
  php-gd,
  php-pdo,

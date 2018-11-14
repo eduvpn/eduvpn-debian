@@ -1,6 +1,5 @@
 vpn-admin-portal (1.7.2-5) stable; urgency=medium
 
-  * UNRELEASED.
   * debian/docs: remove explicit CHANGES.md since implicitly dealt with by
     dh_installchangelogs.
   * debian/preinst: add missing debhelper token.
@@ -9,6 +8,8 @@ vpn-admin-portal (1.7.2-5) stable; urgency=medium
   * debian/lintian-overrides: added; with binary-without-manpage
     usr/bin/vpn-admin-portal-add-user.  This manpage is not planned to be
     written soonish.
+  * debian/control: add php-cli to Depends, since we ship the
+    usr/bin/vpn-admin-portal-add-user script.
   * debian/control: make pkg-php-tools Build-Depends versioned, since we use
     Composer package support: we need >= 1.7~.
   * debian/{rules,postinst}: get rid of "override_dh_compress": we _do_ want
@@ -16,7 +17,7 @@ vpn-admin-portal (1.7.2-5) stable; urgency=medium
     sane with compressed
     /usr/share/doc/vpn-admin-portal/config.php.example.gz .
 
- -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 14 Nov 2018 16:14:30 +0100
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 14 Nov 2018 16:28:06 +0100
 
 vpn-admin-portal (1.7.2-4) stable; urgency=medium
 
