@@ -21,4 +21,6 @@ Depends:
  php-sqlite3,
  php-constant-time
 Suggests: ${phpcomposer:Debian-suggest}
-Description: ${phpcomposer:description}
+Description: OTP Verification Library
+ Minimal PHP library to verify OTP codes and protect against replay and brute force
+ attacks.
