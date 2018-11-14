@@ -22,5 +22,5 @@ Depends:
  php-constant-time
 Suggests: ${phpcomposer:Debian-suggest}
 Description: OTP Verification Library
- Minimal PHP library to verify OTP codes and protect against replay and brute force
- attacks.
+ Minimal PHP library to verify OTP codes and protect against replay and brute
+ force attacks.
