@@ -5,10 +5,6 @@
 
 set -e
 
-if [ -f /usr/share/debconf/confmodule ]; then
-        . /usr/share/debconf/confmodule
-fi
-
 case "$1" in
     configure)
         chown www-data:www-data /var/lib/vpn-admin-portal
@@ -32,14 +28,17 @@ case "$1" in
 		if [ ! -d /etc/vpn-admin-portal/default ]; then
 			echo "New installation, creating default configuration"
 			install -d -m 755 /etc/vpn-admin-portal/default
-			install -m 644 /usr/share/doc/vpn-admin-portal/config.php.example \
-				       /etc/vpn-admin-portal/default/config.php
+			if [ -f /usr/share/doc/vpn-admin-portal/config.php.example ]; then
+				install -m 644 /usr/share/doc/vpn-admin-portal/config.php.example \
+				  /etc/vpn-admin-portal/default/config.php
+			elif [ -f /usr/share/doc/vpn-admin-portal/config.php.example.gz ]; then
+				zcat /usr/share/doc/vpn-admin-portal/config.php.example.gz \
+				  >/etc/vpn-admin-portal/default/config.php
+			fi
 		else
 			echo "New installation, but existing default configuration found. Not updating"
 		fi
 	fi
-
-
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
