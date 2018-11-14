@@ -1,3 +1,13 @@
+vpn-admin-portal (1.7.2-5) stable; urgency=medium
+
+  * UNRELEASED.
+  * debian/{rules,postinst}: get rid of "override_dh_compress": we _do_ want
+    changelogs to get installed in compressed form.  Adjust postinst to deal
+    sane with compressed
+    /usr/share/doc/vpn-admin-portal/config.php.example.gz .
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 14 Nov 2018 16:14:30 +0100
+
 vpn-admin-portal (1.7.2-4) stable; urgency=medium
 
   * debian/control: Add myself to Uploaders, similar to other packages in the
