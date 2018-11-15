@@ -1,0 +1,3 @@
+# see https://wiki.debian.org/AutomaticDebugPackages for some background info on the
+# auto generated package openvpn-auth-script-dbgsym_0.1.0-1+deb9u2_amd64.deb
+openvpn-auth-script-dbgsym: debug-file-with-no-debug-symbols
