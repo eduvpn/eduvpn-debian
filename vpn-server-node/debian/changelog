@@ -13,8 +13,11 @@ vpn-server-node (1.1.2-2) stable; urgency=medium
     sane with compressed
     /usr/share/doc/vpn-server-node/config.php.example.gz and
     /usr/share/doc/vpn-server-node/firewall.php.example.gz .
+  * debian/control: enhance description, using as of yet unpublished
+    upstream README.md.
 
- -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 15 Nov 2018 13:38:04 +0100
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 15 Nov 2018 17:29:44 +0100
+
 
 vpn-server-node (1.1.2-1) stable; urgency=medium
 
