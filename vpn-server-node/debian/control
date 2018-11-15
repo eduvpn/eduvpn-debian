@@ -24,4 +24,6 @@ Depends:
  php-psr-log,
  php-eduvpn-common
 Suggests: ${phpcomposer:Debian-suggest}
-Description: VPN Server Node
+Description: Control a Let's Connect! VPN Server Node
+ VPN node of the Let's Connect! software. It contains PHP scripts which control
+ the OpenVPN processes and firewall on a Let's Connect! VPN server.
