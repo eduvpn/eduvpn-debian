@@ -8,6 +8,9 @@ vpn-server-api (1.4.6-2) stable; urgency=medium
   * debian/lintian-overrides: added; with binary-without-manpage
     usr/bin/vpn-server-api-* .  These manpages are not planned to be written
     soonish.
+  * debian/{rules,postinst}: get rid of "override_dh_compress": we _do_ want
+    changelogs to get installed in compressed form.  Adjust postinst to deal
+    sane with compressed /usr/share/doc/vpn-server-api/config.php.example.gz .
 
  -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 15 Nov 2018 09:16:02 +0100
 
