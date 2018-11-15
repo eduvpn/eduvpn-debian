@@ -21,8 +21,5 @@ override_dh_fixperms:
 	dh_fixperms
 	chmod 0755 debian/vpn-server-node/usr/lib/vpn-server-node/*
 
-# Be sure not to compress
-override_dh_compress:
-
 %:
 	dh $@ --with phpcomposer
