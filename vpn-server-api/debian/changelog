@@ -11,6 +11,9 @@ vpn-server-api (1.4.6-2) stable; urgency=medium
   * debian/{rules,postinst}: get rid of "override_dh_compress": we _do_ want
     changelogs to get installed in compressed form.  Adjust postinst to deal
     sane with compressed /usr/share/doc/vpn-server-api/config.php.example.gz .
+  * debian/install: no longer install easy-rsa documentation under
+    usr/share/vpn-server-api/easy-rsa/, but under
+    usr/share/doc/vpn-server-api/easy-rsa/ .
 
  -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 15 Nov 2018 09:16:02 +0100
 
