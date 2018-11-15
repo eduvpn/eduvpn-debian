@@ -3,6 +3,8 @@ vpn-server-node (1.1.2-2) stable; urgency=medium
   * debian/docs: remove explicit CHANGES.md since implicitly dealt with by
     dh_installchangelogs.
   * debian/preinst: add missing debhelper token.
+  * debian/{postinst,preinst}: remove unused
+    '. /usr/share/debconf/confmodule'.
   * debian/lintian-overrides: added; with binary-without-manpage
     usr/bin/vpn-server-node-*.  These manpages are not planned to be
     written soonish.
