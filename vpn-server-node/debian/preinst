@@ -14,8 +14,6 @@ case "$1" in
 	# Mark upgrade    
         touch /etc/vpn-server-node/.upgrade
     ;;
-    
 esac
 
-
-exit 0
+#DEBHELPER#
