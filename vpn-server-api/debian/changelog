@@ -1,6 +1,8 @@
 vpn-server-api (1.4.6-2) stable; urgency=medium
 
   * debian/preinst: add missing debhelper token.
+  * debian/{postrm,postinst,preinst}: remove unused
+    '. /usr/share/debconf/confmodule'.
 
  -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 15 Nov 2018 09:16:02 +0100
 
