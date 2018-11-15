@@ -1,7 +1,7 @@
 openvpn-plugin-auth-script (0.1.0-1+deb9u3) stretch; urgency=medium
 
-  * Give up adhering to Debian 10 "buster" standards, and be comfortable on Debian 9
-    "stretch" stable:
+  * Give up adhering to Debian 10 "buster" standards, and be comfortable on
+    Debian 9 "stretch" stable:
     - debian/compat: lower from 11 to 10,
     - debian/control: lower Standards-Version from 4.1.3 to 3.9.8.
 
