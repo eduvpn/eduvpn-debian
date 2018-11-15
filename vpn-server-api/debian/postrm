@@ -5,14 +5,9 @@
 
 set -e
 
-if [ -f /usr/share/debconf/confmodule ]; then
-        . /usr/share/debconf/confmodule
-fi
-
 case "$1" in
     upgrade|failed-upgrade|abort-install|abort-upgrade|disappear|remove)
     ;;
-    
     purge)
         rm -rf /var/lib/vpn-server-api
     ;;
@@ -23,7 +18,3 @@ case "$1" in
 esac
 
 #DEBHELPER#
-
-exit 0
-
-

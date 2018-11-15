@@ -5,8 +5,16 @@ config/config.php.example => /usr/share/doc/vpn-server-api/config.php.example
 
 src/* /usr/share/php/SURFnet/VPN/Server/
 web /usr/share/vpn-server-api/
-easy-rsa /usr/share/vpn-server-api/
 schema /usr/share/vpn-server-api/
+
+easy-rsa/ChangeLog /usr/share/doc/vpn-server-api/easy-rsa/
+easy-rsa/README.quickstart.md /usr/share/doc/vpn-server-api/easy-rsa/
+easy-rsa/doc /usr/share/doc/vpn-server-api/easy-rsa/
+easy-rsa/vars.example /usr/share/doc/vpn-server-api/easy-rsa/
+
+easy-rsa/easyrsa /usr/share/vpn-server-api/easy-rsa/
+easy-rsa/openssl-1.0.cnf /usr/share/vpn-server-api/easy-rsa/
+easy-rsa/x509-types /usr/share/vpn-server-api/easy-rsa/
 
 bin/housekeeping.php => /usr/bin/vpn-server-api-housekeeping
 bin/init.php => /usr/bin/vpn-server-api-init
