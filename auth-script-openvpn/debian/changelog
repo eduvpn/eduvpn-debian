@@ -8,7 +8,7 @@ openvpn-plugin-auth-script (0.1.0-1+deb9u3) stretch; urgency=medium
     For the time being, we're not interested in the auto generated
     openvpn-auth-script-dbgsym .deb.
 
- -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 15 Nov 2018 14:30:54 +0100
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 15 Nov 2018 17:59:13 +0100
 
 openvpn-plugin-auth-script (0.1.0-1+deb9u2) stretch; urgency=medium
 

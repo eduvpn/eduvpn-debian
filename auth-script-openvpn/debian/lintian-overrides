@@ -1,3 +1,10 @@
 # see https://wiki.debian.org/AutomaticDebugPackages for some background info on the
 # auto generated package openvpn-auth-script-dbgsym_0.1.0-1+deb9u2_amd64.deb
-openvpn-auth-script-dbgsym: debug-file-with-no-debug-symbols
+
+#
+# FIXME for some reason, lintian still gives us:
+#
+#  W: openvpn-auth-script-dbgsym: debug-file-with-no-debug-symbols usr/lib/debug/.build-id/5b/a7e2ab041c0cf9236f2883ff2f7eecce9d3171.debug
+#
+
+debug-file-with-no-debug-symbols *
