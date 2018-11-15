@@ -3,6 +3,9 @@ vpn-server-node (1.1.2-2) stable; urgency=medium
   * debian/docs: remove explicit CHANGES.md since implicitly dealt with by
     dh_installchangelogs.
   * debian/preinst: add missing debhelper token.
+  * debian/lintian-overrides: added; with binary-without-manpage
+    usr/bin/vpn-server-node-*.  These manpages are not planned to be
+    written soonish.
   * debian/{rules,postinst}: get rid of "override_dh_compress": we _do_ want
     changelogs to get installed in compressed form.  Adjust postinst to deal
     sane with compressed
