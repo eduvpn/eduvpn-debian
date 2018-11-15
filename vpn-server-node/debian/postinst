@@ -30,8 +30,13 @@ case "$1" in
 		if [ ! -d /etc/vpn-server-node/default ]; then
 			echo "New installation, creating default configuration"
 			install -d -m 755 /etc/vpn-server-node/default
-			install -m 644 /usr/share/doc/vpn-server-node/config.php.example \
-				       /etc/vpn-server-node/default/config.php
+			if [ -f /usr/share/doc/vpn-server-node/config.php.example ]; then
+				install -m 644 /usr/share/doc/vpn-server-node/config.php.example \
+				  /etc/vpn-server-node/default/config.php
+			elif [ -f /usr/share/doc/vpn-server-node/config.php.example.gz ]; then
+				zcat /usr/share/doc/vpn-server-node/config.php.example.gz \
+				  >/etc/vpn-server-node/default/config.php
+			fi
 		else
 			echo "New installation, but existing default configuration found. Not updating"
 		fi
