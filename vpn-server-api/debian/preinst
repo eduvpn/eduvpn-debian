@@ -11,11 +11,9 @@ fi
 
 case "$1" in
     upgrade)
-	# Mark upgrade    
+	# Mark upgrade
         touch /etc/vpn-server-api/.upgrade
     ;;
-    
 esac
 
-
-exit 0
+#DEBHELPER#

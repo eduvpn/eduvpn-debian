@@ -1,3 +1,9 @@
+vpn-server-api (1.4.6-2) stable; urgency=medium
+
+  * debian/preinst: add missing debhelper token.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 15 Nov 2018 09:16:02 +0100
+
 vpn-server-api (1.4.6-1) stable; urgency=medium
 
   * update to 1.4.6
