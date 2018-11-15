@@ -1,9 +1,17 @@
+php-json-signer (3.0.2-7) stable; urgency=medium
+
+  * debian/lintian-overrides: added: for the time being, we will not ship a
+    php-json-signer manpage.
+  * debian/changelog: fix date in a previous entry.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 15 Nov 2018 15:47:50 +0100
+
 php-json-signer (3.0.2-6) stable; urgency=medium
 
   * debian/control: Add myself to Uploaders, similar to other packages in the
     eduvpn suite.
 
- -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Tue, 04 Sep 2018 15:41:32 +0200
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Sun, 28 Oct 2018 15:41:32 +0200
 
 php-json-signer (3.0.2-5) stable; urgency=medium
 
