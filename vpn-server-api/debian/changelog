@@ -1,3 +1,10 @@
+vpn-server-api (1.4.6-3) stable; urgency=medium
+
+  * debian/control: enhance description inspired by current upstream
+    https://github.com/eduvpn/vpn-server-api/blob/master/README.md .
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Sat, 17 Nov 2018 09:46:59 +0100
+
 vpn-server-api (1.4.6-2) stable; urgency=medium
 
   * debian/docs: remove explicit CHANGES.md since implicitly dealt with by
