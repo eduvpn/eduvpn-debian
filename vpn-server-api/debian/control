@@ -38,4 +38,10 @@ Depends:
  php-constant-time,
  openvpn
 Suggests: ${phpcomposer:Debian-suggest}
-Description: VPN Server API
+Description: VPN Server API for Let's Connect!
+ This package provides the server API of the Let's Connect! software. It is
+ used by both vpn-admin-portal and vpn-user-portal. It contains the Easy-RSA
+ X.509 PKI which supplies a CA and a database containing information about the
+ users and links issued certificates to users.  It furthermore ships some
+ housekeeping cronjobs as well as a configuration snippet for easy
+ integration with the Apache webserver.
