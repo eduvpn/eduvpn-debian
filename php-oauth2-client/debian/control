@@ -24,4 +24,7 @@ Depends:
  php-json,
  php-common
 Suggests: ${phpcomposer:Debian-suggest}
-Description: ${phpcomposer:description}
+Description: simple OAuth 2.0 client
+ This package provides a very simple to use OAuth 2.0 client with minimal
+ dependencies. OAuth is a protocol dealing with granting access to
+ webservices.
