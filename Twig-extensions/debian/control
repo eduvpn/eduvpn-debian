@@ -3,22 +3,29 @@ Section: php
 Priority: optional
 Maintainer: François Kooman <fkooman@tuxed.net>
 Uploaders: Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>
-Build-Depends: 
- debhelper (>= 9), 
- phpunit, 
- phpab, 
+Build-Depends:
+ debhelper (>= 9),
+ phpunit,
+ phpab,
  pkg-php-tools (>= 1.7~),
- php-symfony-translation, 
+ php-symfony-translation,
  php-twig
 Standards-Version: 3.9.8
 Homepage: https://github.com/twigphp/Twig-extensions
 
 Package: php-twig-extensions
 Architecture: all
-Depends: 
- ${misc:Depends}, 
+Depends:
+ ${misc:Depends},
  ${phpcomposer:Debian-require},
  php-twig,
  php-symfony-translation
 Suggests: ${phpcomposer:Debian-suggest}
 Description: Twig extensions
+ This package provides a Twig Extensions Repository.  Twig is a template
+ language for PHP. Included extensions are:
+ - Text: Provides useful filters for text manipulation;
+ - I18n: Adds internationalization support via the gettext library;
+ - Intl: Adds a filter for localization of DateTime objects, numbers and currency;
+ - Array: Provides useful filters for array manipulation;
+ - Date: Adds a filter for rendering the difference between dates.

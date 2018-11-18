@@ -1,3 +1,9 @@
+php-secookie (2.0.1-5) stable; urgency=medium
+
+  * debian/control: enhance description.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Sat, 17 Nov 2018 10:33:43 +0100
+
 php-secookie (2.0.1-4) stable; urgency=medium
 
   * debian/control: make pkg-php-tools Build-Depends versioned, since we use

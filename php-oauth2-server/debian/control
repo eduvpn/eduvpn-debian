@@ -26,4 +26,15 @@ Depends:
  php-constant-time,
  php-sqlite3
 Suggests: ${phpcomposer:Debian-suggest}
-Description: ${phpcomposer:description}
+Description: simple OAuth 2.0 server
+ This package provides a very simple OAuth 2.0 server for integration in
+ PHP applications.  OAuth is a protocol dealing with granting access to
+ webservices.  The server has minimal dependencies, but still tries to be
+ secure.  It features:
+  - Supports PHP >= 5.4;
+  - Only supports Authorization Code Grant;
+  - Does not force a framework on you;
+  - Supports PKCE (RFC 7636);
+  - Supports (expiring) refresh tokens;
+  - Does NOT implement RFC 6749 (#4.1.2.1) error response (except for
+    access_denied);

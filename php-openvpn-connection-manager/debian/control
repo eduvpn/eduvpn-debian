@@ -19,4 +19,9 @@ Depends:
  php-common,
  php-psr-log
 Suggests: ${phpcomposer:Debian-suggest}
-Description: ${phpcomposer:description}
+Description: OpenVPN client connection manager
+ The package provides a simple PHP library managing client connections to
+ OpenVPN processes through the OpenVPN management socket.  It features:
+ - Traversing multiple OpenVPN management sockets;
+ - Show connected clients;
+ - Disconnect clients (by CN).
