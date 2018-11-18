@@ -1,3 +1,11 @@
+vpn-server-node (1.1.2-3) stable; urgency=medium
+
+  * debian/lintian-overrides: added; with binary-without-manpage
+    usr/bin/vpn-server-node-*.  These manpages are not planned to be
+    written soonish.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Sun, 18 Nov 2018 10:42:48 +0100
+
 vpn-server-node (1.1.2-2) stable; urgency=medium
 
   * debian/docs: remove explicit CHANGES.md since implicitly dealt with by
@@ -5,9 +13,6 @@ vpn-server-node (1.1.2-2) stable; urgency=medium
   * debian/preinst: add missing debhelper token.
   * debian/{postinst,preinst}: remove unused
     '. /usr/share/debconf/confmodule'.
-  * debian/lintian-overrides: added; with binary-without-manpage
-    usr/bin/vpn-server-node-*.  These manpages are not planned to be
-    written soonish.
   * debian/{rules,postinst}: get rid of "override_dh_compress": we _do_ want
     changelogs to get installed in compressed form.  Adjust postinst to deal
     sane with compressed
@@ -17,7 +22,6 @@ vpn-server-node (1.1.2-2) stable; urgency=medium
     upstream README.md.
 
  -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 15 Nov 2018 17:29:44 +0100
-
 
 vpn-server-node (1.1.2-1) stable; urgency=medium
 
