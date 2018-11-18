@@ -6,7 +6,7 @@ php-openvpn-connection-manager (1.0.2-6) stable; urgency=medium
 
 php-openvpn-connection-manager (1.0.2-5) stable; urgency=medium
 
-  * debian/control: make pkg-p-tools Build-Depends versioned, since we use
+  * debian/control: make pkg-php-tools Build-Depends versioned, since we use
     Composer package support: we need >= 1.7~.  NB: Debian jessie (current
     oldstable) ships with pkg-php-tools 1.28.
 
