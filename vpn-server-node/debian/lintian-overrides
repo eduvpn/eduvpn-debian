@@ -1,0 +1,3 @@
+vpn-server-node: binary-without-manpage usr/bin/vpn-server-node-certificate-info
+vpn-server-node: binary-without-manpage usr/bin/vpn-server-node-generate-firewall
+vpn-server-node: binary-without-manpage usr/bin/vpn-server-node-server-config
