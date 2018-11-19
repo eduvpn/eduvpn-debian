@@ -3,7 +3,7 @@ Section: php
 Priority: optional
 Maintainer: François Kooman <fkooman@tuxed.net>
 Uploaders: Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>
-Build-Depends: 
+Build-Depends:
  debhelper (>= 9),
  phpunit,
  phpab,
@@ -43,4 +43,6 @@ Depends:
  php-twig,
  php-twig-extensions,
 Suggests: ${phpcomposer:Debian-suggest}
-Description: Common VPN library
+Description: library for Let's Connect! VPN server components
+ PHP library offering common functionality shared by the different
+ Let's Connect VPN server components.

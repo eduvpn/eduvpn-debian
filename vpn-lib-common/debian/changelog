@@ -1,3 +1,12 @@
+vpn-lib-common (1.2.3-2) stable; urgency=medium
+
+  * debian/control: enhance description inspired by current upstream
+    README.md.
+  * debian/docs: remove explicit CHANGES.md since implicitly dealt with by
+    dh_installchangelogs.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Mon, 19 Nov 2018 17:43:15 +0100
+
 vpn-lib-common (1.2.3-1) stable; urgency=medium
 
   * update to 1.2.3
