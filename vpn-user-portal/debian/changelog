@@ -1,3 +1,10 @@
+vpn-user-portal (1.8.3-6) stable; urgency=medium
+
+  * debian/control: enhance description inspired by current upstream
+    README.md.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Mon, 19 Nov 2018 17:56:57 +0100
+
 vpn-user-portal (1.8.3-5) stable; urgency=medium
 
   * debian/docs: remove explicit CHANGES.md since implicitly dealt with by

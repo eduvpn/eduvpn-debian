@@ -40,4 +40,6 @@ Depends: ${misc:Depends},
  php-twig-extensions,
  php-cli
 Suggests: ${phpcomposer:Debian-suggest}
-Description: VPN User Portal
+Description: VPN User Portal for Let's Connect!
+ User portal and OAuth authorization server of the Let's Connect! software, allowing
+ users to download and manage VPN configurations and certificates.
