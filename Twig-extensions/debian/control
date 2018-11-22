@@ -24,8 +24,9 @@ Suggests: ${phpcomposer:Debian-suggest}
 Description: Twig extensions
  This package provides a Twig Extensions Repository.  Twig is a template
  language for PHP. Included extensions are:
- - Text: Provides useful filters for text manipulation;
- - I18n: Adds internationalization support via the gettext library;
- - Intl: Adds a filter for localization of DateTime objects, numbers and currency;
- - Array: Provides useful filters for array manipulation;
- - Date: Adds a filter for rendering the difference between dates.
+  - Text: Provides useful filters for text manipulation;
+  - I18n: Adds internationalization support via the gettext library;
+  - Intl: Adds a filter for localization of DateTime objects, numbers and
+    currency;
+  - Array: Provides useful filters for array manipulation;
+  - Date: Adds a filter for rendering the difference between dates.

@@ -22,11 +22,11 @@ Suggests: ${phpcomposer:Debian-suggest}
 Description: library for SQLite database migrations
  This package provides a PHP library for performing SQLite database migrations,
  including updating the database schema.
- - Uses `PDO` database abstraction layer;
- - Optimized for running during every (HTTP) request;
- - Uses database transactions to run migrations;
- - Implement rudimentary "locking" to prevent the migration to run multiple
-   times when application is under load;
- - No dependencies, only core PHP functionality;
- - Less than 200 NCLOC;
- - Supports PHP >= 5.4.
+  - Uses `PDO` database abstraction layer;
+  - Optimized for running during every (HTTP) request;
+  - Uses database transactions to run migrations;
+  - Implement rudimentary "locking" to prevent the migration to run multiple
+    times when application is under load;
+  - No dependencies, only core PHP functionality;
+  - Less than 200 NCLOC;
+  - Supports PHP >= 5.4.

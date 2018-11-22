@@ -1,3 +1,9 @@
+php-openvpn-connection-manager (1.0.2-7) stable; urgency=medium
+
+  * debian/control: fix syntax of description.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 22 Nov 2018 11:17:45 +0100
+
 php-openvpn-connection-manager (1.0.2-6) stable; urgency=medium
 
   * debian/control: enhance description.

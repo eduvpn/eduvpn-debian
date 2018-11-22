@@ -18,10 +18,10 @@ Suggests: ${phpcomposer:Debian-suggest}
 Description: Secure cookie and session library
  This package provides a secure cookie and session library for PHP.
  It features:
- - PHP >= 5.4 supported;
- - Replace complicated setcookie() which is not secure by default;
- - Allow binding PHP sessions to "Domain" and "Path";
- - Uses a "Canary" to regularly refresh session ID;
- - Expires the PHP session on the server;
- - Implements SameSite attribute value;
- - Unit tests with PHPUnit.
+  - PHP >= 5.4 supported;
+  - Replace complicated setcookie() which is not secure by default;
+  - Allow binding PHP sessions to "Domain" and "Path";
+  - Uses a "Canary" to regularly refresh session ID;
+  - Expires the PHP session on the server;
+  - Implements SameSite attribute value;
+  - Unit tests with PHPUnit.
