@@ -1,3 +1,9 @@
+php-sqlite-migrate (0.1.1-7) stable; urgency=medium
+
+  * debian/control: fix syntax of description.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 22 Nov 2018 11:21:19 +0100
+
 php-sqlite-migrate (0.1.1-6) stable; urgency=medium
 
   * debian/control: enhance description.
