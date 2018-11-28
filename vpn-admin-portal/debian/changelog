@@ -1,3 +1,9 @@
+vpn-admin-portal (1.7.3-1) stable; urgency=medium
+
+  * update to 1.7.3
+
+ -- François Kooman <fkooman@tuxed.net>  Wed, 28 Nov 2018 12:42:48 +0100
+
 vpn-admin-portal (1.7.2-6) stable; urgency=medium
 
   * debian/control: enhance description.
