@@ -1,8 +1,13 @@
 diff --git a/bin/generate.php b/bin/generate.php
-index 9d4079a..80b88ba 100644
+index 9d4079a..7741edb 100644
 --- a/bin/generate.php
 +++ b/bin/generate.php
-@@ -22,8 +22,8 @@
+@@ -1,3 +1,4 @@
++#!/usr/bin/env php
+ <?php
+ 
+ /*
+@@ -22,8 +23,8 @@
   * SOFTWARE.
   */
  
