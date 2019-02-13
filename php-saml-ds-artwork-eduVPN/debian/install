@@ -1,3 +1,3 @@
-views/*twig usr/share/php-saml-ds/views/eduVPN
+views/*php usr/share/php-saml-ds/views/eduVPN
 css/*css usr/share/php-saml-ds/web/css/eduVPN
 img/*png usr/share/php-saml-ds/web/img/eduVPN
