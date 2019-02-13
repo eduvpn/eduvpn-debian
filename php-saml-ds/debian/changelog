@@ -1,3 +1,9 @@
+php-saml-ds (2.0.0-1) stable; urgency=medium
+
+  * update to 2.0.0
+
+ -- François Kooman <fkooman@tuxed.net>  Wed, 13 Feb 2019 18:32:49 +0100
+
 php-saml-ds (1.0.12-7) stable; urgency=medium
 
   * debian/lintian-overrides: added: for the time being, we will not ship a

@@ -10,12 +10,7 @@ if [ -f /usr/share/debconf/confmodule ]; then
 fi
 
 case "$1" in
-    failed-upgrade|abort-install|abort-upgrade|disappear|remove)
-    ;;
-
-    upgrade)
-        echo "removing old template cache..."
-	rm -rf /var/lib/php-saml-ds/tpl/*
+    failed-upgrade|abort-install|abort-upgrade|disappear|remove|upgrade)
     ;;
 
     purge)

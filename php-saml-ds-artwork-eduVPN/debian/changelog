@@ -1,3 +1,9 @@
+php-saml-ds-artwork-eduvpn (2.0.0-1) stable; urgency=medium
+
+  * update to 2.0.0
+
+ -- François Kooman <fkooman@tuxed.net>  Wed, 13 Feb 2019 18:35:55 +0100
+
 php-saml-ds-artwork-eduvpn (1.0.1-2) stable; urgency=medium
 
   * Backport to Debian 9/stretch:

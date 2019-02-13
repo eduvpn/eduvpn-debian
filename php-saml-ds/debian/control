@@ -9,8 +9,7 @@ Build-Depends:
  phpunit,
  pkg-php-tools (>= 1.7~),
  dh-exec,
- php-fkooman-secookie,
- php-twig
+ php-fkooman-secookie
 Standards-Version: 3.9.8
 Homepage: https://git.tuxed.net/fkooman/php-saml-ds
 
