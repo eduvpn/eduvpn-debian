@@ -9,10 +9,7 @@ Build-Depends:
  phpab,
  pkg-php-tools (>= 1.7~),
  php-date,
- php-hash,
  php-json,
- php-openssl,
- php-spl,
  php-libsodium,
  php-constant-time
 Standards-Version: 3.9.8
@@ -23,10 +20,7 @@ Architecture: all
 Depends: 
  ${misc:Depends}, 
  php-date,
- php-hash,
  php-json,
- php-openssl,
- php-spl,
  php-libsodium,
  php-constant-time
 Suggests: ${phpcomposer:Debian-suggest}
