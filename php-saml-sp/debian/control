@@ -10,9 +10,6 @@ Build-Depends:
  pkg-php-tools (>= 1.7~),
  php-date,
  php-dom,
- php-libxml,
- php-session,
- php-zlib
  php-libsodium,
  php-constant-time
 Standards-Version: 3.9.8
@@ -24,9 +21,6 @@ Depends:
  ${misc:Depends}, 
  php-date,
  php-dom,
- php-libxml,
- php-session,
- php-zlib
  php-libsodium,
  php-constant-time
 Suggests: ${phpcomposer:Debian-suggest}
