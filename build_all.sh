@@ -6,24 +6,20 @@ sudo apt-get -y install build-essential devscripts aptly equivs
 
 PACKAGE_LIST=(\
     BaconQrCode \
-    php-oauth2-client \
-    php-yubitwee \
+    php-jwt \
     php-otp-verifier \
     php-sqlite-migrate \
     php-oauth2-server \
     php-secookie \
-    Twig-extensions \
     php-saml-ds \
     php-openvpn-connection-manager \
     vpn-lib-common \
     vpn-server-api \
     vpn-user-portal \
     vpn-server-node \
-    vpn-admin-portal \
     php-json-signer \
     vpn-portal-artwork-eduVPN \
     vpn-portal-artwork-LC \
-    auth-script-openvpn \
 )
 
 ./repo_setup.sh

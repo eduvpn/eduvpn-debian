@@ -1,13 +1,9 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: php-oauth2-server
-Source: https://git.tuxed.net/fkooman/php-oauth2-client
+Upstream-Name: php-jwt
+Source: https://git.tuxed.net/fkooman/php-jwt
 
 Files: *
-Copyright:  2016, 2017 François Kooman <fkooman@tuxed.net>
-License: MIT
-
-Files: debian/*
-Copyright: 2017 Gijs Molenaar <Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>>
+Copyright:  2019 François Kooman <fkooman@tuxed.net>
 License: MIT
 
 License: MIT
