@@ -8,6 +8,11 @@ Build-Depends:
  phpunit,
  phpab,
  pkg-php-tools (>= 1.7~),
+ php-date,
+ php-hash,
+ php-json,
+ php-openssl,
+ php-spl,
  php-libsodium,
  php-constant-time
 Standards-Version: 3.9.8
@@ -17,7 +22,12 @@ Package: php-fkooman-jwt
 Architecture: all
 Depends: 
  ${misc:Depends}, 
- ${phpcomposer:Debian-require},
- php-libsodium
+ php-date,
+ php-hash,
+ php-json,
+ php-openssl,
+ php-spl,
+ php-libsodium,
+ php-constant-time
 Suggests: ${phpcomposer:Debian-suggest}
 Description: JWT Library.
