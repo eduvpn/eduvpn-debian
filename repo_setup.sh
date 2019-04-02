@@ -2,7 +2,7 @@
 
 KEY=eduvpn+debian@surfnet.nl
 DIST=stretch
-REPO=eduVPN
+REPO=LC
 
 aptly publish drop ${DIST} || true
 aptly repo drop ${REPO} || true

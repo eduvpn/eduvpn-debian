@@ -1,6 +1,6 @@
 #!/bin/bash -ve
 
-REPO=eduVPN
+REPO=LC
 NAME=$(basename "${PWD}")
 VERSION=$(cat debian/changelog | head -1 | cut -d "(" -f 2 | cut -d ")" -f 1 | cut -d '-' -f 1)
 rm -rf build
