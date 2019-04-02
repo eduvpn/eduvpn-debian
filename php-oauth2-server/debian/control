@@ -10,7 +10,6 @@ Build-Depends:
  phpab,
  php-common,
  php-json,
- php-libsodium,
  php-constant-time,
  php-sqlite3
 Standards-Version: 3.9.8
@@ -22,7 +21,6 @@ Depends:
  ${misc:Depends},
  php-common,
  php-json,
- php-libsodium,
  php-constant-time,
  php-sqlite3
 Suggests: ${phpcomposer:Debian-suggest}

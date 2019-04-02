@@ -1,62 +1,421 @@
+diff --git a/src/LocalSigner.php b/src/LocalSigner.php
+index 8f81944..ed14c8c 100644
+--- a/src/LocalSigner.php
++++ b/src/LocalSigner.php
+@@ -71,16 +71,16 @@ class LocalSigner implements SignerInterface
+     {
+         // we add a JWT header, but this is just 'informative', it won't be
+         // verified at all by the verifier...
+-        $jwtHeader = Base64UrlSafe::encodeUnpadded(
++        $jwtHeader = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'alg' => 'HS256',
+                     'typ' => 'JWT',
+                 ]
+             )
+-        );
+-        $jwtPayload = Base64UrlSafe::encodeUnpadded(Json::encode($codeTokenInfo));
+-        $jwtSignature = Base64UrlSafe::encodeUnpadded($this->__sign($jwtHeader.'.'.$jwtPayload));
++        ), '=');
++        $jwtPayload = \rtrim(Base64UrlSafe::encode(Json::encode($codeTokenInfo)), '=');
++        $jwtSignature = \rtrim(Base64UrlSafe::encode($this->__sign($jwtHeader.'.'.$jwtPayload)), '=');
+ 
+         return $jwtHeader.'.'.$jwtPayload.'.'.$jwtSignature;
+     }
+@@ -100,7 +100,7 @@ class LocalSigner implements SignerInterface
+ 
+         // we don't care at about the JWT header content, so we ignore it and
+         // only use it because it is part of the signature...
+-        $jwtSignature = Base64UrlSafe::encodeUnpadded($this->__sign($jwtParts[0].'.'.$jwtParts[1]));
++        $jwtSignature = \rtrim(Base64UrlSafe::encode($this->__sign($jwtParts[0].'.'.$jwtParts[1])), '=');
+         if (false === \hash_equals($jwtSignature, $jwtParts[2])) {
+             return false;
+         }
 diff --git a/src/OAuthServer.php b/src/OAuthServer.php
-index 8ee4245..ee49a27 100644
+index b11191b..9a43cd1 100644
 --- a/src/OAuthServer.php
 +++ b/src/OAuthServer.php
-@@ -550,12 +550,15 @@ class OAuthServer
+@@ -571,13 +571,13 @@ class OAuthServer
              // compare code_challenge with expected value
              $strCmp = \hash_equals(
-                 $codeInfo['code_challenge'],
+                 $codeChallenge,
 -                Base64UrlSafe::encodeUnpadded(
--                    \hash(
--                        'sha256',
--                        $postData['code_verifier'],
--                        true
--                    )
-+                \rtrim(
-+                    Base64UrlSafe::encode(
-+                        \hash(
-+                            'sha256',
-+                            $postData['code_verifier'],
-+                            true
-+                        )
-+                    ),
-+                    '='
-                 )
++                \rtrim(Base64UrlSafe::encode(
+                     \hash(
+                         'sha256',
+                         $postData['code_verifier'],
+                         true
+                     )
+-                )
++                ), '=')
              );
  
-diff --git a/src/SodiumSigner.php b/src/SodiumSigner.php
-index 3b54ae4..2597169 100644
---- a/src/SodiumSigner.php
-+++ b/src/SodiumSigner.php
-@@ -68,8 +68,11 @@ class SodiumSigner implements SignerInterface
-      */
-     public function sign(array $listOfClaims)
+             if (false === $strCmp) {
+diff --git a/tests/BearerValidatorTest.php b/tests/BearerValidatorTest.php
+index 191287e..61b2c9d 100644
+--- a/tests/BearerValidatorTest.php
++++ b/tests/BearerValidatorTest.php
+@@ -75,7 +75,7 @@ class BearerValidatorTest extends TestCase
      {
--        return Base64UrlSafe::encodeUnpadded(
--            \sodium_crypto_sign(Util::encodeJson($listOfClaims), $this->secretKey)
-+        return \rtrim(
-+            Base64UrlSafe::encode(
-+                \sodium_crypto_sign(Util::encodeJson($listOfClaims), $this->secretKey)
-+            ),
-+            '='
-         );
-     }
+         $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1', new DateTime('2016-01-01'));
  
+-        $providedAccessToken = Base64UrlSafe::encodeUnpadded(
++        $providedAccessToken = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'v' => OAuthServer::TOKEN_VERSION,
+@@ -87,7 +87,7 @@ class BearerValidatorTest extends TestCase
+                     'expires_at' => '2016-01-01T01:00:00+00:00',
+                 ]
+             )
+-        );
++        ), '=');
+         $accessTokenInfo = $this->validator->validate(\sprintf('Bearer %s', $providedAccessToken));
+         $this->assertSame('foo', $accessTokenInfo->getUserId());
+         $this->assertSame('config', (string) $accessTokenInfo->getScope());
+@@ -99,7 +99,7 @@ class BearerValidatorTest extends TestCase
+     public function testInvalidSignature()
+     {
+         try {
+-            $providedAccessToken = Base64UrlSafe::encodeUnpadded(
++            $providedAccessToken = \rtrim(Base64UrlSafe::encode(
+                 Json::encode(
+                     [
+                         'v' => OAuthServer::TOKEN_VERSION,
+@@ -111,7 +111,7 @@ class BearerValidatorTest extends TestCase
+                         'expires_at' => '2016-01-01T01:00:00+00:00',
+                     ]
+                 )
+-            );
++            ), '=');
+ 
+             $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1', new DateTime('2016-01-01'));
+             $this->validator->validate(\sprintf('Bearer %s', $providedAccessToken));
+@@ -134,7 +134,7 @@ class BearerValidatorTest extends TestCase
+             );
+             $this->validator->setDateTime(new DateTime('2016-01-01'));
+ 
+-            $providedAccessToken = Base64UrlSafe::encodeUnpadded(
++            $providedAccessToken = \rtrim(Base64UrlSafe::encode(
+                 Json::encode(
+                     [
+                         'v' => OAuthServer::TOKEN_VERSION,
+@@ -146,7 +146,7 @@ class BearerValidatorTest extends TestCase
+                         'expires_at' => '2016-01-01T01:00:00+00:00',
+                     ]
+                 )
+-            );
++            ), '=');
+ 
+             $this->validator->validate(\sprintf('Bearer %s', $providedAccessToken));
+             $this->fail();
+@@ -173,7 +173,7 @@ class BearerValidatorTest extends TestCase
+      */
+     public function testExpiredToken()
+     {
+-        $providedAccessToken = Base64UrlSafe::encodeUnpadded(
++        $providedAccessToken = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'v' => OAuthServer::TOKEN_VERSION,
+@@ -185,7 +185,7 @@ class BearerValidatorTest extends TestCase
+                     'expires_at' => '2015-01-01T01:00:00+00:00',
+                 ]
+             )
+-        );
++        ), '=');
+ 
+         try {
+             $this->validator->validate(\sprintf('Bearer %s', $providedAccessToken));
+@@ -214,7 +214,7 @@ class BearerValidatorTest extends TestCase
+     public function testCodeAsAccessToken()
+     {
+         try {
+-            $providedAccessToken = Base64UrlSafe::encodeUnpadded(
++            $providedAccessToken = \rtrim(Base64UrlSafe::encode(
+                 Json::encode(
+                     [
+                         'v' => OAuthServer::TOKEN_VERSION,
+@@ -228,7 +228,7 @@ class BearerValidatorTest extends TestCase
+                         'expires_at' => '2016-01-01T00:05:00+00:00',
+                     ]
+                 )
+-            );
++            ), '=');
+ 
+             $this->validator->validate(\sprintf('Bearer %s', $providedAccessToken));
+             $this->fail();
+diff --git a/tests/OAuthServerTest.php b/tests/OAuthServerTest.php
+index d7f3430..9f4256e 100644
+--- a/tests/OAuthServerTest.php
++++ b/tests/OAuthServerTest.php
+@@ -133,7 +133,7 @@ class OAuthServerTest extends TestCase
+             'foo'
+         );
+ 
+-        $expectedCode = Base64UrlSafe::encodeUnpadded(
++        $expectedCode = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'v' => OAuthServer::TOKEN_VERSION,
+@@ -147,7 +147,7 @@ class OAuthServerTest extends TestCase
+                     'expires_at' => '2016-01-01T00:05:00+00:00',
+                 ]
+             )
+-        );
++        ), '=');
+ 
+         $this->assertInstanceOf('\fkooman\OAuth\Server\Http\Response', $authorizeResponse);
+         $this->assertSame(
+@@ -181,7 +181,7 @@ class OAuthServerTest extends TestCase
+         );
+         $this->assertSame(302, $authorizeResponse->getStatusCode());
+ 
+-        $expectedCode = Base64UrlSafe::encodeUnpadded(
++        $expectedCode = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'v' => OAuthServer::TOKEN_VERSION,
+@@ -195,7 +195,7 @@ class OAuthServerTest extends TestCase
+                     'expires_at' => '2016-01-01T00:05:00+00:00',
+                 ]
+             )
+-        );
++        ), '=');
+ 
+         $this->assertSame(
+             [
+@@ -228,7 +228,7 @@ class OAuthServerTest extends TestCase
+         );
+         $this->assertSame(302, $authorizeResponse->getStatusCode());
+ 
+-        $expectedCode = Base64UrlSafe::encodeUnpadded(
++        $expectedCode = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'v' => OAuthServer::TOKEN_VERSION,
+@@ -242,7 +242,7 @@ class OAuthServerTest extends TestCase
+                     'expires_at' => '2016-01-01T00:05:00+00:00',
+                 ]
+             )
+-        );
++        ), '=');
+ 
+         $this->assertSame(
+             [
+@@ -258,7 +258,7 @@ class OAuthServerTest extends TestCase
+      */
+     public function testPostToken()
+     {
+-        $providedCode = Base64UrlSafe::encodeUnpadded(
++        $providedCode = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'v' => OAuthServer::TOKEN_VERSION,
+@@ -272,7 +272,7 @@ class OAuthServerTest extends TestCase
+                     'expires_at' => '2016-01-01T00:05:00+00:00',
+                 ]
+             )
+-        );
++        ), '=');
+ 
+         $tokenResponse = $this->server->postToken(
+             [
+@@ -295,7 +295,7 @@ class OAuthServerTest extends TestCase
+             $tokenResponse->getHeaders()
+         );
+ 
+-        $expectedAccessToken = Base64UrlSafe::encodeUnpadded(
++        $expectedAccessToken = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'v' => OAuthServer::TOKEN_VERSION,
+@@ -307,8 +307,8 @@ class OAuthServerTest extends TestCase
+                     'expires_at' => '2016-01-01T01:00:00+00:00',
+                 ]
+             )
+-        );
+-        $expectedRefreshToken = Base64UrlSafe::encodeUnpadded(
++        ), '=');
++        $expectedRefreshToken = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'v' => OAuthServer::TOKEN_VERSION,
+@@ -319,7 +319,7 @@ class OAuthServerTest extends TestCase
+                     'scope' => 'config',
+                 ]
+             )
+-        );
++        ), '=');
+ 
+         $this->assertSame(
+             [
+@@ -337,7 +337,7 @@ class OAuthServerTest extends TestCase
+      */
+     public function testPostTokenSecret()
+     {
+-        $providedCode = Base64UrlSafe::encodeUnpadded(
++        $providedCode = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'v' => OAuthServer::TOKEN_VERSION,
+@@ -350,7 +350,7 @@ class OAuthServerTest extends TestCase
+                     'expires_at' => '2016-01-01T00:05:00+00:00',
+                 ]
+             )
+-        );
++        ), '=');
+ 
+         $tokenResponse = $this->server->postToken(
+             [
+@@ -363,7 +363,7 @@ class OAuthServerTest extends TestCase
+             '123456'
+         );
+ 
+-        $expectedAccessToken = Base64UrlSafe::encodeUnpadded(
++        $expectedAccessToken = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'v' => OAuthServer::TOKEN_VERSION,
+@@ -375,8 +375,8 @@ class OAuthServerTest extends TestCase
+                     'expires_at' => '2016-01-01T01:00:00+00:00',
+                 ]
+             )
+-        );
+-        $expectedRefreshToken = Base64UrlSafe::encodeUnpadded(
++        ), '=');
++        $expectedRefreshToken = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'v' => OAuthServer::TOKEN_VERSION,
+@@ -387,7 +387,7 @@ class OAuthServerTest extends TestCase
+                     'scope' => 'config',
+                 ]
+             )
+-        );
++        ), '=');
+ 
+         $this->assertSame(
+             [
+@@ -405,7 +405,7 @@ class OAuthServerTest extends TestCase
+      */
+     public function testPostTokenMissingCodeVerifierPublicClient()
+     {
+-        $providedCode = Base64UrlSafe::encodeUnpadded(
++        $providedCode = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'v' => OAuthServer::TOKEN_VERSION,
+@@ -419,7 +419,7 @@ class OAuthServerTest extends TestCase
+                     'expires_at' => '2016-01-01T00:05:00+00:00',
+                 ]
+             )
+-        );
++        ), '=');
+ 
+         try {
+             $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1', new DateTime('2016-01-01'));
+@@ -487,7 +487,7 @@ class OAuthServerTest extends TestCase
+         try {
+             $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1', new DateTime('2016-01-01'));
+ 
+-            $providedCode = Base64UrlSafe::encodeUnpadded(
++            $providedCode = \rtrim(Base64UrlSafe::encode(
+                 Json::encode(
+                     [
+                         'v' => OAuthServer::TOKEN_VERSION,
+@@ -501,7 +501,7 @@ class OAuthServerTest extends TestCase
+                         'expires_at' => '2016-01-01T00:05:00+00:00',
+                     ]
+                 )
+-            );
++            ), '=');
+ 
+             $this->server->postToken(
+                 [
+@@ -526,7 +526,7 @@ class OAuthServerTest extends TestCase
+     public function testExpiredCode()
+     {
+         try {
+-            $providedCode = Base64UrlSafe::encodeUnpadded(
++            $providedCode = \rtrim(Base64UrlSafe::encode(
+                 Json::encode(
+                     [
+                         'v' => OAuthServer::TOKEN_VERSION,
+@@ -540,7 +540,7 @@ class OAuthServerTest extends TestCase
+                         'expires_at' => '2015-01-01T00:05:00+00:00',
+                     ]
+                 )
+-            );
++            ), '=');
+ 
+             $this->server->postToken(
+                 [
+@@ -567,7 +567,7 @@ class OAuthServerTest extends TestCase
+         try {
+             $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1', new DateTime('2016-01-01'));
+ 
+-            $providedCode = Base64UrlSafe::encodeUnpadded(
++            $providedCode = \rtrim(Base64UrlSafe::encode(
+                 Json::encode(
+                     [
+                         'v' => OAuthServer::TOKEN_VERSION,
+@@ -579,7 +579,7 @@ class OAuthServerTest extends TestCase
+                         'expires_at' => '2016-01-01T01:00:00+00:00',
+                     ]
+                 )
+-            );
++            ), '=');
+ 
+             $this->server->postToken(
+                 [
+@@ -605,7 +605,7 @@ class OAuthServerTest extends TestCase
+     {
+         $this->storage->storeAuthorization('foo', 'code-client-secret', 'config', 'random_1', new DateTime('2016-01-01'));
+ 
+-        $providedRefreshToken = Base64UrlSafe::encodeUnpadded(
++        $providedRefreshToken = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'v' => OAuthServer::TOKEN_VERSION,
+@@ -617,7 +617,7 @@ class OAuthServerTest extends TestCase
+                     'expires_at' => '2017-01-01T00:00:00+00:00',
+                 ]
+             )
+-        );
++        ), '=');
+ 
+         $tokenResponse = $this->server->postToken(
+             [
+@@ -628,7 +628,7 @@ class OAuthServerTest extends TestCase
+             '123456'
+         );
+ 
+-        $expectedAccessToken = Base64UrlSafe::encodeUnpadded(
++        $expectedAccessToken = \rtrim(Base64UrlSafe::encode(
+             Json::encode(
+                 [
+                     'v' => OAuthServer::TOKEN_VERSION,
+@@ -640,7 +640,7 @@ class OAuthServerTest extends TestCase
+                     'expires_at' => '2016-01-01T01:00:00+00:00',
+                 ]
+             )
+-        );
++        ), '=');
+ 
+         $this->assertSame(
+             [
 diff --git a/tests/TestSigner.php b/tests/TestSigner.php
-index 8f4f036..8edbe7f 100644
+index 8b00a17..4fc44a8 100644
 --- a/tests/TestSigner.php
 +++ b/tests/TestSigner.php
-@@ -41,8 +41,11 @@ class TestSigner implements SignerInterface
+@@ -41,7 +41,7 @@ class TestSigner implements SignerInterface
       */
-     public function sign(array $listOfClaims)
+     public function sign(array $codeTokenInfo)
      {
--        return Base64UrlSafe::encodeUnpadded(
--            Util::encodeJson($listOfClaims)
-+        return \rtrim(
-+            Base64UrlSafe::encode(
-+                Util::encodeJson($listOfClaims)
-+            ),
-+            '='
-         );
+-        return Base64UrlSafe::encodeUnpadded(Json::encode($codeTokenInfo));
++        return \rtrim(Base64UrlSafe::encode(Json::encode($codeTokenInfo)), '=');
      }
  
+     /**
