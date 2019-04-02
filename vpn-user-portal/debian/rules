@@ -1,11 +1,15 @@
 #!/usr/bin/make -f
 
 define REQUIRES
-require_once __DIR__.'/sodium_compat.php';
-require_once '/usr/share/php/fkooman/OAuth/Client/autoload.php';
-require_once '/usr/share/php/SURFnet/VPN/Common/autoload.php';
-require_once '/usr/share/php/fkooman/OAuth/Server/autoload.php';
 require_once '/usr/share/php/BaconQrCode/autoload.php';
+require_once '/usr/share/php/fkooman/Jwt/autoload.php';
+require_once '/usr/share/php/fkooman/OAuth/Server/autoload.php';
+require_once '/usr/share/php/fkooman/SAML/SP/autoload.php';
+require_once '/usr/share/php/fkooman/SeCookie/autoload.php';
+require_once '/usr/share/php/fkooman/SqliteMigrate/autoload.php';
+require_once '/usr/share/php/LC/Common/autoload.php';
+require_once '/usr/share/php/ParagonIE/ConstantTime/autoload.php';
+require_once __DIR__.'/sodium_compat.php';
 endef
 
 # easier to use this as a shell variable

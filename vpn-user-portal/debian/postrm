@@ -9,11 +9,6 @@ case "$1" in
     failed-upgrade|abort-install|abort-upgrade|disappear|remove)
     ;;
 
-    upgrade)
-        echo "removing old template cache..."
-        rm -rf /var/lib/vpn-user-portal/*/tpl/*
-    ;;
-
     purge)
         rm -rf /var/lib/vpn-user-portal
     ;;

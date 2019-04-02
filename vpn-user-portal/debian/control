@@ -9,36 +9,35 @@ Build-Depends:
  phpab,
  phpunit,
  pkg-php-tools (>= 1.7~),
- php-common,
- php-fkooman-oauth2-client,
- php-eduvpn-common,
- php-fkooman-oauth2-server,
- php-twig-extensions,
  php-bacon-qr-code,
- php-constant-time,
- php-eduvpn-common,
+ php-sqlite3,
  php-json,
- php-libsodium,
- php-mbstring,
- php-fkooman-secookie
+ php-fkooman-jwt,
+ php-fkooman-oauth2-server,
+ php-fkooman-saml-sp,
+ php-fkooman-secookie,
+ php-fkooman-sqlite-migrate,
+ php-lc-common,
+ php-constant-time,
+ php-libsodium
 Standards-Version: 3.9.8
 Homepage: https://github.com/eduvpn/vpn-user-portal
 
 Package: vpn-user-portal
 Architecture: all
 Depends: ${misc:Depends},
- php-common,
+ php-cli,
  php-bacon-qr-code,
- php-eduvpn-common,
+ php-sqlite3,
  php-json,
- php-libsodium,
- php-mbstring,
- php-fkooman-oauth2-client,
+ php-fkooman-jwt,
  php-fkooman-oauth2-server,
+ php-fkooman-saml-sp,
  php-fkooman-secookie,
+ php-fkooman-sqlite-migrate,
+ php-lc-common,
  php-constant-time,
- php-twig-extensions,
- php-cli
+ php-libsodium
 Suggests: ${phpcomposer:Debian-suggest}
 Description: VPN User Portal for Let's Connect!
  User portal and OAuth authorization server of the Let's Connect! software, allowing

@@ -5,12 +5,12 @@ debian/apache.conf => /etc/apache2/conf-available/vpn-user-portal.conf
 bin/add-user.php => /usr/bin/vpn-user-portal-add-user
 bin/foreign-key-list-fetcher.php => /usr/bin/vpn-user-portal-foreign-key-list-fetcher
 bin/init.php => /usr/bin/vpn-user-portal-init
-bin/show-public-key.php => /usr/bin/vpn-user-portal-show-public-key
-bin/generate-voucher.php => /usr/bin/vpn-user-portal-generate-voucher
+bin/show-oauth-key.php => /usr/bin/vpn-user-portal-show-oauth-key
+bin/generate-oauth-key.php => /usr/bin/vpn-user-portal-generate-oauth-key
 
 config/config.php.example => /usr/share/doc/vpn-user-portal/config.php.example
 
-src/* /usr/share/php/SURFnet/VPN/Portal/
+src/* /usr/share/php/LC/Portal/
 
 locale /usr/share/vpn-user-portal/
 views /usr/share/vpn-user-portal/
