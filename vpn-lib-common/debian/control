@@ -8,11 +8,7 @@ Build-Depends:
  phpunit,
  phpab,
  pkg-php-tools (>= 1.7~),
- php-psr-log,
- php-fkooman-secookie,
- php-twig,
  php-ldap,
- php-twig-extensions,
  php-mbstring,
  php-libsodium,
  php-common,
@@ -21,7 +17,8 @@ Build-Depends:
  php-sqlite3,
  php-json,
  php-fkooman-secookie,
- php-constant-time
+ php-constant-time,
+ php-psr-log
 Standards-Version: 3.9.8
 Homepage: https://github.com/eduvpn/vpn-lib-common
 
@@ -29,19 +26,17 @@ Package: php-eduvpn-common
 Architecture: all
 Depends:
  ${misc:Depends},
+ php-ldap,
+ php-mbstring,
+ php-libsodium,
  php-common,
  php-curl,
  php-radius,
+ php-sqlite3,
  php-json,
- php-mbstring,
- php-libsodium,
- php-ldap,
  php-fkooman-secookie,
  php-constant-time,
- php-common,
- php-psr-log,
- php-twig,
- php-twig-extensions,
+ php-psr-log
 Suggests: ${phpcomposer:Debian-suggest}
 Description: library for Let's Connect! VPN server components
  PHP library offering common functionality shared by the different
