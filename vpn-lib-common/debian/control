@@ -22,7 +22,7 @@ Build-Depends:
 Standards-Version: 3.9.8
 Homepage: https://github.com/eduvpn/vpn-lib-common
 
-Package: php-eduvpn-common
+Package: php-lc-common
 Architecture: all
 Depends:
  ${misc:Depends},
