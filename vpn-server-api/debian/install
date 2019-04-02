@@ -3,7 +3,7 @@
 debian/apache.conf => /etc/apache2/conf-available/vpn-server-api.conf
 config/config.php.example => /usr/share/doc/vpn-server-api/config.php.example
 
-src/* /usr/share/php/SURFnet/VPN/Server/
+src/* /usr/share/php/LC/Server/
 web /usr/share/vpn-server-api/
 schema /usr/share/vpn-server-api/
 
@@ -16,9 +16,9 @@ easy-rsa/easyrsa /usr/share/vpn-server-api/easy-rsa/
 easy-rsa/openssl-1.0.cnf /usr/share/vpn-server-api/easy-rsa/
 easy-rsa/x509-types /usr/share/vpn-server-api/easy-rsa/
 
+bin/disconnect-expired-certificates.php => /usr/bin/vpn-server-api-disconnect-expired-certificates
 bin/housekeeping.php => /usr/bin/vpn-server-api-housekeeping
 bin/init.php => /usr/bin/vpn-server-api-init
-bin/show-instance-info.php => /usr/bin/vpn-server-api-show-instance-info
 bin/stats.php => /usr/bin/vpn-server-api-stats
 bin/status.php => /usr/bin/vpn-server-api-status
 bin/update-api-secrets.php => /usr/bin/vpn-server-api-update-api-secrets

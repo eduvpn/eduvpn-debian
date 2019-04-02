@@ -1,14 +1,11 @@
 #!/usr/bin/make -f
 
 define REQUIRES
-require_once '/usr/share/php/fkooman/OAuth/Client/autoload.php';
 require_once '/usr/share/php/fkooman/Otp/autoload.php';
 require_once '/usr/share/php/fkooman/SqliteMigrate/autoload.php';
-require_once '/usr/share/php/SURFnet/VPN/Common/autoload.php';
-require_once '/usr/share/php/fkooman/OAuth/Server/autoload.php';
-require_once '/usr/share/php/fkooman/YubiTwee/autoload.php';
+require_once '/usr/share/php/LC/Common/autoload.php';
+require_once '/usr/share/php/Psr/Log/autoload.php';
 require_once '/usr/share/php/LC/OpenVpn/autoload.php';
-
 endef
 
 # easier to use this as a shell variable

@@ -9,13 +9,14 @@ Build-Depends:
  phpab,
  pkg-php-tools (>= 1.7~),
  phpunit,
+ php-sqlite3,
+ php-json,
  php-fkooman-otp-verifier,
  php-fkooman-sqlite-migrate,
- php-fkooman-oauth2-client,
- php-fkooman-yubitwee,
  php-lc-openvpn-connection-manager,
- php-eduvpn-common (>= 1.0.5),
- php-fkooman-oauth2-server
+ php-lc-common,
+ php-psr-log,
+ php-constant-time
 Standards-Version: 3.9.8
 Homepage: https://github.com/eduvpn/vpn-server-api
 
@@ -24,17 +25,13 @@ Architecture: all
 Depends: 
  ${misc:Depends},
  php-cli,
- php-common,
+ php-sqlite3,
+ php-json,
  php-fkooman-otp-verifier,
  php-fkooman-sqlite-migrate,
- php-eduvpn-common,
  php-lc-openvpn-connection-manager,
- php-curl,
- php-json,
- php-mbstring,
- php-fkooman-oauth2-client,
- php-fkooman-secookie,
- php-fkooman-yubitwee,
+ php-lc-common,
+ php-psr-log,
  php-constant-time,
  openvpn
 Suggests: ${phpcomposer:Debian-suggest}
