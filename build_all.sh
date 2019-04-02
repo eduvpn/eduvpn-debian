@@ -11,7 +11,7 @@ PACKAGE_LIST=(\
     php-sqlite-migrate \
     php-oauth2-server \
     php-secookie \
-    php-saml-ds \
+    php-saml-sp \
     php-openvpn-connection-manager \
     vpn-lib-common \
     vpn-server-api \
