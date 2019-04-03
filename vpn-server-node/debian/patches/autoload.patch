@@ -43,6 +43,21 @@ index 1a59896..bf311e0 100644
  
  use LC\Common\Config;
  use LC\Common\HttpClient\CurlHttpClient;
+diff --git a/config/config.php.example b/config/config.php.example
+index 0112e14..c5ecff0 100644
+--- a/config/config.php.example
++++ b/config/config.php.example
+@@ -3,8 +3,8 @@
+ return [
+     // Override the user/group under which OpenVPN will run, on CentOS/Fedora this
+     // is openvpn:openvpn, on Debian this is nobody:nogroup
+-    'vpnUser' => 'openvpn',
+-    'vpnGroup' => 'openvpn',
++    'vpnUser' => 'nobody',
++    'vpnGroup' => 'nogroup',
+ 
+     'apiUser' => 'vpn-server-node',
+     'apiPass' => 'XXX-vpn-server-node/vpn-server-api-XXX',
 diff --git a/libexec/client-connect.php b/libexec/client-connect.php
 index b4cffde..c3501a2 100644
 --- a/libexec/client-connect.php
@@ -88,3 +103,18 @@ index 61d9cad..880ac86 100644
  
      /** @var string */
      private $vpnConfigDir;
+diff --git a/tests/data/internet-0.conf b/tests/data/internet-0.conf
+index 0bdc4ac..03897d3 100644
+--- a/tests/data/internet-0.conf
++++ b/tests/data/internet-0.conf
+@@ -9,8 +9,8 @@ auth none
+ ca tls/internet/ca.crt
+ cert tls/internet/server.crt
+ cipher AES-256-GCM
+-client-connect /usr/libexec/vpn-server-node/client-connect
+-client-disconnect /usr/libexec/vpn-server-node/client-disconnect
++client-connect /usr/lib/vpn-server-node/client-connect
++client-disconnect /usr/lib/vpn-server-node/client-disconnect
+ dev tun-1-0
+ dev-type tun
+ dh none
