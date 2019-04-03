@@ -38,7 +38,8 @@ Depends: ${misc:Depends},
  php-lc-common,
  php-constant-time,
  php-libsodium,
- fonts-roboto-fontface
+ fonts-roboto-fontface,
+ openssl
 Suggests: ${phpcomposer:Debian-suggest}
 Description: VPN User Portal for Let's Connect!
  User portal and OAuth authorization server of the Let's Connect! software, allowing

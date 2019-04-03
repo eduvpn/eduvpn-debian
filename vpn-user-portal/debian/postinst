@@ -26,8 +26,27 @@ case "$1" in
 		rm  /etc/vpn-user-portal/.upgrade
 	else
         # generate OAuth key if it does not exist
-        if [ ! -f /etc/vpn-user-portal/oauth.key ]; then
+        if [ ! -f "/etc/vpn-user-portal/oauth.key" ]
+        then
             /usr/bin/vpn-user-portal-generate-oauth-key
+        fi
+
+        # generate SAML keys if they do not yet exist
+        if [ ! -f "/etc/vpn-user-portal/sp.key" ]
+        then
+            /usr/bin/openssl \
+                req \
+                -nodes \
+                -subj "/CN=SAML SP" \
+                -x509 \
+                -sha256 \
+                -newkey rsa:3072 \
+                -keyout "/etc/vpn-user-portal/sp.key" \
+                -out "/etc/vpn-user-portal/sp.crt" \
+                -days 1825 \
+                2>/dev/null
+            # allow web server to read the private key
+            chmod 0644 /etc/vpn-user-portal/sp.key
         fi
 
 		# This is a new installation. Try to create default config
