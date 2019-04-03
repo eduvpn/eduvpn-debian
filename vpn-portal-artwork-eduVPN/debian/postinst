@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -e
+
+ARTWORK=eduVPN
+
+case "$1" in
+    configure)
+	    if [ ! -f /etc/vpn-user-portal/${ARTWORK}.php ]; then
+		    if [ -f /usr/share/doc/vpn-portal-artwork-${ARTWORK}/${ARTWORK}.php.example ]; then
+			    install -m 644 /usr/share/doc/vpn-portal-artwork-${ARTWORK}/${ARTWORK}.php.example \
+			      /etc/vpn-user-portal/${ARTWORK}.php
+		    elif [ -f /usr/share/doc/vpn-portal-artwork-${ARTWORK}/${ARTWORK}.php.example.gz ]; then
+			    zcat /usr/share/doc/vpn-portal-artwork-${ARTWORK}/${ARTWORK}.php.example.gz \
+			      >/etc/vpn-user-portal/${ARTWORK}.php
+		    fi
+	    fi
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
