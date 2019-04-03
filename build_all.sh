@@ -20,6 +20,8 @@ PACKAGE_LIST=(\
     php-json-signer \
     vpn-portal-artwork-eduVPN \
     vpn-portal-artwork-LC \
+    php-saml-ds \
+    php-saml-ds-artwork-eduVPN \
 )
 
 ./repo_setup.sh

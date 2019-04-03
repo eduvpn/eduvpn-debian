@@ -1,3 +1,10 @@
+php-saml-ds-artwork-eduvpn (2.0.0-2) stable; urgency=medium
+
+  * remove `postinst` and `postrm`
+  * update TODO
+
+ -- François Kooman <fkooman@tuxed.net>  Wed, 03 Apr 2019 15:12:00 +0200
+
 php-saml-ds-artwork-eduvpn (2.0.0-1) stable; urgency=medium
 
   * update to 2.0.0
