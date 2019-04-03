@@ -1,5 +1,3 @@
 views/vpn-user-portal/*.php usr/share/vpn-user-portal/views/LC
 css/*css usr/share/vpn-user-portal/web/css/LC
-css/*css usr/share/vpn-admin-portal/web/css/LC
 img/*png usr/share/vpn-user-portal/web/img/LC
-img/*png usr/share/vpn-admin-portal/web/img/LC

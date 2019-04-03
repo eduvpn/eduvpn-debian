@@ -1,6 +1,3 @@
-- postinst,postrm: should _we_ deal with clearing cache?  likely this would better
-be handled by the application which actually _writes_ to the cache.
-
 - debian/install: couldn't vpn-admin-portal and vpn-user-portal consult something like
 /usr/share/vpn-portal-artwork-lc ?  it feels wrong we are writing in
 vpn-admin-portal and vpn-user-portal's directories (
