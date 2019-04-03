@@ -1,3 +1,4 @@
+config/LC.php.example etc/vpn-user-portal/LC.php
 views/vpn-user-portal/*.php usr/share/vpn-user-portal/views/LC
 css/*css usr/share/vpn-user-portal/web/css/LC
 img/*png usr/share/vpn-user-portal/web/img/LC
