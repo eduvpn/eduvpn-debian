@@ -25,9 +25,7 @@ case "$1" in
 		rm  /etc/vpn-server-api/.upgrade
 	else
 		# This is a new installation. Try to create default config
-		if [ ! -d /etc/vpn-server-api ]; then
-			echo "New installation, creating default configuration"
-			install -d -m 755 /etc/vpn-server-api
+		if [ ! -f /etc/vpn-server-api/config.php ]; then
 			if [ -f /usr/share/doc/vpn-server-api/config.php.example ]; then
 				install -m 644 /usr/share/doc/vpn-server-api/config.php.example \
 				  /etc/vpn-server-api/config.php

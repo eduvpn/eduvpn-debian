@@ -26,9 +26,7 @@ case "$1" in
 		rm  /etc/vpn-user-portal/.upgrade
 	else
 		# This is a new installation. Try to create default config
-		if [ ! -d /etc/vpn-user-portal/default ]; then
-			echo "New installation, creating default configuration"
-			install -d -m 755 /etc/vpn-user-portal
+		if [ ! -f /etc/vpn-user-portal/config.php ]; then
 			if [ -f /usr/share/doc/vpn-user-portal/config.php.example ]; then
 				install -m 644 /usr/share/doc/vpn-user-portal/config.php.example \
 				       /etc/vpn-user-portal/config.php
