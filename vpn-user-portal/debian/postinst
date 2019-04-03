@@ -25,6 +25,11 @@ case "$1" in
 		echo "Upgrade, not touching configuration"
 		rm  /etc/vpn-user-portal/.upgrade
 	else
+        # generate OAuth key if it does not exist
+        if [ ! -f /etc/vpn-user-portal/oauth.key ]; then
+            /usr/bin/vpn-user-portal-generate-oauth-key
+        fi
+
 		# This is a new installation. Try to create default config
 		if [ ! -f /etc/vpn-user-portal/config.php ]; then
 			if [ -f /usr/share/doc/vpn-user-portal/config.php.example ]; then
