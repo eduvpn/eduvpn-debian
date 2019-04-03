@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 define REQUIRES
-require_once '/usr/share/php/SURFnet/VPN/Common/autoload.php';
+require_once '/usr/share/php/LC/Common/autoload.php';
 require_once '/usr/share/php/Psr/Log/autoload.php';
 endef
 

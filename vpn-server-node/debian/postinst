@@ -25,15 +25,15 @@ case "$1" in
 		# This is a new installation.
 
 		# Try to create default config
-		if [ ! -d /etc/vpn-server-node/default ]; then
+		if [ ! -d /etc/vpn-server-node ]; then
 			echo "New installation, creating default configuration"
-			install -d -m 755 /etc/vpn-server-node/default
+			install -d -m 755 /etc/vpn-server-node
 			if [ -f /usr/share/doc/vpn-server-node/config.php.example ]; then
 				install -m 644 /usr/share/doc/vpn-server-node/config.php.example \
-				  /etc/vpn-server-node/default/config.php
+				  /etc/vpn-server-node/config.php
 			elif [ -f /usr/share/doc/vpn-server-node/config.php.example.gz ]; then
 				zcat /usr/share/doc/vpn-server-node/config.php.example.gz \
-				  >/etc/vpn-server-node/default/config.php
+				  >/etc/vpn-server-node/config.php
 			fi
 		else
 			echo "New installation, but existing default configuration found. Not updating"
@@ -42,7 +42,7 @@ case "$1" in
 		# Try to create default firewall config
 		if [ ! -f /etc/vpn-server-node/firewall.php ]; then
 			echo "New installation, creating firewall configuration"
-			install -d -m 755 /etc/vpn-server-node/default
+			install -d -m 755 /etc/vpn-server-node
 			if [ -f /usr/share/doc/vpn-server-node/firewall.php.example ]; then
 				install -m 644 /usr/share/doc/vpn-server-node/firewall.php.example \
 				  /etc/vpn-server-node/firewall.php

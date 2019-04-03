@@ -3,7 +3,7 @@
 config/config.php.example => /usr/share/doc/vpn-server-node/config.php.example
 config/firewall.php.example => /usr/share/doc/vpn-server-node/firewall.php.example
 
-src/* /usr/share/php/SURFnet/VPN/Node/
+src/* /usr/share/php/LC/Node/
 
 bin/certificate-info.php => /usr/bin/vpn-server-node-certificate-info
 bin/generate-firewall.php => /usr/bin/vpn-server-node-generate-firewall

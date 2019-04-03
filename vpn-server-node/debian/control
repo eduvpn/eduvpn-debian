@@ -10,7 +10,7 @@ Build-Depends:
  pkg-php-tools (>= 1.7~), 
  phpab,
  php-psr-log,
- php-eduvpn-common,
+ php-lc-common,
 Standards-Version: 3.9.8
 Homepage: https://github.com/eduvpn/vpn-server-node
 
@@ -22,7 +22,7 @@ Depends:
  openvpn,
  php-cli,
  php-psr-log,
- php-eduvpn-common
+ php-lc-common
 Suggests: ${phpcomposer:Debian-suggest}
 Description: Control a Let's Connect! VPN Server Node
  VPN node of the Let's Connect! software. It contains PHP scripts which control
