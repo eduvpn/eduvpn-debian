@@ -1,8 +1,13 @@
 diff --git a/bin/certificate-info.php b/bin/certificate-info.php
-index 61f6dab..74c3323 100644
+index 61f6dab..9c94503 100644
 --- a/bin/certificate-info.php
 +++ b/bin/certificate-info.php
-@@ -7,8 +7,8 @@
+@@ -1,3 +1,4 @@
++#!/usr/bin/env php
+ <?php
+ 
+ /*
+@@ -7,8 +8,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
@@ -14,10 +19,15 @@ index 61f6dab..74c3323 100644
  use LC\Common\FileIO;
  
 diff --git a/bin/generate-firewall.php b/bin/generate-firewall.php
-index 9785cfc..20be226 100644
+index 9785cfc..af451bd 100644
 --- a/bin/generate-firewall.php
 +++ b/bin/generate-firewall.php
-@@ -7,8 +7,8 @@
+@@ -1,3 +1,4 @@
++#!/usr/bin/env php
+ <?php
+ 
+ /*
+@@ -7,8 +8,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
@@ -29,10 +39,15 @@ index 9785cfc..20be226 100644
  use LC\Common\Config;
  use LC\Common\FileIO;
 diff --git a/bin/server-config.php b/bin/server-config.php
-index 1a59896..bf311e0 100644
+index 1a59896..5cd6c37 100644
 --- a/bin/server-config.php
 +++ b/bin/server-config.php
-@@ -7,8 +7,8 @@
+@@ -1,3 +1,4 @@
++#!/usr/bin/env php
+ <?php
+ 
+ /*
+@@ -7,8 +8,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
@@ -59,10 +74,15 @@ index 0112e14..c5ecff0 100644
      'apiUser' => 'vpn-server-node',
      'apiPass' => 'XXX-vpn-server-node/vpn-server-api-XXX',
 diff --git a/libexec/client-connect.php b/libexec/client-connect.php
-index b4cffde..c3501a2 100644
+index b4cffde..0f6b13a 100644
 --- a/libexec/client-connect.php
 +++ b/libexec/client-connect.php
-@@ -7,8 +7,8 @@
+@@ -1,3 +1,4 @@
++#!/usr/bin/env php
+ <?php
+ 
+ /*
+@@ -7,8 +8,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
@@ -74,10 +94,15 @@ index b4cffde..c3501a2 100644
  use LC\Common\Config;
  use LC\Common\HttpClient\CurlHttpClient;
 diff --git a/libexec/client-disconnect.php b/libexec/client-disconnect.php
-index a7c75b3..d61874e 100644
+index a7c75b3..0377784 100644
 --- a/libexec/client-disconnect.php
 +++ b/libexec/client-disconnect.php
-@@ -7,8 +7,8 @@
+@@ -1,3 +1,4 @@
++#!/usr/bin/env php
+ <?php
+ 
+ /*
+@@ -7,8 +8,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
