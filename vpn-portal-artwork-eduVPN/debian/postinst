@@ -2,17 +2,23 @@
 
 set -e
 
-ARTWORK=eduVPN
-
 case "$1" in
     configure)
-	    if [ ! -f /etc/vpn-user-portal/${ARTWORK}.php ]; then
-		    if [ -f /usr/share/doc/vpn-portal-artwork-${ARTWORK}/${ARTWORK}.php.example ]; then
-			    install -m 644 /usr/share/doc/vpn-portal-artwork-${ARTWORK}/${ARTWORK}.php.example \
-			      /etc/vpn-user-portal/${ARTWORK}.php
-		    elif [ -f /usr/share/doc/vpn-portal-artwork-${ARTWORK}/${ARTWORK}.php.example.gz ]; then
-			    zcat /usr/share/doc/vpn-portal-artwork-${ARTWORK}/${ARTWORK}.php.example.gz \
-			      >/etc/vpn-user-portal/${ARTWORK}.php
+
+	    if [ ! -d /etc/vpn-user-portal ]
+        then
+		    install -d -m 750 /etc/vpn-user-portal
+    	    chown -R root:www-data /etc/vpn-user-portal
+	    fi
+
+	    if [ ! -f /etc/vpn-user-portal/eduVPN.php ]
+        then
+		    if [ -f /usr/share/doc/vpn-portal-artwork-eduvpn/eduVPN.php.example ]
+            then
+			    install -m 644 /usr/share/doc/vpn-portal-artwork-eduvpn/eduVPN.php.example /etc/vpn-user-portal/eduVPN.php
+		    elif [ -f /usr/share/doc/vpn-portal-artwork-eduvpn/eduVPN.php.example.gz ]
+            then
+			    zcat /usr/share/doc/vpn-portal-artwork-eduvpn/eduVPN.php.example.gz >/etc/vpn-user-portal/eduVPN.php
 		    fi
 	    fi
     ;;
