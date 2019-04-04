@@ -1,4 +1,3 @@
-config/eduVPN.php.example etc/vpn-user-portal/eduVPN.php
 views/vpn-user-portal/*.php usr/share/vpn-user-portal/views/eduVPN
-css/*css usr/share/vpn-user-portal/web/css/eduVPN
-img/*png usr/share/vpn-user-portal/web/img/eduVPN
+css/*.css usr/share/vpn-user-portal/web/css/eduVPN
+img/*.png usr/share/vpn-user-portal/web/img/eduVPN
