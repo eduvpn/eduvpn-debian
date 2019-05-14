@@ -1,0 +1,13 @@
+diff --git a/composer.json b/composer.json
+index 57a4257..388a313 100644
+--- a/composer.json
++++ b/composer.json
+@@ -32,7 +32,7 @@
+         "ext-openssl": "*",
+         "ext-pcre": "*",
+         "ext-spl": "*",
+-        "lc/common": "v2.x-dev",
++        "lc/common": "^2",
+         "php": ">=5.4",
+         "psr/log": "^1"
+     },
