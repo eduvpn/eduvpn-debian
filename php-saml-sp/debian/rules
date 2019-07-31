@@ -2,7 +2,6 @@
 
 define REQUIRES
 require_once '/usr/share/php/ParagonIE/ConstantTime/autoload.php';
-require_once __DIR__.'/sodium_compat.php';
 endef
 
 # easier to use this as a shell variable
