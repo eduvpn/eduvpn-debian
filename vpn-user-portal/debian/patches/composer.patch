@@ -1,9 +1,9 @@
 diff --git a/composer.json b/composer.json
-index 61b1c52..2e2690e 100644
+index 8b12fd8..1a1abe3 100644
 --- a/composer.json
 +++ b/composer.json
-@@ -57,7 +57,7 @@
-         "fkooman/php-saml-sp": "^0",
+@@ -61,7 +61,7 @@
+         "fkooman/php-saml-sp": "^0.2",
          "fkooman/secookie": "^2",
          "fkooman/sqlite-migrate": "^0",
 -        "lc/common": "v2.x-dev",
