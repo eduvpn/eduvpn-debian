@@ -1,3 +1,9 @@
+php-saml-sp (0.2.2-1) stable; urgency=medium
+
+  * update to 0.2.2
+
+ -- François Kooman <fkooman@tuxed.net>  Tue, 06 Aug 2019 10:22:28 +0200
+
 php-saml-sp (0.2.0-1) stable; urgency=medium
 
   * update to 0.2.0
