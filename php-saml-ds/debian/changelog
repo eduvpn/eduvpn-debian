@@ -1,3 +1,9 @@
+php-saml-ds (2.0.2-1) stable; urgency=medium
+
+  * update to 2.0.2
+
+ -- François Kooman <fkooman@tuxed.net>  Fri, 09 Aug 2019 11:43:43 +0200
+
 php-saml-ds (2.0.1-2) stable; urgency=medium
 
   * do not require Twig
