@@ -1,10 +1,10 @@
 diff --git a/composer.json b/composer.json
-index 9b220a2..b7ce5ab 100644
+index 6c0db48..e379cf0 100644
 --- a/composer.json
 +++ b/composer.json
 @@ -46,7 +46,7 @@
          "ext-spl": "*",
-         "fkooman/otp-verifier": "^0",
+         "fkooman/otp-verifier": "^0.3",
          "fkooman/sqlite-migrate": "^0",
 -        "lc/common": "v2.x-dev",
 +        "lc/common": "^2",
