@@ -11,16 +11,6 @@ case "$1" in
     	    chown -R root:www-data /etc/vpn-user-portal
 	    fi
 
-	    if [ ! -f /etc/vpn-user-portal/eduVPN.php ]
-        then
-		    if [ -f /usr/share/doc/vpn-portal-artwork-eduvpn/eduVPN.php.example ]
-            then
-			    install -m 644 /usr/share/doc/vpn-portal-artwork-eduvpn/eduVPN.php.example /etc/vpn-user-portal/eduVPN.php
-		    elif [ -f /usr/share/doc/vpn-portal-artwork-eduvpn/eduVPN.php.example.gz ]
-            then
-			    zcat /usr/share/doc/vpn-portal-artwork-eduvpn/eduVPN.php.example.gz >/etc/vpn-user-portal/eduVPN.php
-		    fi
-	    fi
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
