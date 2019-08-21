@@ -10,7 +10,6 @@ Build-Depends:
  pkg-php-tools (>= 1.7~),
  php-date,
  php-json,
- php-libsodium,
  php-constant-time
 Standards-Version: 3.9.8
 Homepage: https://git.tuxed.net/fkooman/php-jwt
@@ -21,7 +20,6 @@ Depends:
  ${misc:Depends}, 
  php-date,
  php-json,
- php-libsodium,
  php-constant-time
 Suggests: ${phpcomposer:Debian-suggest}
 Description: JWT Library.

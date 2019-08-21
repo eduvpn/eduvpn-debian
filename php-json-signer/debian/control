@@ -6,7 +6,6 @@ Uploaders: Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>
 Build-Depends:
  debhelper (>= 9),
  phpab,
- php-libsodium,
  phpunit,
  pkg-php-tools (>= 1.7~),
  dh-exec,
@@ -18,7 +17,6 @@ Package: php-json-signer
 Architecture: all
 Depends: 
  ${misc:Depends}, 
- php-libsodium,
  php-cli,
  php-constant-time
 Suggests: ${phpcomposer:Debian-suggest}
