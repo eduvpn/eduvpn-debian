@@ -1,3 +1,11 @@
+php-jwt (1.0.0-2) stable; urgency=medium
+
+  * debian/control: remove php-libsodium from both Depends and Build-Depends:
+    php7.3's php executable is linked with libsodium, the php-libsodium package
+    is not shipped with Debian 10/buster.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 21 Aug 2019 15:46:54 +0200
+
 php-jwt (1.0.0-1) stable; urgency=medium
 
   * initial package
