@@ -1,3 +1,12 @@
+vpn-server-api (2.0.2-2) stable; urgency=medium
+
+  * debian/control: make (build-)depends on php-fkooman-otp-verifier
+    versioned, in order to pass build-time test
+    LC\Server\Tests\Api\UsersModuleTest::testVerifyOtpKeyWrong.  Fixes
+    https://github.com/eduvpn/eduvpn-debian/issues/56 .
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 29 Aug 2019 09:28:57 +0200
+
 vpn-server-api (2.0.2-1) stable; urgency=medium
 
   * update to 2.0.2
