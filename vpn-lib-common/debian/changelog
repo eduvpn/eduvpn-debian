@@ -1,3 +1,9 @@
+vpn-lib-common (2.0.5-1) stable; urgency=medium
+
+  * update to 2.0.5
+
+ -- François Kooman <fkooman@tuxed.net>  Thu, 29 Aug 2019 11:48:20 +0200
+
 vpn-lib-common (2.0.4-1) stable; urgency=medium
 
   * update to 2.0.4
