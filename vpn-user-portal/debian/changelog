@@ -1,3 +1,10 @@
+vpn-user-portal (2.0.11-3) stable; urgency=medium
+
+  * debian/control: make (build-)depends on php-fkooman-jwt versioned in
+    order to get rid of requirement php-libsodium (missing on Debian 10/buster).
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 29 Aug 2019 10:42:41 +0200
+
 vpn-user-portal (2.0.11-2) stable; urgency=medium
 
   * debian/control: remove php-libsodium from both Depends and Build-Depends:

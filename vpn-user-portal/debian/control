@@ -12,7 +12,7 @@ Build-Depends:
  php-bacon-qr-code,
  php-sqlite3,
  php-json,
- php-fkooman-jwt,
+ php-fkooman-jwt (>= 1.0.0-2),
  php-fkooman-oauth2-server,
  php-fkooman-saml-sp,
  php-fkooman-secookie,
