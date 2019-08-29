@@ -1,13 +1,8 @@
 diff --git a/bin/add-user.php b/bin/add-user.php
-index cd79e62..46d50b0 100644
+index cd79e62..05a40d7 100644
 --- a/bin/add-user.php
 +++ b/bin/add-user.php
-@@ -1,3 +1,4 @@
-+#!/usr/bin/env php
- <?php
- 
- /*
-@@ -7,8 +8,8 @@
+@@ -7,8 +7,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
@@ -19,15 +14,10 @@ index cd79e62..46d50b0 100644
  use LC\Common\CliParser;
  use LC\Common\Config;
 diff --git a/bin/foreign-key-list-fetcher.php b/bin/foreign-key-list-fetcher.php
-index 05cd7b3..c7cf617 100644
+index 05cd7b3..3c57e8a 100644
 --- a/bin/foreign-key-list-fetcher.php
 +++ b/bin/foreign-key-list-fetcher.php
-@@ -1,3 +1,4 @@
-+#!/usr/bin/env php
- <?php
- 
- /*
-@@ -7,8 +8,8 @@
+@@ -7,8 +7,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
@@ -39,15 +29,10 @@ index 05cd7b3..c7cf617 100644
  use LC\Common\Config;
  use LC\Portal\ForeignKeyListFetcher;
 diff --git a/bin/generate-oauth-key.php b/bin/generate-oauth-key.php
-index 2eafa03..4dfd46e 100644
+index da9e661..2445e25 100644
 --- a/bin/generate-oauth-key.php
 +++ b/bin/generate-oauth-key.php
-@@ -1,3 +1,4 @@
-+#!/usr/bin/env php
- <?php
- 
- /*
-@@ -7,8 +8,8 @@
+@@ -7,8 +7,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
@@ -59,15 +44,10 @@ index 2eafa03..4dfd46e 100644
  use fkooman\Jwt\Keys\EdDSA\SecretKey;
  use LC\Common\FileIO;
 diff --git a/bin/init.php b/bin/init.php
-index 0e41697..9cceedd 100644
+index 0e41697..b93d23b 100644
 --- a/bin/init.php
 +++ b/bin/init.php
-@@ -1,3 +1,4 @@
-+#!/usr/bin/env php
- <?php
- 
- /*
-@@ -7,8 +8,8 @@
+@@ -7,8 +7,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
@@ -79,15 +59,10 @@ index 0e41697..9cceedd 100644
  use LC\Common\Config;
  use LC\Common\FileIO;
 diff --git a/bin/show-oauth-key.php b/bin/show-oauth-key.php
-index 999a6b0..9a13bc1 100644
+index d528642..9a7a07b 100644
 --- a/bin/show-oauth-key.php
 +++ b/bin/show-oauth-key.php
-@@ -1,3 +1,4 @@
-+#!/usr/bin/env php
- <?php
- 
- /*
-@@ -7,8 +8,8 @@
+@@ -7,8 +7,8 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
@@ -99,7 +74,7 @@ index 999a6b0..9a13bc1 100644
  use fkooman\Jwt\Keys\EdDSA\SecretKey;
  use LC\Common\FileIO;
 diff --git a/web/api.php b/web/api.php
-index c6780f2..78f2aad 100644
+index 10c1f7f..1cfc1a6 100644
 --- a/web/api.php
 +++ b/web/api.php
 @@ -7,8 +7,8 @@
@@ -114,7 +89,7 @@ index c6780f2..78f2aad 100644
  use fkooman\Jwt\Keys\EdDSA\SecretKey;
  use LC\Common\Config;
 diff --git a/web/index.php b/web/index.php
-index ce84f2c..30fe8cd 100644
+index c26a929..42272e3 100644
 --- a/web/index.php
 +++ b/web/index.php
 @@ -7,8 +7,8 @@
@@ -129,7 +104,7 @@ index ce84f2c..30fe8cd 100644
  use fkooman\Jwt\Keys\EdDSA\SecretKey;
  use fkooman\OAuth\Server\OAuthServer;
 diff --git a/web/oauth.php b/web/oauth.php
-index 500b52a..52140a4 100644
+index 6984276..e131fdd 100644
 --- a/web/oauth.php
 +++ b/web/oauth.php
 @@ -7,8 +7,8 @@
