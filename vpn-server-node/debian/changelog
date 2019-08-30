@@ -1,3 +1,10 @@
+vpn-server-node (2.0.3-2) stable; urgency=medium
+
+  * fix hashbang
+  * split autoload patch from debian config defaults patch
+
+ -- François Kooman <fkooman@tuxed.net>  Fri, 30 Aug 2019 16:30:50 +0200
+
 vpn-server-node (2.0.3-1) stable; urgency=medium
 
   * update to 2.0.3
