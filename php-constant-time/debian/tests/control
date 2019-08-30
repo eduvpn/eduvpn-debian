@@ -1,0 +1,2 @@
+Test-Command: phpunit --bootstrap /usr/share/php/ParagonIE/ConstantTime/autoload.php
+Depends: @, phpunit

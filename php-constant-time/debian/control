@@ -1,0 +1,22 @@
+Source: php-constant-time
+Section: php
+Priority: optional
+Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Uploaders: David Prévot <taffit@debian.org>
+Build-Depends: debhelper-compat (= 12), phpab, phpunit, pkg-php-tools (>= 1.7~)
+Standards-Version: 4.3.0
+Homepage: https://github.com/paragonie/constant_time_encoding
+Vcs-Git: https://salsa.debian.org/php-team/pear/php-constant-time.git
+Vcs-Browser: https://salsa.debian.org/php-team/pear/php-constant-time
+
+Package: php-constant-time
+Architecture: all
+Depends: ${misc:Depends}, ${phpcomposer:Debian-require}
+Suggests: ${phpcomposer:Debian-suggest}
+Recommends: ${phpcomposer:Debian-recommend}
+Replaces: ${phpcomposer:Debian-replace}
+Breaks: ${phpcomposer:Debian-conflict}, ${phpcomposer:Debian-replace}
+Provides: ${phpcomposer:Debian-provide}
+Description: ${phpcomposer:description}
+ This library aims to offer character encoding functions that do not leak
+ information about what you are encoding/decoding via processor cache misses.

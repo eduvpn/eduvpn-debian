@@ -1,0 +1,4 @@
+version=3
+options=uversionmangle=s/-?([^\d.])/~$1/i;tr/A-Z/a-z/ \
+https://github.com/paragonie/constant_time_encoding/releases \
+.*/v?(.*)\.tar\.gz

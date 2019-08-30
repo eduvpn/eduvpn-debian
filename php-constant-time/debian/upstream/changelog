@@ -1,0 +1,103 @@
+Version 2.2.2 - Mar 10, 2018
+
+    This library now has 100% type-safety.
+    Added unit tests to detect string truncation bugs that were (mistakenly?) reported.
+
+
+Version 2.2.1 - Jan 22, 2018
+
+    Fix a pasto reported by Ed Barnard on Twitter.
+
+
+Version 2.2.0 - Sep 22, 2017
+
+    Adds encodeUnpadded() to Base32 and Base64 (and their derived classes). Satisfies #9.
+
+
+Version 2.1.1 - Sep 16, 2017
+
+Fix composer.json typo.
+
+
+Version 2.1.0 - Sep 16, 2017
+
+Previous tag was a false alarm. This is the real deal.
+
+This library is now type-safe. Encoding functions (e.g. Base64::decode()) will always return a string or throw a RangeException. They will never return false.
+
+Furthermore, type safety is assured with Psalm.
+
+
+Version 2.0.3 - Jul 11, 2016
+
+Throw a RangeException instead of returning false in a function with a return type of string.
+
+
+Version 2.0.2 - Jun 13, 2016
+
+Handle an edge-case reported in #4
+
+
+Version 2.0.1 - May 10, 2016
+
+    Added scalar type declarations to Binary.
+
+
+Version 2.0.0 - Apr 8, 2016
+
+Version 2 will require PHP 7 and use scalar type declarations.
+
+
+Version 1.0.1 - Jun 13, 2016
+
+Handle edge-case reported in #4
+
+
+Version 1.0.0 - Apr 8, 2016
+
+We're now stable (and with sufficient test coverage to be confident about the correctness of our implementation).
+
+
+Version 0.6.0 - Apr 8, 2016
+
+    Base32: Default to lowercase output, add encodeUpper() and decodeUpper().
+    RFC4648: Removed erroneous encodeUpper() references. Base64 is case-sensitive.
+
+
+Version 0.5.1 - Mar 24, 2016
+
+    Return false instead of throwing a RangeException in Base64::decode()
+
+
+Version 0.5.0 - Mar 14, 2016
+
+    Add Base64UrlSafe
+    Create an RFC4648 class for strict RFC conformity
+    Added more unit tests
+
+
+Version 0.4.0 - Mar 13, 2016
+
+Relaxed the version requirements to accommodate PHP 5.3 and PHP 5.4. No other code changes were made.
+
+
+Version 0.3.0 - Mar 12, 2016
+
+    Added Base32Hex
+    Restructured into classes
+    We now cover all of the encoding formats specified by RFC 4648
+
+
+Version 0.2.1 - Mar 12, 2016
+
+    Mitigate chr()/ord() related cache-timing vulnerability.
+
+
+Version 0.2.0 - Mar 12, 2016
+
+Added Base32 (as specified in RFC 4648).
+
+
+Version 0.1.0 - Feb 3, 2016
+
+Initial release

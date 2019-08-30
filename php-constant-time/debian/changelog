@@ -1,0 +1,61 @@
+php-constant-time (2.2.3-1) unstable; urgency=medium
+
+  * Use debhelper-compat 12
+  * Drop get-orig-source target
+  * Use https in Format
+  * Update Standards-Version to 4.3.0
+
+ -- David Prévot <taffit@debian.org>  Tue, 08 Jan 2019 17:25:39 +1100
+
+php-constant-time (2.2.2-1) unstable; urgency=medium
+
+  [ Paragon Initiative Enterprises ]
+  * Update copyright year, make totallyTyped (Psalm).
+  * Add unit tests against string truncation
+
+  [ David Prévot ]
+  * Update copyright (years)
+
+ -- David Prévot <taffit@debian.org>  Sun, 11 Mar 2018 18:28:44 -1000
+
+php-constant-time (2.2.1-1) unstable; urgency=medium
+
+  [ Paragon Initiative Enterprises ]
+  * Fix pastos and docblocks.
+
+  [ David Prévot ]
+  * Move project repository to salsa.d.o
+  * Update Standards-Version to 4.1.3
+
+ -- David Prévot <taffit@debian.org>  Wed, 07 Mar 2018 17:12:18 -1000
+
+php-constant-time (2.2.0-1) unstable; urgency=medium
+
+  [ Paragon Initiative Enterprises ]
+  * Update unit tests to PHPUnit 6
+
+  [ David Prévot ]
+  * Update copyright (years)
+  * Update Standards-Version to 4.1.1
+
+ -- David Prévot <taffit@debian.org>  Mon, 23 Oct 2017 20:52:49 -1000
+
+php-constant-time (2.0.3-1) unstable; urgency=medium
+
+  [ Paragon Initiative Enterprises ]
+  * Return type consistency
+
+ -- David Prévot <taffit@debian.org>  Fri, 15 Jul 2016 15:17:15 -0400
+
+php-constant-time (2.0.2-1) unstable; urgency=medium
+
+  [ Paragon Initiative Enterprises ]
+  * Add support for unpadded encoding
+
+ -- David Prévot <taffit@debian.org>  Mon, 13 Jun 2016 20:50:16 -0400
+
+php-constant-time (2.0.1-1) unstable; urgency=low
+
+  * Initial release: new php-phpseclib dependency
+
+ -- David Prévot <taffit@debian.org>  Sun, 05 Jun 2016 17:13:17 -0400
