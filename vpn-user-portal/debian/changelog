@@ -1,3 +1,10 @@
+vpn-user-portal (2.0.12-3) stable; urgency=medium
+
+  * remove patches for libsodium and php-constant-time on buster as we have 
+    php-sodium and php-constant-time >= 2.2.0
+
+ -- François Kooman <fkooman@tuxed.net>  Fri, 30 Aug 2019 20:21:43 +0200
+
 vpn-user-portal (2.0.12-2) stable; urgency=medium
 
   * fix hashbang
