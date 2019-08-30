@@ -10,7 +10,7 @@ Build-Depends:
  phpab,
  php-common,
  php-json,
- php-constant-time,
+ php-constant-time (>= 2.2.0~),
  php-sqlite3
 Standards-Version: 3.9.8
 Homepage: https://git.tuxed.net/fkooman/php-oauth2-server
@@ -21,7 +21,7 @@ Depends:
  ${misc:Depends},
  php-common,
  php-json,
- php-constant-time,
+ php-constant-time (>= 2.2.0~),
  php-sqlite3
 Suggests: ${phpcomposer:Debian-suggest}
 Description: simple OAuth 2.0 server
