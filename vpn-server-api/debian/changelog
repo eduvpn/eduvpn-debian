@@ -1,3 +1,15 @@
+vpn-server-api (2.0.3-2) stable; urgency=medium
+
+  * fix hashbang
+
+ -- François Kooman <fkooman@tuxed.net>  Fri, 30 Aug 2019 16:30:29 +0200
+
+vpn-server-api (2.0.3-1) stable; urgency=medium
+
+  * update to 2.0.3
+
+ -- François Kooman <fkooman@tuxed.net>  Thu, 29 Aug 2019 11:53:24 +0200
+
 vpn-server-api (2.0.2-2) stable; urgency=medium
 
   * debian/control: make (build-)depends on php-fkooman-otp-verifier

@@ -9,6 +9,9 @@ endef
 export REQUIRES
 
 override_dh_auto_build:
+	# add hashbang to scripts to make the executable
+	sed -i '1s/^/#!\/usr\/bin\/php\n/' libexec/*.php bin/*.php
+
 	phpab -o src/autoload.php src
 	echo "$${REQUIRES}" >> src/autoload.php
 
