@@ -8,7 +8,6 @@ Build-Depends:
  phpunit,
  phpab,
  pkg-php-tools (>= 1.7~),
- php-date,
  php-json,
  php-constant-time (>= 2.2.0~)
 Standards-Version: 3.9.8
@@ -19,7 +18,6 @@ Architecture: all
 Depends:
  ${misc:Depends},
  ${phpcomposer:Debian-require},
- php-date,
  php-constant-time (>= 2.2.0~)
 Suggests: ${phpcomposer:Debian-suggest}
 Description: JWT Library.
