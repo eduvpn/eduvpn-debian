@@ -8,7 +8,6 @@ Build-Depends:
  phpunit,
  phpab,
  pkg-php-tools (>= 1.7~),
- php-date,
  php-json,
  php-constant-time (>= 2.2.0~)
 Standards-Version: 3.9.8
@@ -16,10 +15,9 @@ Homepage: https://git.tuxed.net/fkooman/php-jwt
 
 Package: php-fkooman-jwt
 Architecture: all
-Depends: 
- ${misc:Depends}, 
- php-date,
- php-json,
+Depends:
+ ${misc:Depends},
+ ${phpcomposer:Debian-require},
  php-constant-time (>= 2.2.0~)
 Suggests: ${phpcomposer:Debian-suggest}
 Description: JWT Library.
