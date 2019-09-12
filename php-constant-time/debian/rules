@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --with phpcomposer
+
+override_dh_auto_build:
+	phpab --output src/autoload.php src
+
+override_dh_auto_test:
+ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
+	phpunit --bootstrap src/autoload.php
+else
+	@echo "** tests disabled"
+endif
+
+override_dh_installchangelogs:
+	dh_installchangelogs $(CURDIR)/debian/upstream/changelog

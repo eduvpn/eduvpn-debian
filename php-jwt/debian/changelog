@@ -1,3 +1,16 @@
+php-jwt (1.0.1-2) stable; urgency=medium
+
+  * remove patches for libsodium and php-constant-time on buster as we have 
+    php-sodium and php-constant-time >= 2.2.0
+
+ -- François Kooman <fkooman@tuxed.net>  Fri, 30 Aug 2019 20:37:05 +0200
+
+php-jwt (1.0.1-1) stable; urgency=medium
+
+  * update to 1.0.1
+
+ -- François Kooman <fkooman@tuxed.net>  Thu, 29 Aug 2019 11:45:41 +0200
+
 php-jwt (1.0.0-2) stable; urgency=medium
 
   * debian/control: remove php-libsodium from both Depends and Build-Depends:

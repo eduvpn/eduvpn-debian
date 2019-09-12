@@ -1,11 +1,30 @@
-vpn-user-portal (2.0.11-3) stable; urgency=medium
+vpn-user-portal (2.0.12-4) stable; urgency=medium
 
   * debian/control: make (build-)depends on php-fkooman-jwt versioned to >=
     1.0.1 in order to get rid of requirement php-libsodium (missing on Debian
     10/buster).  This jwt features "switch to paragonie/sodium_compat for
     Composer installations" (thanks François Kooman).
 
- -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 29 Aug 2019 10:42:41 +0200
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 12 Sep 2019 11:24:24 +0200
+
+vpn-user-portal (2.0.12-3) stable; urgency=medium
+
+  * remove patches for libsodium and php-constant-time on buster as we have 
+    php-sodium and php-constant-time >= 2.2.0
+
+ -- François Kooman <fkooman@tuxed.net>  Fri, 30 Aug 2019 20:21:43 +0200
+
+vpn-user-portal (2.0.12-2) stable; urgency=medium
+
+  * fix hashbang
+
+ -- François Kooman <fkooman@tuxed.net>  Fri, 30 Aug 2019 16:31:13 +0200
+
+vpn-user-portal (2.0.12-1) stable; urgency=medium
+
+  * update to 2.0.12
+
+ -- François Kooman <fkooman@tuxed.net>  Thu, 29 Aug 2019 11:49:27 +0200
 
 vpn-user-portal (2.0.11-2) stable; urgency=medium
 

@@ -9,13 +9,15 @@ require_once '/usr/share/php/fkooman/SeCookie/autoload.php';
 require_once '/usr/share/php/fkooman/SqliteMigrate/autoload.php';
 require_once '/usr/share/php/LC/Common/autoload.php';
 require_once '/usr/share/php/ParagonIE/ConstantTime/autoload.php';
-require_once __DIR__.'/sodium_compat.php';
 endef
 
 # easier to use this as a shell variable
 export REQUIRES
 
 override_dh_auto_build:
+	# add hashbang to scripts to make the executable
+	sed -i '1s/^/#!\/usr\/bin\/php\n/' bin/*.php
+
 	phpab -o src/autoload.php src
 	echo "$${REQUIRES}" >> src/autoload.php
 

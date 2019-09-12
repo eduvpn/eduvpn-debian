@@ -1,8 +1,8 @@
 diff --git a/composer.json b/composer.json
-index 8b12fd8..1a1abe3 100644
+index cac080c..f817960 100644
 --- a/composer.json
 +++ b/composer.json
-@@ -61,7 +61,7 @@
+@@ -59,7 +59,7 @@
          "fkooman/php-saml-sp": "^0.2",
          "fkooman/secookie": "^2",
          "fkooman/sqlite-migrate": "^0",
@@ -10,4 +10,4 @@ index 8b12fd8..1a1abe3 100644
 +        "lc/common": "^2",
          "paragonie/constant_time_encoding": "^1|^2",
          "paragonie/random_compat": "^1|^2",
-         "php": ">=5.4.0"
+         "paragonie/sodium_compat": "^1",
