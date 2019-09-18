@@ -24,24 +24,6 @@
 
 set -e
 
-#PACKAGE_LIST=(\
-#    BaconQrCode \
-#    php-oauth2-client \
-#    php-yubitwee \
-#    otp \
-#    php-oauth2-server \
-#    php-secookie \
-#    Twig-extensions \
-#    php-saml-ds \
-#    php-openvpn-connection-manager \
-#    vpn-lib-common \
-#    vpn-server-api \
-#    vpn-user-portal \
-#    vpn-server-node \
-#    vpn-admin-portal \
-#    php-json-signer \
-#)
-
 # keep list ordered by dependency
 PACKAGE_LIST="php-yubitwee
     php-secookie
@@ -60,12 +42,9 @@ PACKAGE_LIST="php-yubitwee
     vpn-server-api"
 
 
-# FIXME build fails: BaconQrCode
-# FIXME current build fails: vpn-lib-common
 # FIXME depends vpn-user-portal (php-bacon-qr-code)
 # FIXME php-otp-verifier packaged
 # FIXME php-sqlite-migrate packaged
-# FIXME otp is being replaced by php-otp-verifier: not yet tested
 #
 # depends: vpn-server-node vpn-admin-portal (vpn-lib-common)
 # depends: vpn-server-api (vpn-lib-common)
@@ -83,6 +62,21 @@ PACKAGE_LIST="php-yubitwee
     vpn-server-node
     vpn-admin-portal
     vpn-server-api"
+
+#
+PACKAGE_LIST="php-otp-verifier
+    php-secookie
+    BaconQrCode
+    php-jwt
+    php-oauth2-server
+    php-saml-sp
+    php-openvpn-connection-manager
+    php-sqlite-migrate
+    vpn-lib-common
+    vpn-server-node
+    vpn-server-api
+    vpn-user-portal"
+
 
 if test -f ~/.pbuilderrc
 then
@@ -110,7 +104,8 @@ do
     echo '***' "$0: building $f ..."
     (
         cd "$f" || exit
-        ../le-build
+        ../lc-build
+        # lc-build
     )
     echo '***' "$0: finished building $f."
 done
@@ -118,4 +113,11 @@ done
 echo '***' "$0: completed."
 
 # FIXME now it's time to sign Packages.xz
+
+# FIXME make it run lintian :
+# joostvb@perun:/var/cache/pbuilder/apt-archive% lintian php-jwt_1.0.1-3_amd64.changes
+# W: php-jwt source: maintainer-also-in-uploaders
+# W: php-jwt source: changelog-should-mention-nmu
+# W: php-jwt source: source-nmu-has-incorrect-version-number 1.0.1-3
+# E: php-fkooman-jwt: extended-description-is-empty
 
