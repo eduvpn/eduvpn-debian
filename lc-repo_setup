@@ -1,0 +1,65 @@
+#/bin/sh
+
+# MIT License
+#
+# Copyright (c) 2018, 2019 Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+set -e
+
+test -f ~/.pbuilderrc && exit 1
+
+sudo pbuilder create
+# should give:
+# I: creating base tarball [/var/cache/pbuilder/base.tgz]
+
+sudo chown $USER /var/cache/pbuilder
+mkdir -p /var/cache/pbuilder/apt-archive
+touch /var/cache/pbuilder/apt-archive/Packages
+gzip -kf /var/cache/pbuilder/apt-archive/Packages
+
+test -d /var/cache/pbuilder/result || mkdir /var/cache/pbuilder/result
+test -d /var/cache/pbuilder/hooks || mkdir /var/cache/pbuilder/hooks
+
+sudo pbuilder update --override-config \
+ --mirror http://deb.debian.org/debian/ \
+ --othermirror "deb [trusted=yes] file:///var/cache/pbuilder/apt-archive ./" \
+ --bindmounts "/var/cache/pbuilder/apt-archive" \
+ --distribution buster
+
+# --distribution sid
+
+# --distribution is any possible SUITE in debootstrap(8), i.e. the files in
+# /usr/share/debootstrap/scripts, i.e. e.g. "stretch" (debian 9 stable)
+# "buster" (debian 10 testing), "xenial" (ubuntu 16.04 LTS), "bionic" (ubuntu
+# 18.04 LTS) "cosmic" (ubuntu devel)
+
+#  /var/cache/pbuilder -> /home/joostvb/pbuilder/
+
+# drwxr-xr-x 9 joostvb root 125 авг 11 19:18 /var/cache/pbuilder/
+#
+# drwxr-xr-x 2 joostvb joostvb      4096 авг 16 11:36 apt-archive/
+# drwxr-xr-x 2 joostvb root        20480 авг 16 11:36 aptcache/
+# -rw-r--r-- 1 root    root    203916143 авг 11 19:18 base.tgz
+# drwxr-xr-x 5 joostvb root           42 авг 16 11:36 build/
+# drwxr-xr-x 2 joostvb root            6 јул 11  2014 ccache/
+# drwxr-xr-x 2 joostvb root            6 јул 11  2014 pbuildd/
+# drwxr-xr-x 2 joostvb root            6 јул 11  2014 pbuilder-mnt/
+# drwxr-xr-x 2 joostvb root         4096 авг 16 11:36 result/
