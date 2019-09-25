@@ -1,3 +1,9 @@
+vpn-user-portal (2.0.13-1) stable; urgency=medium
+
+  * update to 2.0.13
+
+ -- François Kooman <fkooman@tuxed.net>  Wed, 25 Sep 2019 12:04:09 +0200
+
 vpn-user-portal (2.0.12-2) stable; urgency=medium
 
   * fix hashbang
