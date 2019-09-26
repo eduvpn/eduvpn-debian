@@ -24,23 +24,6 @@
 
 set -e
 
-# keep list ordered by dependency
-PACKAGE_LIST="php-yubitwee
-    php-secookie
-    Twig-extensions
-    php-oauth2-client
-    php-oauth2-server
-    php-otp-verifier
-    php-saml-ds
-    php-openvpn-connection-manager
-    php-json-signer
-    BaconQrCode
-    vpn-lib-common
-    vpn-user-portal
-    vpn-server-node
-    vpn-admin-portal
-    vpn-server-api"
-
 
 # FIXME depends vpn-user-portal (php-bacon-qr-code)
 # FIXME php-otp-verifier packaged
@@ -48,21 +31,8 @@ PACKAGE_LIST="php-yubitwee
 #
 # depends: vpn-server-node vpn-admin-portal (vpn-lib-common)
 # depends: vpn-server-api (vpn-lib-common)
-# keep ordered by dependency
-# these all build, as of чет, 16. авг 2018.  14:40:15 CEST
-PACKAGE_LIST="php-yubitwee
-    php-secookie
-    Twig-extensions
-    php-oauth2-client
-    php-oauth2-server
-    php-saml-ds
-    php-openvpn-connection-manager
-    php-json-signer
-    vpn-lib-common
-    vpn-server-node
-    vpn-admin-portal
-    vpn-server-api"
-
+#
+# list should be ordered by dependency
 #
 PACKAGE_LIST="php-otp-verifier
     php-secookie
@@ -120,4 +90,3 @@ echo '***' "$0: completed."
 # W: php-jwt source: changelog-should-mention-nmu
 # W: php-jwt source: source-nmu-has-incorrect-version-number 1.0.1-3
 # E: php-fkooman-jwt: extended-description-is-empty
-
