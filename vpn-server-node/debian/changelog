@@ -1,3 +1,9 @@
+vpn-server-node (2.0.4-2) stable; urgency=medium
+
+  * add CONFIG_CHANGES.md as a documentation file
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 14 Oct 2019 11:06:47 +0200
+
 vpn-server-node (2.0.4-1) stable; urgency=medium
 
   * update to 2.0.4
