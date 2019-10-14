@@ -1,3 +1,9 @@
+vpn-server-api (2.0.4-1) stable; urgency=medium
+
+  * update to 2.0.4
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 14 Oct 2019 10:55:08 +0200
+
 vpn-server-api (2.0.3-2) stable; urgency=medium
 
   * fix hashbang
