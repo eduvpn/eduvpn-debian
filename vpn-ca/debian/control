@@ -1,0 +1,17 @@
+Source: vpn-ca
+Section: unknown
+Priority: optional
+Maintainer: Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>
+Build-Depends: debhelper-compat (= 12), dh-golang
+Build-Depends-Arch: golang-any
+Standards-Version: 4.4.0
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Browser: https://salsa.debian.org/debian/vpn-ca
+#Vcs-Git: https://salsa.debian.org/debian/vpn-ca.git
+
+Package: vpn-ca
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Built-Using: ${misc:Built-Using}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
