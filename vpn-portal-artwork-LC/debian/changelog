@@ -1,3 +1,9 @@
+vpn-portal-artwork-lc (2.1.0-1) stable; urgency=medium
+
+  * update to 2.1.0
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 04 Nov 2019 21:31:45 +0100
+
 vpn-portal-artwork-lc (2.0.1-1) stable; urgency=medium
 
   * update to 2.0.1
