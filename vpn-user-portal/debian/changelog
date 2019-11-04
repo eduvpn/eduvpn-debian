@@ -1,3 +1,9 @@
+vpn-user-portal (2.1.0-1) stable; urgency=medium
+
+  * update to 2.1.0
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 04 Nov 2019 21:27:34 +0100
+
 vpn-user-portal (2.0.14-1) stable; urgency=medium
 
   * update to 2.0.14
