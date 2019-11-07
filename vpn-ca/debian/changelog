@@ -1,5 +1,11 @@
+vpn-ca (0.0.7-1) unstable; urgency=medium
+
+  * New upstream.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 07 Nov 2019 14:16:24 +0100
+
 vpn-ca (0.0.4-1) unstable; urgency=medium
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial release.
 
  -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 31 Oct 2019 14:26:14 +0000
