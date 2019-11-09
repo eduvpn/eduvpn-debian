@@ -8,7 +8,10 @@ Repository to build (all) Debian packages related to eduVPN.
 
 # Signing
 
-    $ gpg --batch --quick-generate-key --passphrase '' software@example.org
+Aplty only supports GnuPG 1, because it is only 2019. Specify 
+`software@example.org` as email address.
+
+    $ gpg1 --gen-key
 
 Set the email address you use as `KEY` in the `repo_setup.sh` and 
 `repo_update.sh`.
@@ -16,7 +19,7 @@ Set the email address you use as `KEY` in the `repo_setup.sh` and
 Add your key to the trusted store, where `vpn@example.org` is the address you
 used for the key:
 
-    $ gpg -a --export software@example.org | sudo apt-key add -
+    $ gpg1 -a --export software@example.org | sudo apt-key add -
 
 # Repository
 
