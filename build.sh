@@ -7,35 +7,24 @@ rm -rf build
 mkdir -p build
 uscan --destdir=build --download-current-version
 (
-  cd build
-  if [ -f "${NAME}-${VERSION}.tar.gz" ]
-  then
-    tar -xzf "${NAME}-${VERSION}.tar.gz"
-  elif [ -f "${NAME}-${VERSION}.tar.xz" ] 
-  then
-    tar -xJf "${NAME}-${VERSION}.tar.xz"
-  elif [ -f "${NAME}_${VERSION}.orig.tar.gz" ]
-  then
-    tar -xzf "${NAME}_${VERSION}.orig.tar.gz"
-  else
-    echo "unable to unpack file"
-    exit 1
-  fi
+    cd build
+    TARDIR="$( tar tf $NAME-*.tar.?? | grep '/$' | sort | head -1 )"
+    tar -xf "$NAME"-*.tar.??
+    cd "$TARDIR"
 
-  cd "${NAME}-${VERSION}"
-  cp -r ../../debian .
+    cp -r ../../debian .
 
-  # install build dependencies
-  sudo apt-get update
-  # update installed software
-  sudo apt-get -y dist-upgrade
-  # install build dependencies
-  sudo mk-build-deps -i -r debian/control
+    # install build depend    encies
+    sudo apt-get update
+    # update installed software
+    sudo apt-get -y dist-upgrade
+    # install build dependencies
+    sudo mk-build-deps -i -r debian/control
 
-  # build and sign package
-  debuild -uc -us
+    # build and sign package
+    debuild -uc -us
 
-  # add package to repository
-  aptly repo add ${REPO} ../*.deb
-  aptly repo add ${REPO} ../*.dsc
+    # add package to repository
+    aptly repo add ${REPO} ../*.deb
+    aptly repo add ${REPO} ../*.dsc
 )
