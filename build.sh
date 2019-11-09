@@ -8,8 +8,8 @@ mkdir -p build
 uscan --destdir=build --download-current-version
 (
     cd build
-    TARDIR="$( tar tf $NAME-*.tar.?? | grep '/$' | sort | head -1 )"
-    tar -xf "$NAME"-*.tar.??
+    TARDIR="$( tar tf "$NAME"_*.tar.?? | grep '/$' | sort | head -1 )"
+    tar -xf "$NAME"_*.tar.??
     cd "$TARDIR"
 
     cp -r ../../debian .
