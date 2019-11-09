@@ -35,8 +35,7 @@ resolved during (chained) build:
     $ cd eduvpn-debian-buster
     $ ./build_all.sh
 
-The script uses `sudo` quite a bit, and also `gpg`, so you may be asked for
-your password during the build.
+The `build.sh` script called by `build_all.sh` uses `sudo` for some steps.
 
 After everything is done, you can find the repository in 
 `${HOME}/.aptly/public`. Copy this to a public web server and have the VPN 
