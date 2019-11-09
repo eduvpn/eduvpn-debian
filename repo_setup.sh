@@ -1,7 +1,7 @@
 #!/bin/bash -ve
 
-KEY=eduvpn+debian@surfnet.nl
-DIST=stretch
+KEY=software@example.org
+DIST=buster
 REPO=LC
 
 aptly publish drop ${DIST} || true
