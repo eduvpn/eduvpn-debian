@@ -2,6 +2,8 @@ vpn-ca (0.0.7-1) unstable; urgency=medium
 
   * New upstream.
   * d/upstream/signing-key.asc, d/watch: verify upstream signature.
+  * d/copyright: fix syntax.
+  * d/rules: for now, override dh_dwz and dh_golang.
 
  -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 07 Nov 2019 14:16:24 +0100
 
