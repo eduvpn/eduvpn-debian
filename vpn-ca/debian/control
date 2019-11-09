@@ -13,8 +13,8 @@ Package: vpn-ca
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Built-Using: ${misc:Built-Using}
-Description: Simple CA intended for use with Let's Connect! & eduVPN
+Description: Simple CA intended for use with Let's Connect! and eduVPN
  A simple Certification Authority for TLS/SSL server certificates,
- offering a tiny CLI API for use with Let's Connect!  software from
+ offering a tiny CLI API for use with Let's Connect! software from
  https://letsconnect-vpn.org/ and in the eduVPN project
  at https://www.eduvpn.nl/.
