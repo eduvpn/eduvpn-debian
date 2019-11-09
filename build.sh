@@ -14,6 +14,9 @@ uscan --destdir=build --download-current-version
   elif [ -f "${NAME}-${VERSION}.tar.xz" ] 
   then
     tar -xJf "${NAME}-${VERSION}.tar.xz"
+  elif [ -f "${NAME}_${VERSION}.orig.tar.gz" ]
+  then
+    tar -xzf "${NAME}_${VERSION}.orig.tar.gz"
   else
     echo "unable to unpack file"
     exit 1
@@ -24,7 +27,7 @@ uscan --destdir=build --download-current-version
 
   # install build dependencies
   sudo apt-get update
-  # update installe dsoftware
+  # update installed software
   sudo apt-get -y dist-upgrade
   # install build dependencies
   sudo mk-build-deps -i -r debian/control
