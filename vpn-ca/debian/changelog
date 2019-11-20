@@ -1,3 +1,12 @@
+vpn-ca (0.0.7+git20191108.df53cc8-1) UNRELEASED; urgency=medium
+
+  * Ran "dh-make-golang make github.com/letsconnectvpn/vpn-ca" :
+    - d/control, d/copyright, d/watch: merged . FIXME d/watch should use signing-key
+    - d/install: no longer needed CHECKME FIXME, was: _bin/* usr/bin
+    - d/gbp.conf: added
+
+ -- Joost van Baal-Ilić <joostvb@debian.org>  Wed, 20 Nov 2019 10:08:08 +0100
+
 vpn-ca (0.0.7-1) unstable; urgency=medium
 
   * New upstream.

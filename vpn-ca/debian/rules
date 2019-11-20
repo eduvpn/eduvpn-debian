@@ -1,23 +1,25 @@
 #!/usr/bin/make -f
 
-# See debhelper(7)
-# output every command that modifies files on the build system.
-#export DH_VERBOSE = 1
-
-# for golang
-export DH_OPTIONS
+override_dh_auto_install:
+	dh_auto_install -- --no-source
 
 %:
-	dh $@ --buildsystem=makefile --with=golang
+	dh $@ --buildsystem=golang --with=golang
 
-# fails with ".debug_info section not present"
-override_dh_dwz:
-	:
 
+####################
+# # for golang
+# export DH_OPTIONS
+# 
+# %:
+#         dh $@ --buildsystem=makefile --with=golang
+#
+# # fails with ".debug_info section not present"
+# override_dh_dwz:
+#         :
+#
 # needs DH_GOPKG
-override_dh_golang:
-	:
+# override_dh_golang:
+#         :
 
-## %:
-## 	dh $@ --builddirectory=_build --buildsystem=golang --with=golang
 

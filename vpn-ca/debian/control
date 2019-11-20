@@ -2,17 +2,21 @@ Source: vpn-ca
 Section: web
 Priority: optional
 Maintainer: Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>
-Build-Depends: debhelper-compat (= 12), dh-golang
-Build-Depends-Arch: golang-any
-Standards-Version: 4.4.0
+Build-Depends: debhelper (>= 11),
+               dh-golang,
+               golang-any
+Standards-Version: 4.2.1
 Homepage: https://software.tuxed.net/vpn-ca/
 Vcs-Browser: https://github.com/eduvpn/eduvpn-debian/vpn-ca
 Vcs-Git: https://github.com/eduvpn/eduvpn-debian/vpn-ca.git
+XS-Go-Import-Path: github.com/letsconnectvpn/vpn-ca
+Testsuite: autopkgtest-pkg-go
 
 Package: vpn-ca
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
 Built-Using: ${misc:Built-Using}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
 Description: Simple CA intended for use with Let's Connect! and eduVPN
  A simple Certification Authority for TLS/SSL server certificates,
  offering a tiny CLI API for use with Let's Connect! software from
