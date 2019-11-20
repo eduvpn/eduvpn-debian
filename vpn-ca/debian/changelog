@@ -1,11 +1,11 @@
-vpn-ca (0.0.7-2) UNRELEASED; urgency=medium
+vpn-ca (0.0.7-2) unstable; urgency=medium
 
   * Ran "dh-make-golang make github.com/letsconnectvpn/vpn-ca" :
     - changed upstream version from dh-make-golang's 0.0.7+git20191108.df53cc8-1
       to 0.0.7,
     - d/control, d/copyright: merged,
-    - d/watch: not merged; we stay with downloading from tuxed.net, not using git
-      tags but .tar.xz's.
+    - d/watch: not merged; we stay with downloading from tuxed.net, not using
+      git tags but .tar.xz's,
     - d/install: no longer needed,
     - d/gbp.conf: added.
 
