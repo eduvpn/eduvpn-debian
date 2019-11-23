@@ -30,30 +30,50 @@ set -e
 #
 # list should be ordered by dependency
 #
-PACKAGE_LIST="php-otp-verifier
-    php-secookie
-    BaconQrCode
-    php-jwt
-    php-oauth2-server
-    php-saml-sp
-    php-openvpn-connection-manager
-    php-sqlite-migrate
+PACKAGE_LIST="BaconQrCode
     php-constant-time
+    vpn-ca
+    php-saml-sp
+    php-jwt
+    php-otp-verifier
+    php-oauth2-server
+    php-secookie
+    php-sqlite-migrate
+    php-openvpn-connection-manager
     vpn-lib-common
-    vpn-server-node
     vpn-server-api
+    vpn-server-node
     vpn-user-portal
-    php-saml-ds-artwork-eduVPN
     vpn-portal-artwork-eduVPN
     vpn-portal-artwork-LC
-    php-otp-verifier
-    vpn-ca"
+    php-json-signer
+    php-saml-ds
+    php-saml-ds-artwork-eduVPN"
 
-#missing (these are in branch buster as of nov 2019):
-# php-json-signer
-# php-saml-ds
-# php-secookie
-#
+# nov 2019 суб 23 11:23 < fkooman> on debian you need also this baconqr thing and
+#                        php-constant-time, put those at the beginning
+# https://raw.githubusercontent.com/eduvpn/builder/master/build_packages.sh
+# PACKAGE_LIST=(\
+#    vpn-ca \
+#    lc-daemon \
+#    php-fkooman-saml-sp \
+#    php-fkooman-jwt \
+#    php-fkooman-otp-verifier \
+#    php-fkooman-oauth2-server \
+#    php-fkooman-secookie \
+#    php-fkooman-sqlite-migrate \
+#    php-LC-openvpn-connection-manager \
+#    php-LC-common \
+#    vpn-server-api \
+#    vpn-server-node \
+#    vpn-user-portal \
+#    vpn-portal-artwork-eduVPN \
+#    vpn-portal-artwork-LC \
+#    php-json-signer \
+#    php-saml-ds \
+#    php-saml-ds-artwork-eduVPN \
+#)
+
 
 if test -f ~/.pbuilderrc
 then
