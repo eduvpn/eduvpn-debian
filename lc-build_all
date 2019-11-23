@@ -38,22 +38,22 @@ PACKAGE_LIST="php-otp-verifier
     php-saml-sp
     php-openvpn-connection-manager
     php-sqlite-migrate
+    php-constant-time
     vpn-lib-common
     vpn-server-node
     vpn-server-api
     vpn-user-portal
+    php-saml-ds-artwork-eduVPN
+    vpn-portal-artwork-eduVPN
+    vpn-portal-artwork-LC
     php-otp-verifier
     vpn-ca"
 
 #missing (these are in branch buster as of nov 2019):
-#php-constant-time
-#php-json-signer
-#php-saml-ds
-#php-saml-ds-artwork-eduVPN
-#php-secookie
-#vpn-portal-artwork-eduVPN
-#vpn-portal-artwork-LC
-
+# php-json-signer
+# php-saml-ds
+# php-secookie
+#
 
 if test -f ~/.pbuilderrc
 then
@@ -90,6 +90,8 @@ done
 echo '***' "$0: completed."
 
 # FIXME now it's time to sign Packages.xz
+# create Release.gpg and InRelease
+
 
 # FIXME make it run lintian :
 # joostvb@perun:/var/cache/pbuilder/apt-archive% lintian php-jwt_1.0.1-3_amd64.changes
