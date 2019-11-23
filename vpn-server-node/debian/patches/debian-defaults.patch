@@ -14,10 +14,10 @@ index 0112e14..c5ecff0 100644
      'apiUser' => 'vpn-server-node',
      'apiPass' => 'XXX-vpn-server-node/vpn-server-api-XXX',
 diff --git a/src/OpenVpn.php b/src/OpenVpn.php
-index 1ec2a9f..8e29dd0 100644
+index 5d9942b..fe1357c 100644
 --- a/src/OpenVpn.php
 +++ b/src/OpenVpn.php
-@@ -18,8 +18,8 @@ use RuntimeException;
+@@ -19,8 +19,8 @@ use RuntimeException;
  
  class OpenVpn
  {
@@ -29,7 +29,7 @@ index 1ec2a9f..8e29dd0 100644
      /** @var string */
      private $vpnConfigDir;
 diff --git a/tests/data/internet-0.conf b/tests/data/internet-0.conf
-index 0bdc4ac..03897d3 100644
+index 92413c8..6b9bb48 100644
 --- a/tests/data/internet-0.conf
 +++ b/tests/data/internet-0.conf
 @@ -9,8 +9,8 @@ auth none
@@ -40,6 +40,6 @@ index 0bdc4ac..03897d3 100644
 -client-disconnect /usr/libexec/vpn-server-node/client-disconnect
 +client-connect /usr/lib/vpn-server-node/client-connect
 +client-disconnect /usr/lib/vpn-server-node/client-disconnect
- dev tun-1-0
+ dev tun0
  dev-type tun
  dh none

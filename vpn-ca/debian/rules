@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+override_dh_auto_install:
+	dh_auto_install -- --no-source
+
+%:
+	dh $@ --buildsystem=golang --with=golang
+
+
+####################
+# # for golang
+# export DH_OPTIONS
+# 
+# %:
+#         dh $@ --buildsystem=makefile --with=golang
+#
+# # fails with ".debug_info section not present"
+# override_dh_dwz:
+#         :
+#
+# needs DH_GOPKG
+# override_dh_golang:
+#         :
+
+
