@@ -25,10 +25,6 @@
 set -e
 
 
-# FIXME depends vpn-user-portal (php-bacon-qr-code)
-# FIXME php-otp-verifier packaged
-# FIXME php-sqlite-migrate packaged
-#
 # depends: vpn-server-node vpn-admin-portal (vpn-lib-common)
 # depends: vpn-server-api (vpn-lib-common)
 #
@@ -45,7 +41,18 @@ PACKAGE_LIST="php-otp-verifier
     vpn-lib-common
     vpn-server-node
     vpn-server-api
-    vpn-user-portal"
+    vpn-user-portal
+    php-otp-verifier
+    vpn-ca"
+
+#missing (these are in branch buster as of nov 2019):
+#php-constant-time
+#php-json-signer
+#php-saml-ds
+#php-saml-ds-artwork-eduVPN
+#php-secookie
+#vpn-portal-artwork-eduVPN
+#vpn-portal-artwork-LC
 
 
 if test -f ~/.pbuilderrc
