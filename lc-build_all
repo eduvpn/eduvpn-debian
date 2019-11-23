@@ -30,8 +30,33 @@ set -e
 #
 # list should be ordered by dependency
 #
+
 PACKAGE_LIST="BaconQrCode
     php-constant-time
+    vpn-ca
+    php-saml-sp
+    php-jwt
+    php-otp-verifier
+    php-oauth2-server
+    php-secookie
+    php-sqlite-migrate
+    php-openvpn-connection-manager
+    vpn-lib-common
+    vpn-server-api
+    vpn-server-node
+    vpn-user-portal
+    vpn-portal-artwork-eduVPN
+    vpn-portal-artwork-LC
+    php-json-signer
+    php-saml-ds
+    php-saml-ds-artwork-eduVPN"
+
+# above: how it should be. below: how it just might work, as of
+# суб, 23. нов 2019.  11:39:57 CET
+# broken as of суб, 23. нов 2019.  11:38:56 CET:
+#  php-constant-time
+
+PACKAGE_LIST="BaconQrCode
     vpn-ca
     php-saml-sp
     php-jwt
