@@ -1,6 +1,6 @@
 #!/bin/bash -ve
 
-KEY=eduvpn+debian@surfnet.nl
+KEY=software+debian@letsconnect-vpn.org
 DIST=stretch
 REPO=LC
 
