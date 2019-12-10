@@ -10,4 +10,4 @@ aptly repo drop ${REPO} || true
 # create a new repository
 aptly repo create -architectures="amd64,all,source" ${REPO}
 aptly publish -gpg-key=${KEY} -distribution=${DIST} -architectures="amd64,all,source" repo ${REPO}
-gpg --export --armor ${KEY} > ~/.aptly/public/${REPO}.key
+gpg1 --export --armor ${KEY} > ~/.aptly/public/${REPO}.key
