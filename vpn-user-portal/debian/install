@@ -11,8 +11,9 @@ bin/generate-oauth-key.php => /usr/bin/vpn-user-portal-generate-oauth-key
 config/config.php.example => /usr/share/doc/vpn-user-portal/config.php.example
 
 src/* /usr/share/php/LC/Portal/
-
 locale /usr/share/vpn-user-portal/
 views /usr/share/vpn-user-portal/
 web /usr/share/vpn-user-portal/
 schema /usr/share/vpn-user-portal/
+
+VERSION /usr/share/vpn-user-portal/
