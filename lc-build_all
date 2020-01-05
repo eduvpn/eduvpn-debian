@@ -25,27 +25,79 @@
 set -e
 
 
-# FIXME depends vpn-user-portal (php-bacon-qr-code)
-# FIXME php-otp-verifier packaged
-# FIXME php-sqlite-migrate packaged
-#
 # depends: vpn-server-node vpn-admin-portal (vpn-lib-common)
 # depends: vpn-server-api (vpn-lib-common)
 #
 # list should be ordered by dependency
 #
-PACKAGE_LIST="php-otp-verifier
-    php-secookie
-    BaconQrCode
-    php-jwt
-    php-oauth2-server
+
+PACKAGE_LIST="BaconQrCode
+    php-constant-time
+    vpn-ca
     php-saml-sp
-    php-openvpn-connection-manager
+    php-jwt
+    php-otp-verifier
+    php-oauth2-server
+    php-secookie
     php-sqlite-migrate
+    php-openvpn-connection-manager
     vpn-lib-common
-    vpn-server-node
     vpn-server-api
-    vpn-user-portal"
+    vpn-server-node
+    vpn-user-portal
+    vpn-portal-artwork-eduVPN
+    vpn-portal-artwork-LC
+    php-json-signer
+    php-saml-ds
+    php-saml-ds-artwork-eduVPN"
+
+# above: how it should be. below: how it just might work, as of
+# суб, 23. нов 2019.  11:39:57 CET
+# broken as of суб, 23. нов 2019.  11:38:56 CET:
+#  php-constant-time
+
+PACKAGE_LIST="BaconQrCode
+    vpn-ca
+    php-saml-sp
+    php-jwt
+    php-otp-verifier
+    php-oauth2-server
+    php-secookie
+    php-sqlite-migrate
+    php-openvpn-connection-manager
+    vpn-lib-common
+    vpn-server-api
+    vpn-server-node
+    vpn-user-portal
+    vpn-portal-artwork-eduVPN
+    vpn-portal-artwork-LC
+    php-json-signer
+    php-saml-ds
+    php-saml-ds-artwork-eduVPN"
+
+# nov 2019 суб 23 11:23 < fkooman> on debian you need also this baconqr thing and
+#                        php-constant-time, put those at the beginning
+# https://raw.githubusercontent.com/eduvpn/builder/master/build_packages.sh
+# PACKAGE_LIST=(\
+#    vpn-ca \
+#    lc-daemon \
+#    php-fkooman-saml-sp \
+#    php-fkooman-jwt \
+#    php-fkooman-otp-verifier \
+#    php-fkooman-oauth2-server \
+#    php-fkooman-secookie \
+#    php-fkooman-sqlite-migrate \
+#    php-LC-openvpn-connection-manager \
+#    php-LC-common \
+#    vpn-server-api \
+#    vpn-server-node \
+#    vpn-user-portal \
+#    vpn-portal-artwork-eduVPN \
+#    vpn-portal-artwork-LC \
+#    php-json-signer \
+#    php-saml-ds \
+#    php-saml-ds-artwork-eduVPN \
+#)
 
 
 if test -f ~/.pbuilderrc
@@ -83,6 +135,8 @@ done
 echo '***' "$0: completed."
 
 # FIXME now it's time to sign Packages.xz
+# create Release.gpg and InRelease
+
 
 # FIXME make it run lintian :
 # joostvb@perun:/var/cache/pbuilder/apt-archive% lintian php-jwt_1.0.1-3_amd64.changes
