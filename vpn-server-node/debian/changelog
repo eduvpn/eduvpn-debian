@@ -1,3 +1,21 @@
+vpn-server-node (2.1.0-1) stable; urgency=medium
+
+  * update to 2.1.0
+
+ -- François Kooman <fkooman@tuxed.net>  Thu, 21 Nov 2019 22:10:33 +0100
+
+vpn-server-node (2.0.4-2) stable; urgency=medium
+
+  * add CONFIG_CHANGES.md as a documentation file
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 14 Oct 2019 11:06:47 +0200
+
+vpn-server-node (2.0.4-1) stable; urgency=medium
+
+  * update to 2.0.4
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 14 Oct 2019 10:54:34 +0200
+
 vpn-server-node (2.0.3-2) stable; urgency=medium
 
   * fix hashbang

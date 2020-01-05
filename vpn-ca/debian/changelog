@@ -1,0 +1,33 @@
+vpn-ca (1.0.0-1) stable; urgency=medium
+
+  * update to 1.0.0
+
+ -- François Kooman <fkooman@tuxed.net>  Wed, 20 Nov 2019 11:58:00 +0100
+
+vpn-ca (0.0.7-2) unstable; urgency=medium
+
+  * Ran "dh-make-golang make github.com/letsconnectvpn/vpn-ca" :
+    - changed upstream version from dh-make-golang's 0.0.7+git20191108.df53cc8-1
+      to 0.0.7,
+    - d/control, d/copyright: merged,
+    - d/watch: not merged; we stay with downloading from tuxed.net, not using
+      git tags but .tar.xz's,
+    - d/install: no longer needed,
+    - d/gbp.conf: added.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Wed, 20 Nov 2019 10:08:08 +0100
+
+vpn-ca (0.0.7-1) unstable; urgency=medium
+
+  * New upstream.
+  * d/upstream/signing-key.asc, d/watch: verify upstream signature.
+  * d/copyright: fix syntax.
+  * d/rules: for now, override dh_dwz and dh_golang.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 07 Nov 2019 14:16:24 +0100
+
+vpn-ca (0.0.4-1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Thu, 31 Oct 2019 14:26:14 +0000

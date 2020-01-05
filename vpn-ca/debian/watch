@@ -1,0 +1,7 @@
+version=4
+opts=pgpsigurlmangle=s/$/.asc/,\
+uversionmangle=s/(\d)[_\.\-\+]?(RC|rc|pre|dev|beta|alpha)[.]?(\d*)$/\$1~\$2\$3/ \
+ https://software.tuxed.net/vpn-ca/download.html files/vpn-ca-(.+)\.tar\.xz
+
+# filenamemangle=s/.+\/v?(\d\S*)\.tar\.xz/vpn-ca-\$1\.tar\.xz/,\
+#  https://github.com/letsconnectvpn/vpn-ca/tags .*/v?(\d\S*)\.tar\.gz

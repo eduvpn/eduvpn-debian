@@ -1,6 +1,6 @@
 #!/bin/bash -ve
 
-KEY=eduvpn+debian@surfnet.nl
-DIST=stretch
+KEY=software@example.org
+DIST=buster
 
 aptly publish update -gpg-key=${KEY} ${DIST}
