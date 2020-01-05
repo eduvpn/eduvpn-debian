@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# MIT License
+#
+# Copyright (c) 2019 Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+# This script inspired by https://non-gnu.uvt.nl/debian/update-apt-repo.mk
+
+#
+# call as e.g.:
+#  cd /srv/www/deb.your.dom.ain/debian
+#  GNUPGHOME=/path/to/.gnupg gpg-agent --quiet --daemon lc-repo_sign
+#
+
+
+# gpg --cipher-algo AES256 \
+#   --digest-algo SHA512 --no-permission-warning --default-key $GNUPG_KEY --armor \
+#   --output - --sign
+
+sign="gpg --armor --output - --sign"
+
+$sign --detach-sign Release >Release.gpg
+$sign --clear-sign  Release >InRelease
+
