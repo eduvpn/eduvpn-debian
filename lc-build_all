@@ -134,13 +134,19 @@ done
 
 echo '***' "$0: completed."
 
-# FIXME now it's time to sign Packages.xz
-# create Release.gpg and InRelease
-
-
 # FIXME make it run lintian :
 # joostvb@perun:/var/cache/pbuilder/apt-archive% lintian php-jwt_1.0.1-3_amd64.changes
 # W: php-jwt source: maintainer-also-in-uploaders
 # W: php-jwt source: changelog-should-mention-nmu
 # W: php-jwt source: source-nmu-has-incorrect-version-number 1.0.1-3
 # E: php-fkooman-jwt: extended-description-is-empty
+
+# FIXME now it's time to sign Packages.xz
+
+# sign/create Release.gpg and InRelease :
+
+(
+ cd /srv/www/deb.your.dom.ain/debian  # FIXME
+ gpg-agent --quiet --daemon lc-repo_sign
+)
+
