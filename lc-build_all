@@ -1,4 +1,4 @@
-#/bin/sh
+#/bin/bash
 
 # MIT License
 #
@@ -141,12 +141,39 @@ echo '***' "$0: completed."
 # W: php-jwt source: source-nmu-has-incorrect-version-number 1.0.1-3
 # E: php-fkooman-jwt: extended-description-is-empty
 
-# FIXME now it's time to sign Packages.xz
+# now it's time to reshuffle our repo
+# in /var/cache/pbuilder/apt-archive
 
-# sign/create Release.gpg and InRelease :
+# create full-blown archive under /var/cache/pbuilder/debian/{dists,pool}/
+# (offering deb http:// sources for apt) from content in
+# /var/cache/pbuilder/apt-archive (offers only file:// sources for apt)
 
+mkdir /var/cache/pbuilder/debian
 (
- cd /srv/www/deb.your.dom.ain/debian  # FIXME
- gpg-agent --quiet --daemon lc-repo_sign
+    cd /var/cache/pbuilder/debian
+    mkdir pool
+    cp -a ../apt-archive pool/main
+    rm pool/main/{Packages,Sources}*
+
+    mkdir -p dists/buster/main/binary-{all,i386,amd64}
+    mkdir -p dists/buster/main/sources
+
+    dpkg-scanpackages --arch i386 pool/main >dists/buster/main/binary-i386/Packages
+    dpkg-scanpackages --arch amd64 pool/main >dists/buster/main/binary-amd64/Packages
+
+    dpkg-scansources . >Sources
+
+    # debian/dists/buster/Release
+    apt-ftparchive release dists/$foo > Release
+
+
+    # FIXME now it's time to sign Packages.xz
+
+    # sign/create Release.gpg and InRelease :
+
+    gpg-agent --quiet --daemon lc-repo_sign
 )
+
+# now /var/cache/pbuilder/debian is ready to rsync to e.g.
+# https://repo.eduvpn.org/debian-stable/
 
