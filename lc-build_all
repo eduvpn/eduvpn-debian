@@ -22,6 +22,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# example usage:
+#  LC_SKIP_BUILD=yes ./lc-build_all
+
 set -e
 
 
