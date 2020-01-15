@@ -153,7 +153,7 @@ mkdir /var/cache/pbuilder/debian
     cd /var/cache/pbuilder/debian
     mkdir pool
     cp -a ../apt-archive pool/main
-    rm pool/main/{Packages,Sources}*
+    rm pool/main/{Packages,Sources}* || true
 
     mkdir -p dists/buster/main/binary-{all,i386,amd64}
     mkdir -p dists/buster/main/sources
