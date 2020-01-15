@@ -30,7 +30,6 @@
 #  GNUPGHOME=/path/to/.gnupg gpg-agent --quiet --daemon lc-repo_sign
 #
 
-
 # gpg --cipher-algo AES256 \
 #   --digest-algo SHA512 --no-permission-warning --default-key $GNUPG_KEY --armor \
 #   --output - --sign

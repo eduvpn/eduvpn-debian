@@ -121,18 +121,23 @@ sudo pbuilder update
 
 # FIXME ./le-repo_setup
 
-for f in $PACKAGE_LIST
-do
-    echo '***' "$0: building $f ..."
-    (
-        cd "$f" || exit
-        ../lc-build
-        # lc-build
-    )
-    echo '***' "$0: finished building $f."
-done
+if test -n "$LC_SKIP_BUILD"
+then
+    echo '***' "$O: skipping lc-build calls."
+else
+    for f in $PACKAGE_LIST
+    do
+        echo '***' "$0: building $f ..."
+        (
+            cd "$f" || exit
+            ../lc-build
+            # lc-build
+        )
+        echo '***' "$0: finished building $f."
+    done
+    echo '***' "$0: completed."
+fi
 
-echo '***' "$0: completed."
 
 # FIXME make it run lintian :
 # joostvb@perun:/var/cache/pbuilder/apt-archive% lintian php-jwt_1.0.1-3_amd64.changes
@@ -148,31 +153,36 @@ echo '***' "$0: completed."
 # (offering deb http:// sources for apt) from content in
 # /var/cache/pbuilder/apt-archive (offers only file:// sources for apt)
 
-mkdir /var/cache/pbuilder/debian
-(
-    cd /var/cache/pbuilder/debian
-    mkdir pool
-    cp -a ../apt-archive pool/main
-    rm pool/main/{Packages,Sources}* || true
+if test -n "$LC_SKIP_REPO"
+then
+    echo '***' "$0: skipping preparing repo for publishing."
+else
+    mkdir /var/cache/pbuilder/debian
+    (
+        cd /var/cache/pbuilder/debian
+        mkdir pool
+        cp -a ../apt-archive pool/main
+        rm pool/main/{Packages,Sources}* || true
 
-    mkdir -p dists/buster/main/binary-{all,i386,amd64}
-    mkdir -p dists/buster/main/sources
+        mkdir -p dists/buster/main/binary-{all,i386,amd64}
+        mkdir -p dists/buster/main/sources
 
-    dpkg-scanpackages --arch i386 pool/main >dists/buster/main/binary-i386/Packages
-    dpkg-scanpackages --arch amd64 pool/main >dists/buster/main/binary-amd64/Packages
+        dpkg-scanpackages --arch i386 pool/main >dists/buster/main/binary-i386/Packages
+        dpkg-scanpackages --arch amd64 pool/main >dists/buster/main/binary-amd64/Packages
 
-    dpkg-scansources . >Sources
+        dpkg-scansources . >Sources
 
-    # debian/dists/buster/Release
-    apt-ftparchive release dists/$foo > Release
+        # debian/dists/buster/Release
+        apt-ftparchive release dists/$foo > Release
 
 
-    # FIXME now it's time to sign Packages.xz
+        # FIXME now it's time to sign Packages.xz
 
-    # sign/create Release.gpg and InRelease :
+        # sign/create Release.gpg and InRelease :
 
-    gpg-agent --quiet --daemon lc-repo_sign
-)
+        gpg-agent --quiet --daemon lc-repo_sign
+    )
+fi
 
 # now /var/cache/pbuilder/debian is ready to rsync to e.g.
 # https://repo.eduvpn.org/debian-stable/
