@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 # MIT License
 #
@@ -116,15 +116,15 @@ EATMYDATA=yes
 EOT
 fi
 
-# FIXME this might be needed after _every_ build?
-sudo pbuilder update
-
 # FIXME ./le-repo_setup
 
 if test -n "$LC_SKIP_BUILD"
 then
     echo '***' "$O: skipping lc-build calls."
 else
+    # FIXME this might be needed after _every_ build?
+    sudo pbuilder update
+
     for f in $PACKAGE_LIST
     do
         echo '***' "$0: building $f ..."
@@ -160,7 +160,7 @@ else
     test -d /var/cache/pbuilder/debian || mkdir -p /var/cache/pbuilder/debian
     (
         cd /var/cache/pbuilder/debian
-        mkdir pool
+        test -d pool || mkdir pool
         cp -a ../apt-archive pool/main
         rm pool/main/{Packages,Sources}* || true
 
