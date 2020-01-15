@@ -157,7 +157,7 @@ if test -n "$LC_SKIP_REPO"
 then
     echo '***' "$0: skipping preparing repo for publishing."
 else
-    mkdir /var/cache/pbuilder/debian
+    test -d /var/cache/pbuilder/debian || mkdir -p /var/cache/pbuilder/debian
     (
         cd /var/cache/pbuilder/debian
         mkdir pool
