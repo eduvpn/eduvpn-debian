@@ -180,10 +180,11 @@ else
 
         # sign/create Release.gpg and InRelease :
 
+        # FIXME path to lc-repo_sign ?
         gpg-agent --quiet --daemon lc-repo_sign
     )
 fi
 
-# now /var/cache/pbuilder/debian is ready to rsync to e.g.
-# https://repo.eduvpn.org/debian-stable/
+echo '***' "$0: finished creating and signing apt-able repo in /var/cache/pbuilder/debian."
+echo '***' "$0: repo ready to rsync to e.g. https://repo.eduvpn.org/debian-stable/"
 
