@@ -1,5 +1,5 @@
 diff --git a/bin/add-user.php b/bin/add-user.php
-index cd79e62..05a40d7 100644
+index 2aefc98..e1c260a 100644
 --- a/bin/add-user.php
 +++ b/bin/add-user.php
 @@ -7,8 +7,8 @@
@@ -29,7 +29,7 @@ index 05cd7b3..3c57e8a 100644
  use LC\Common\Config;
  use LC\Portal\ForeignKeyListFetcher;
 diff --git a/bin/generate-oauth-key.php b/bin/generate-oauth-key.php
-index da9e661..2445e25 100644
+index 2eafa03..1f5426a 100644
 --- a/bin/generate-oauth-key.php
 +++ b/bin/generate-oauth-key.php
 @@ -7,8 +7,8 @@
@@ -44,7 +44,7 @@ index da9e661..2445e25 100644
  use fkooman\Jwt\Keys\EdDSA\SecretKey;
  use LC\Common\FileIO;
 diff --git a/bin/init.php b/bin/init.php
-index 0e41697..b93d23b 100644
+index 4441691..c16e582 100644
 --- a/bin/init.php
 +++ b/bin/init.php
 @@ -7,8 +7,8 @@
@@ -59,7 +59,7 @@ index 0e41697..b93d23b 100644
  use LC\Common\Config;
  use LC\Common\FileIO;
 diff --git a/bin/show-oauth-key.php b/bin/show-oauth-key.php
-index d528642..9a7a07b 100644
+index 999a6b0..0bcaad2 100644
 --- a/bin/show-oauth-key.php
 +++ b/bin/show-oauth-key.php
 @@ -7,8 +7,8 @@
@@ -74,7 +74,7 @@ index d528642..9a7a07b 100644
  use fkooman\Jwt\Keys\EdDSA\SecretKey;
  use LC\Common\FileIO;
 diff --git a/web/api.php b/web/api.php
-index 10c1f7f..1cfc1a6 100644
+index 7bf3f88..616a51f 100644
 --- a/web/api.php
 +++ b/web/api.php
 @@ -7,8 +7,8 @@
@@ -89,7 +89,7 @@ index 10c1f7f..1cfc1a6 100644
  use fkooman\Jwt\Keys\EdDSA\SecretKey;
  use LC\Common\Config;
 diff --git a/web/index.php b/web/index.php
-index c26a929..42272e3 100644
+index 9d7b36d..b0e2165 100644
 --- a/web/index.php
 +++ b/web/index.php
 @@ -7,8 +7,8 @@
@@ -104,7 +104,7 @@ index c26a929..42272e3 100644
  use fkooman\Jwt\Keys\EdDSA\SecretKey;
  use fkooman\OAuth\Server\OAuthServer;
 diff --git a/web/oauth.php b/web/oauth.php
-index 6984276..e131fdd 100644
+index 85a158e..b98ffd3 100644
 --- a/web/oauth.php
 +++ b/web/oauth.php
 @@ -7,8 +7,8 @@
@@ -118,3 +118,18 @@ index 6984276..e131fdd 100644
  
  use fkooman\Jwt\Keys\EdDSA\SecretKey;
  use fkooman\OAuth\Server\OAuthServer;
+diff --git a/web/well-known.php b/web/well-known.php
+index f48a036..5de04de 100644
+--- a/web/well-known.php
++++ b/web/well-known.php
+@@ -7,8 +7,8 @@
+  * SPDX-License-Identifier: AGPL-3.0+
+  */
+ 
+-require_once dirname(__DIR__).'/vendor/autoload.php';
+-$baseDir = dirname(__DIR__);
++require_once '/usr/share/php/LC/Portal/autoload.php';
++$baseDir = '/usr/share/vpn-user-portal';
+ 
+ use LC\Common\FileIO;
+ use LC\Common\Http\JsonResponse;

@@ -29,7 +29,7 @@ index 9694e44..a52d5bf 100644
  use LC\Server\Storage;
  
 diff --git a/bin/init.php b/bin/init.php
-index cf99c3d..b34a84b 100644
+index c777475..64d8ebe 100644
 --- a/bin/init.php
 +++ b/bin/init.php
 @@ -7,8 +7,8 @@
@@ -42,7 +42,7 @@ index cf99c3d..b34a84b 100644
 +$baseDir = '/usr/share/vpn-server-api';
  
  use LC\Common\Config;
- use LC\Common\FileIO;
+ use LC\Server\CA\EasyRsaCa;
 diff --git a/bin/stats.php b/bin/stats.php
 index c898aa8..d7d22dd 100644
 --- a/bin/stats.php
@@ -104,7 +104,7 @@ index aace998..9b0875f 100644
  use LC\Common\CliParser;
  use LC\Common\Config;
 diff --git a/web/api.php b/web/api.php
-index 5a1f771..62b0094 100644
+index a97baa6..7c2c0db 100644
 --- a/web/api.php
 +++ b/web/api.php
 @@ -7,8 +7,8 @@
