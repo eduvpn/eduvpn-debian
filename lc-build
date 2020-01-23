@@ -46,7 +46,7 @@ uscan --destdir=build --download-current-version
 
   cp -r ../../debian .
 
-  # install build dependencies, build and sign FIXME source package
+  # install build dependencies, build packages
   pdebuild
   echo '***' "$0: finished build in" `pwd` ", buildlog in .build"
 )
