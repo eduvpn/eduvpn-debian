@@ -18,7 +18,7 @@ Build-Depends:
  php-fkooman-saml-sp,
  php-fkooman-secookie,
  php-fkooman-sqlite-migrate,
- php-lc-common,
+ php-lc-common (>= 2.1.0),
  php-constant-time,
  php-libsodium
 Standards-Version: 3.9.8
@@ -37,7 +37,7 @@ Depends: ${misc:Depends},
  php-fkooman-saml-sp,
  php-fkooman-secookie,
  php-fkooman-sqlite-migrate,
- php-lc-common,
+ php-lc-common (>= 2.1.0),
  php-constant-time,
  php-libsodium,
  openssl
