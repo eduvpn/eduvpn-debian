@@ -14,7 +14,7 @@ Build-Depends:
  php-fkooman-otp-verifier (>= 0.3~),
  php-fkooman-sqlite-migrate,
  php-lc-openvpn-connection-manager,
- php-lc-common,
+ php-lc-common (>= 2.1.0),
  php-psr-log,
  php-constant-time
 Standards-Version: 3.9.8
@@ -30,7 +30,7 @@ Depends:
  php-fkooman-otp-verifier (>= 0.3~),
  php-fkooman-sqlite-migrate,
  php-lc-openvpn-connection-manager,
- php-lc-common,
+ php-lc-common (>= 2.1.0),
  php-psr-log,
  php-constant-time,
  openvpn
