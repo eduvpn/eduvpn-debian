@@ -15,7 +15,6 @@ Build-Depends:
  php-radius,
  php-sqlite3,
  php-json,
- php-fkooman-secookie,
  php-constant-time,
  php-psr-log
 Standards-Version: 3.9.8
@@ -32,7 +31,6 @@ Depends:
  php-radius,
  php-sqlite3,
  php-json,
- php-fkooman-secookie,
  php-constant-time,
  php-psr-log
 Suggests: ${phpcomposer:Debian-suggest}
