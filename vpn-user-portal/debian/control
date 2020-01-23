@@ -19,8 +19,7 @@ Build-Depends:
  php-fkooman-secookie,
  php-fkooman-sqlite-migrate,
  php-lc-common (>= 2.1.0),
- php-constant-time (>= 2.2.0~)
- php-sodium
+ php-constant-time (>= 2.2.0~),
 Standards-Version: 3.9.8
 Homepage: https://github.com/eduvpn/vpn-user-portal
 
@@ -39,8 +38,6 @@ Depends: ${misc:Depends},
  php-fkooman-sqlite-migrate,
  php-constant-time (>= 2.2.0~),
  php-lc-common (>= 2.1.0),
- php-sodium,
->>>>>>> master
  openssl
 Suggests: ${phpcomposer:Debian-suggest}
 Description: VPN User Portal for Let's Connect!
