@@ -2,7 +2,7 @@
 
 # MIT License
 #
-# Copyright (c) 2018, 2019 Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>
+# Copyright (c) 2018, 2019, 2020 Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -46,7 +46,7 @@ uscan --destdir=build --download-current-version
 
   cp -r ../../debian .
 
-  # install build dependencies, build and sign FIXME package
+  # install build dependencies, build and sign FIXME source package
   pdebuild
   echo '***' "$0: finished build in" `pwd` ", buildlog in .build"
 )
@@ -63,4 +63,3 @@ cp build/*.{deb,build,buildinfo,orig.tar.??,debian.tar.??,changes,dsc} \
   gzip -kf Sources
   echo '***' "$0: updated archive in" `pwd`
 )
-
