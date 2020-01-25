@@ -51,6 +51,13 @@ resolved during (chained) build:
 
 FIXME: lc-build_all from within git checkout i'd guess?
 
+FIXME: for "users":
+
+ apt-get source pkgname
+ apt-get build-dep pkgname    or dpkg-checkbuilddeps
+ cd pkgname-*
+ debuild -uc -us      (or dpkg-buildpackage -uc -us)
+
 
     $ wget https://github.com/eduVPN/eduvpn-debian/archive/buster.tar.gz
     $ tar -xzf buster.tar.gz
