@@ -1,3 +1,9 @@
+vpn-portal-artwork-eduvpn (2.1.2-1) stable; urgency=medium
+
+  * update to 2.1.2
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 27 Jan 2020 17:59:00 +0100
+
 vpn-portal-artwork-eduvpn (2.1.1-1) stable; urgency=medium
 
   * update to 2.1.1
