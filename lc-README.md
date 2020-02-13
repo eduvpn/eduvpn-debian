@@ -2,6 +2,29 @@
 
 Repository to build (all) Debian packages related to eduVPN.
 
+# TL;DR
+
+Tested on a clean Debian GNU/Linux 10 (buster) system.  If you have 2 GB of
+diskspace, such a system should fit.
+
+ # apt install sudo git pbuilder devscripts dpkg-dev apt-utils gpg-agent gpg
+
+(Tested with extra packages installed: zsh locales-all.)
+
+ # adduser $you sudo
+
+ $ git clone https://github.com/joostvb-gh/eduvpn-debian.git
+ $ cd eduvpn-debian
+ $ git checkout lc-build
+ $ ./lc-repo_setup
+
+ # chown $you /var/cache/pbuilder/*
+ # cp ~$you/.pbuilderrc ~/.
+
+ [...]
+
+ $ ./lc-build_all
+
 # Dependencies
 
     $ sudo apt -y install devscripts pbuilder dpkg-dev apt-utils gpg-agent gpg
