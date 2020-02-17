@@ -7,21 +7,16 @@ Build-Depends:
  debhelper (>= 9),
  phpunit,
  phpab,
- pkg-php-tools (>= 1.7~)
+ pkg-php-tools (>= 1.7~),
+ php-constant-time
 Standards-Version: 3.9.8
 Homepage: https://git.tuxed.net/fkooman/php-secookie
 
 Package: php-fkooman-secookie
 Architecture: all
-Depends: ${misc:Depends}, ${phpcomposer:Debian-require}
+Depends: ${misc:Depends},
+ php-constant-time
 Suggests: ${phpcomposer:Debian-suggest}
 Description: Secure cookie and session library
- This package provides a secure cookie and session library for PHP.
- It features:
-  - PHP >= 5.4 supported;
-  - Replace complicated setcookie() which is not secure by default;
-  - Allow binding PHP sessions to "Domain" and "Path";
-  - Uses a "Canary" to regularly refresh session ID;
-  - Expires the PHP session on the server;
-  - Implements SameSite attribute value;
-  - Unit tests with PHPUnit.
+ This is a simple to use and secure cookie and session library written in PHP. 
+ It does not use any of PHP's built-in cookie/session functions.
