@@ -93,3 +93,12 @@ After everything is done, you can find the repository in
 `${HOME}/.aptly/public`. Copy this to a public web server and have the VPN 
 server add this repository and key, just like above, but then with the correct
 URLs.
+
+# Debugging and Hacking
+
+Restart from scratch:
+
+ $ cd /var/cache/pbuilder
+ $ rm -rf debian/* result/* apt-archive/* ~/.pbuilderrc
+
+
