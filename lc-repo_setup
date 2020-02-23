@@ -39,7 +39,7 @@ test -d /var/cache/pbuilder/result || mkdir /var/cache/pbuilder/result
 test -d /var/cache/pbuilder/hooks || mkdir /var/cache/pbuilder/hooks
 
 sudo pbuilder update --override-config \
- --mirror http://deb.debian.org/debian/ \
+ --mirror http://httpredir.debian.org/debian \
  --othermirror "deb [trusted=yes] file:///var/cache/pbuilder/apt-archive ./" \
  --bindmounts "/var/cache/pbuilder/apt-archive" \
  --distribution buster
