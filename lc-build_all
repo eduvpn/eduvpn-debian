@@ -88,9 +88,6 @@ if test -n "$LC_SKIP_BUILD"
 then
     echo '***' "$O: skipping lc-build calls."
 else
-    # FIXME this might be needed after _every_ build?
-    sudo pbuilder update
-
     for f in $PACKAGE_LIST
     do
         echo '***' "$0: building $f ..."
@@ -100,6 +97,7 @@ else
             # lc-build
         )
         echo '***' "$0: finished building $f."
+        sudo pbuilder update
     done
     echo '***' "$0: completed."
 fi
