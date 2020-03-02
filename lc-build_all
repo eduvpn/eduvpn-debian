@@ -75,6 +75,13 @@ EATMYDATA=yes
 EOT
 fi
 
+if test -f /root/.pbuilderrc
+then
+    echo "$0: reusing existing /root/.pbuilderrc"
+else
+    sudo cp ~/.pbuilderrc /root/
+fi
+
 # FIXME ./le-repo_setup
 
 if test -n "$LC_SKIP_BUILD"

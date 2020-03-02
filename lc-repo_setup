@@ -24,7 +24,11 @@
 
 set -e
 
-test -f ~/.pbuilderrc && exit 1
+if test -f ~/.pbuilderrc
+then
+   echo >&2 $0: error: ~/.pbuilderrc exists.
+   exit 1
+fi
 
 sudo pbuilder create
 # should give:
