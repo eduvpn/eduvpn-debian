@@ -30,7 +30,7 @@ then
    exit 1
 fi
 
-sudo pbuilder create
+sudo pbuilder create --distribution buster
 # should give:
 # I: creating base tarball [/var/cache/pbuilder/base.tgz]
 
