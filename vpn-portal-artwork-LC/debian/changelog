@@ -1,3 +1,9 @@
+vpn-portal-artwork-lc (2.1.1-2) stable; urgency=medium
+
+  * forgot to install the locales
+
+ -- François Kooman <fkooman@tuxed.net>  Fri, 10 Apr 2020 22:42:04 +0200
+
 vpn-portal-artwork-lc (2.1.1-1) stable; urgency=medium
 
   * update to 2.1.1
