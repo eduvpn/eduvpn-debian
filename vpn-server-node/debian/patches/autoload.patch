@@ -29,22 +29,20 @@ index 01b9cec..dc0fe94 100644
  use LC\Common\Config;
  use LC\Common\HttpClient\CurlHttpClient;
 diff --git a/bin/generate-firewall.php b/bin/generate-firewall.php
-index 9785cfc..20be226 100644
+index 758e255..701fe0c 100644
 --- a/bin/generate-firewall.php
 +++ b/bin/generate-firewall.php
-@@ -7,8 +7,8 @@
+@@ -7,7 +7,7 @@
   * SPDX-License-Identifier: AGPL-3.0+
   */
  
 -require_once dirname(__DIR__).'/vendor/autoload.php';
--$baseDir = dirname(__DIR__);
 +require_once '/usr/share/php/LC/Node/autoload.php';
-+$baseDir = '/usr/share/vpn-server-node';
  
- use LC\Common\Config;
- use LC\Common\FileIO;
+ echo '************************************************************************'.PHP_EOL;
+ echo '*                                                                      *'.PHP_EOL;
 diff --git a/bin/server-config.php b/bin/server-config.php
-index 1a59896..bf311e0 100644
+index b066c93..03b2458 100644
 --- a/bin/server-config.php
 +++ b/bin/server-config.php
 @@ -7,8 +7,8 @@
