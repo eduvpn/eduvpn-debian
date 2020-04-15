@@ -1,7 +1,6 @@
 #!/usr/bin/dh-exec --with=install
 
 config/config.php.example => /usr/share/doc/vpn-server-node/config.php.example
-config/firewall.php.example => /usr/share/doc/vpn-server-node/firewall.php.example
 
 src/* /usr/share/php/LC/Node/
 

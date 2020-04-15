@@ -36,20 +36,6 @@ case "$1" in
 		else
 			echo "New installation, but existing default configuration found. Not updating"
 		fi
-
-		# Try to create default firewall config
-		if [ ! -f /etc/vpn-server-node/firewall.php ]; then
-			echo "New installation, creating firewall configuration"
-			if [ -f /usr/share/doc/vpn-server-node/firewall.php.example ]; then
-				install -m 644 /usr/share/doc/vpn-server-node/firewall.php.example \
-				  /etc/vpn-server-node/firewall.php
-			elif [ -f /usr/share/doc/vpn-server-node/firewall.php.example.gz ]; then
-				zcat /usr/share/doc/vpn-server-node/firewall.php.example.gz \
-				  >/etc/vpn-server-node/firewall.php
-			fi
-		else
-			echo "New installation, but existing firewall configuration found. Not updating"
-		fi
 	fi
     ;;
 
