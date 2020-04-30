@@ -3,7 +3,10 @@ Maintainer: François Kooman <fkooman@tuxed.net>
 Section: misc
 Priority: optional
 Standards-Version: 3.9.2
-Build-Depends: debhelper (>= 9), golang-any (>= 1.11)
+Build-Depends:
+ debhelper (>= 9), 
+ golang-any (>= 1.11)
+
 Package: vpn-ca
 Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}
