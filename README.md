@@ -2,6 +2,8 @@
 
 Repository to build (all) Debian packages related to eduVPN.
 
+**NOTE**: on Debian 9 you need to install Go from `stretch-backports`!
+
 # Signing
 
     $ gpg --gen-key
