@@ -1,0 +1,19 @@
+diff --git a/Makefile b/Makefile
+index 168cc55..4029705 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,3 +1,7 @@
++PREFIX=/usr/local
++
++.PHONY: fmt test clean install
++
+ _bin/vpn-daemon: vpn-daemon/main.go
+ 	go build -o $@ vpn-daemon/main.go
+ 
+@@ -9,3 +13,6 @@ test:
+ 
+ clean:
+ 	rm -f _bin/*
++
++install: _bin/vpn-daemon
++	install -D _bin/vpn-daemon $(DESTDIR)$(PREFIX)/sbin/vpn-daemon
