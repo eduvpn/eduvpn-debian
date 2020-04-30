@@ -1,0 +1,5 @@
+vpn-daemon (1.1.0-1) stable; urgency=medium
+
+  * initial package
+
+ -- François Kooman <fkooman@tuxed.net>  Thu, 30 Apr 2020 17:39:49 +0200
