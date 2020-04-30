@@ -1,0 +1,3 @@
+- restore signature check
+- also install docs/license files
+- build-depend on golang
