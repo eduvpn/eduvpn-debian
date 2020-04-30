@@ -1,3 +1,10 @@
+vpn-ca (2.0.1-2) stable; urgency=medium
+
+  * verify signature
+  * install docs
+
+ -- François Kooman <fkooman@tuxed.net>  Thu, 30 Apr 2020 14:03:46 +0200
+
 vpn-ca (2.0.1-1) stable; urgency=medium
 
   * update to 2.0.1
