@@ -4,7 +4,7 @@ Description=Daemon to manage OpenVPN processes
 [Service]
 Environment=LISTEN=127.0.0.1:41194
 EnvironmentFile=-/etc/default/vpn-daemon
-ExecStart=/usr/bin/vpn-daemon ${ENABLE_TLS} -listen ${LISTEN}
+ExecStart=/usr/sbin/vpn-daemon ${ENABLE_TLS} -listen ${LISTEN}
 Restart=on-failure
 PrivateDevices=yes
 User=vpn-daemon
