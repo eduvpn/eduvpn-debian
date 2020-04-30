@@ -1,0 +1,4 @@
+#!/bin/sh
+
+addgroup --quiet --system vpn-daemon
+adduser --quiet --system vpn-daemon
