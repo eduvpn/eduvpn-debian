@@ -1,0 +1,12 @@
+Source: vpn-ca
+Maintainer: F. Kooman <fkooman@tuxed.net>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9)
+
+Package: vpn-ca
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: vpn-ca
+ simple CA.

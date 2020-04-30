@@ -1,0 +1,5 @@
+vpn-ca (2.0.0-1) stable; urgency=medium
+
+  * initial package
+
+ -- F. Kooman <fkooman@tuxed.net>  Thu, 30 Apr 2020 11:14:08 +0200
