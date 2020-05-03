@@ -1,5 +1,5 @@
 diff --git a/bin/disconnect-expired-certificates.php b/bin/disconnect-expired-certificates.php
-index 35d0c80..39b906e 100644
+index f262604..791ba7e 100644
 --- a/bin/disconnect-expired-certificates.php
 +++ b/bin/disconnect-expired-certificates.php
 @@ -7,8 +7,8 @@
@@ -29,7 +29,7 @@ index 9694e44..a52d5bf 100644
  use LC\Server\Storage;
  
 diff --git a/bin/init.php b/bin/init.php
-index c777475..64d8ebe 100644
+index 87f618d..a6f7836 100644
 --- a/bin/init.php
 +++ b/bin/init.php
 @@ -7,8 +7,8 @@
@@ -42,7 +42,7 @@ index c777475..64d8ebe 100644
 +$baseDir = '/usr/share/vpn-server-api';
  
  use LC\Common\Config;
- use LC\Server\CA\EasyRsaCa;
+ use LC\Server\CA\VpnCa;
 diff --git a/bin/stats.php b/bin/stats.php
 index c898aa8..d7d22dd 100644
 --- a/bin/stats.php
@@ -59,7 +59,7 @@ index c898aa8..d7d22dd 100644
  use LC\Common\Config;
  use LC\Common\FileIO;
 diff --git a/bin/status.php b/bin/status.php
-index 330f891..f408a1e 100644
+index a156635..aa51395 100644
 --- a/bin/status.php
 +++ b/bin/status.php
 @@ -7,8 +7,8 @@
@@ -104,7 +104,7 @@ index aace998..9b0875f 100644
  use LC\Common\CliParser;
  use LC\Common\Config;
 diff --git a/web/api.php b/web/api.php
-index a97baa6..7c2c0db 100644
+index dd8576a..8f913c9 100644
 --- a/web/api.php
 +++ b/web/api.php
 @@ -7,8 +7,8 @@
