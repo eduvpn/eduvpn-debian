@@ -6,10 +6,6 @@ Files: *
 Copyright: 2016-2018, The Commons Conservancy eduVPN Programme
 License: AGPL-3.0
 
-Files: easy-rsa/*
-Copyright: 2013, the Open-Source OpenVPN development community
-License: GPL-2+
-
 Files: debian/*
 Copyright: 2017 Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
 License: MIT

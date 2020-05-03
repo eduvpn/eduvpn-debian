@@ -24,6 +24,7 @@ Package: vpn-server-api
 Architecture: all
 Depends: 
  ${misc:Depends},
+ vpn-ca,
  php-cli,
  php-sqlite3,
  php-json,
