@@ -1,0 +1,3 @@
+version=4
+opts="pgpsigurlmangle=s/$/.asc/" \
+https://software.tuxed.net/vpn-maint-scripts/download.html files/vpn-maint-scripts-(.+)\.tar\.xz
