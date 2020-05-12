@@ -4,7 +4,6 @@ config/config.php.example => /usr/share/doc/vpn-server-node/config.php.example
 
 src/* /usr/share/php/LC/Node/
 
-bin/certificate-info.php => /usr/bin/vpn-server-node-certificate-info
 bin/generate-firewall.php => /usr/bin/vpn-server-node-generate-firewall
 bin/server-config.php => /usr/bin/vpn-server-node-server-config
 bin/generate-dns-zones.php => /usr/bin/vpn-server-node-generate-dns-zones
