@@ -1,3 +1,9 @@
+vpn-daemon (1.1.1-3) stable; urgency=medium
+
+  * update paths for TLS cert
+
+ -- François Kooman <fkooman@tuxed.net>  Wed, 13 May 2020 11:11:20 +0200
+
 vpn-daemon (1.1.1-2) stable; urgency=medium
 
   * specify location of vpn-daemon TLS keys
