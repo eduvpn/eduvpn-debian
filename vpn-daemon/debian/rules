@@ -3,4 +3,7 @@
 	dh $@
 
 override_dh_auto_install:
-	$(MAKE) install DESTDIR=$$(pwd)/debian/vpn-daemon PREFIX=/usr
+	$(MAKE) install \
+		DESTDIR=$$(pwd)/debian/vpn-daemon \
+		PREFIX=/usr \
+		LDFLAGS="-X main.tlsCertDir=/etc/ssl/certs -X main.tlsKeyDir=/etc/ssl/private"
