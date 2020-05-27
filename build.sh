@@ -24,7 +24,7 @@ uscan --destdir=build --download-current-version
 
   # install build dependencies
   sudo apt-get update
-  # update installe dsoftware
+  # update installed software
   sudo apt-get -y dist-upgrade
   # install build dependencies
   sudo mk-build-deps -i -r debian/control
