@@ -1,0 +1,24 @@
+#!/bin/sh
+
+for TYPE in encryption signing
+do
+    if [ ! -f "/etc/ssl/php-saml-sp/private/${TYPE}.key" ]
+    then
+        # generate the key
+        /usr/bin/openssl \
+            req \
+            -nodes \
+            -subj "/CN=SAML SP (${TYPE})" \
+            -set_serial 1 \
+            -x509 \
+            -sha256 \
+            -newkey rsa:3072 \
+            -keyout "/etc/ssl/php-saml-sp/private/${TYPE}.key" \
+            -out "/etc/ssl/php-saml-sp/${TYPE}.crt" \
+            -days 1825 \
+            2>/dev/null
+        # fix the permissions
+        chmod 0640 /etc/ssl/php-saml-sp/private/${TYPE}.key /etc/ssl/php-saml-sp/${TYPE}.crt
+        chgrp www-data /etc/ssl/php-saml-sp/private/${TYPE}.key /etc/ssl/php-saml-sp/${TYPE}.crt
+    fi
+done

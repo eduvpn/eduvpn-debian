@@ -8,18 +8,22 @@ Build-Depends:
  phpunit,
  phpab,
  pkg-php-tools (>= 1.7~),
+ php-fkooman-secookie,
  php-date,
  php-dom,
  php-constant-time
 Standards-Version: 3.9.8
 Homepage: https://git.tuxed.net/fkooman/php-saml-sp
 
-Package: php-fkooman-saml-sp
+Package: php-saml-sp
 Architecture: all
 Depends: 
  ${misc:Depends}, 
  php-date,
  php-dom,
+ php-fkooman-secookie,
  php-constant-time
+Conflicts: php-fkooman-saml-sp
+Replaces: php-fkooman-saml-sp
 Suggests: ${phpcomposer:Debian-suggest}
-Description: SAML Service Provider library.
+Description: SAML Service Provider.

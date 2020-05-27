@@ -1,1 +1,9 @@
-src/* usr/share/php/fkooman/SAML/SP
+#!/usr/bin/dh-exec --with=install
+
+src/* /usr/share/php/fkooman/SAML/SP
+config/config.php.example => /etc/php-saml-sp/config.php
+debian/apache.conf => /etc/apache2/conf-available/php-saml-sp.conf
+locale /usr/share/php-saml-sp/
+views /usr/share/php-saml-sp/
+web /usr/share/php-saml-sp/
+schema /usr/share/php-saml-sp/

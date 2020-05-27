@@ -1,2 +1,3 @@
 usr/share/php/fkooman/SAML/SP
+etc/ssl/php-saml-sp/private
 
