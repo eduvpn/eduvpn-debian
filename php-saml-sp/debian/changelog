@@ -1,3 +1,10 @@
+php-saml-sp (0.4.0-3) stable; urgency=medium
+
+  * fix debian/ permissions
+  * add symlinks for keys/config
+
+ -- François Kooman <fkooman@tuxed.net>  Wed, 27 May 2020 19:01:09 +0200
+
 php-saml-sp (0.4.0-2) stable; urgency=medium
 
   * update to full php-saml-sp app (from php-fkooman-saml-sp library)
