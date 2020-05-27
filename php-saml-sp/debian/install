@@ -6,4 +6,3 @@ debian/apache.conf => /etc/apache2/conf-available/php-saml-sp.conf
 locale /usr/share/php-saml-sp/
 views /usr/share/php-saml-sp/
 web /usr/share/php-saml-sp/
-schema /usr/share/php-saml-sp/
