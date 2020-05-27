@@ -1,3 +1,10 @@
+vpn-user-portal (2.2.8-2) stable; urgency=medium
+
+  * depend on php-saml-sp for now instead of php-fkooman-saml-sp
+  * no longer generate SAML SP keys
+
+ -- François Kooman <fkooman@tuxed.net>  Wed, 27 May 2020 19:07:00 +0200
+
 vpn-user-portal (2.2.8-1) stable; urgency=medium
 
   * update to 2.2.8
