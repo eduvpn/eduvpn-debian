@@ -1,3 +1,9 @@
+vpn-user-portal (2.3.0-1) stable; urgency=medium
+
+  * update to 2.3.0
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 29 Jun 2020 17:03:25 +0200
+
 vpn-user-portal (2.2.8-2) stable; urgency=medium
 
   * depend on php-saml-sp for now instead of php-fkooman-saml-sp
