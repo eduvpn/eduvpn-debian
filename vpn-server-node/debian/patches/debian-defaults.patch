@@ -14,7 +14,7 @@ index 0112e14..c5ecff0 100644
      'apiUser' => 'vpn-server-node',
      'apiPass' => 'XXX-vpn-server-node/vpn-server-api-XXX',
 diff --git a/src/OpenVpn.php b/src/OpenVpn.php
-index c168e53..4cb85f8 100644
+index 341099f..6b76080 100644
 --- a/src/OpenVpn.php
 +++ b/src/OpenVpn.php
 @@ -19,8 +19,8 @@ use RuntimeException;
@@ -26,10 +26,10 @@ index c168e53..4cb85f8 100644
 +    // Debian
 +    const LIBEXEC_DIR = '/usr/lib/vpn-server-node';
  
-     /** @var string */
-     private $vpnConfigDir;
+     const UP_PATH = '/etc/openvpn/up';
+ 
 diff --git a/tests/data/internet-0.conf b/tests/data/internet-0.conf
-index ea18962..cf1b94b 100644
+index 679382a..33f0230 100644
 --- a/tests/data/internet-0.conf
 +++ b/tests/data/internet-0.conf
 @@ -6,8 +6,8 @@
