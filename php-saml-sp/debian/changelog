@@ -1,3 +1,9 @@
+php-saml-sp (0.5.0-4) stable; urgency=medium
+
+  * forgot data symlink
+
+ -- François Kooman <fkooman@tuxed.net>  Fri, 17 Jul 2020 17:33:04 +0200
+
 php-saml-sp (0.5.0-3) stable; urgency=medium
 
   * next attempt

@@ -1,2 +1,3 @@
+var/lib/php-saml-sp usr/share/php-saml-sp/data
 etc/php-saml-sp usr/share/php-saml-sp/config
 etc/ssl/php-saml-sp usr/share/php-saml-sp/keys
