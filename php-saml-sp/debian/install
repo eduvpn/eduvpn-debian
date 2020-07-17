@@ -3,6 +3,8 @@
 debian/apache.conf => /etc/apache2/conf-available/php-saml-sp.conf
 config/config.php.example => /etc/php-saml-sp/config.php
 
+debian/php-saml-sp.timer => /lib/systemd/system/php-saml-sp.timer
+
 src/* /usr/share/php/fkooman/SAML/SP
 locale /usr/share/php-saml-sp/
 views /usr/share/php-saml-sp/
