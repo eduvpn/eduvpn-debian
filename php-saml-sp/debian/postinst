@@ -1,5 +1,8 @@
 #!/bin/sh
 
+chown -R www-data:www-data /var/lib/php-saml-sp
+chmod -R 700 /var/lib/php-saml-sp
+
 for TYPE in encryption signing
 do
     if [ ! -f "/etc/ssl/php-saml-sp/private/${TYPE}.key" ]

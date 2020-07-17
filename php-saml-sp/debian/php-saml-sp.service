@@ -1,0 +1,8 @@
+[Unit]
+Description=Automatically retrieve SAML metadata from IdP(s) and/or federation(s)
+
+[Service]
+Type=oneshot
+User=www-data
+Group=www-data
+ExecStart=/usr/bin/php-saml-sp-update-metadata

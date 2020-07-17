@@ -1,5 +1,39 @@
+diff --git a/bin/update-metadata.php b/bin/update-metadata.php
+index af591b7..d4d6250 100644
+--- a/bin/update-metadata.php
++++ b/bin/update-metadata.php
+@@ -22,14 +22,14 @@
+  * SOFTWARE.
+  */
+ 
+-require_once \dirname(__DIR__).'/vendor/autoload.php';
++require_once '/usr/share/php/fkooman/SAML/SP/autoload.php';
+ 
+ use fkooman\SAML\SP\CurlHttpClient;
+ use fkooman\SAML\SP\Log\SyslogLogger;
+ use fkooman\SAML\SP\MetadataSource;
+ use fkooman\SAML\SP\Web\Config;
+ 
+-$baseDir = \dirname(__DIR__);
++$baseDir = '/usr/share/php-saml-sp';
+ $logger = new SyslogLogger(\basename($argv[0]));
+ 
+ try {
+diff --git a/bin/validate-metadata.php b/bin/validate-metadata.php
+index 37e07f3..301a966 100644
+--- a/bin/validate-metadata.php
++++ b/bin/validate-metadata.php
+@@ -22,7 +22,7 @@
+  * SOFTWARE.
+  */
+ 
+-require_once \dirname(__DIR__).'/vendor/autoload.php';
++require_once '/usr/share/php/fkooman/SAML/SP/autoload.php';
+ 
+ use fkooman\SAML\SP\Crypto;
+ use fkooman\SAML\SP\PublicKey;
 diff --git a/src/Api/SamlAuth.php b/src/Api/SamlAuth.php
-index 04fa0b9..5c5c0bb 100644
+index de9f587..eac5994 100644
 --- a/src/Api/SamlAuth.php
 +++ b/src/Api/SamlAuth.php
 @@ -48,7 +48,7 @@ class SamlAuth
@@ -12,7 +46,7 @@ index 04fa0b9..5c5c0bb 100644
          $this->session = new SeSession($this->config->getSecureCookie());
          $this->dateTime = new DateTime();
 diff --git a/web/index.php b/web/index.php
-index b81ddc7..3e8878b 100644
+index c988e71..d3202ae 100644
 --- a/web/index.php
 +++ b/web/index.php
 @@ -22,7 +22,7 @@
@@ -23,17 +57,17 @@ index b81ddc7..3e8878b 100644
 +require_once '/usr/share/php/fkooman/SAML/SP/autoload.php';
  
  use fkooman\SAML\SP\CryptoKeys;
- use fkooman\SAML\SP\SeSession;
-@@ -36,7 +36,7 @@ use fkooman\SAML\SP\Web\Service;
+ use fkooman\SAML\SP\Log\SyslogLogger;
+@@ -37,7 +37,7 @@ use fkooman\SAML\SP\Web\SeCookie;
+ use fkooman\SAML\SP\Web\Service;
  use fkooman\SAML\SP\Web\Tpl;
- use fkooman\SAML\SP\XmlIdpInfoSource;
  
 -$baseDir = \dirname(__DIR__);
 +$baseDir = '/usr/share/php-saml-sp';
+ $dataDir = $baseDir.'/data';
+ $logger = new SyslogLogger('php-saml-sp');
  
- try {
-     $config = Config::fromFile($baseDir.'/config/config.php');
-@@ -72,7 +72,7 @@ try {
+@@ -76,7 +76,7 @@ try {
      $spInfo = new SpInfo(
          $spEntityId,
          // AuthnRequest / LogoutRequest / Decryption <EncryptedAssertion>
