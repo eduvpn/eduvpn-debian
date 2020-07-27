@@ -1,3 +1,9 @@
+php-secookie (4.0.0-2) stable; urgency=medium
+
+  * add cron.daily to clean stale sessions
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 27 Jul 2020 21:26:30 +0200
+
 php-secookie (4.0.0-1) stable; urgency=medium
 
   * update to 4.0.0
