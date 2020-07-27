@@ -9,7 +9,6 @@ Build-Depends:
  phpab,
  phpunit,
  pkg-php-tools (>= 1.7~),
- php-bacon-qr-code,
  php-log,
  php-sqlite3,
  php-json,
@@ -27,7 +26,6 @@ Package: vpn-user-portal
 Architecture: all
 Depends: ${misc:Depends},
  php-cli,
- php-bacon-qr-code,
  php-log,
  php-sqlite3,
  php-json,
@@ -38,7 +36,8 @@ Depends: ${misc:Depends},
  php-lc-common (>= 2.1.0),
  php-constant-time,
  php-libsodium,
- openssl
+ openssl,
+ qrencode
 Suggests: ${phpcomposer:Debian-suggest}
 Description: VPN User Portal for Let's Connect!
  User portal and OAuth authorization server of the Let's Connect! software, allowing

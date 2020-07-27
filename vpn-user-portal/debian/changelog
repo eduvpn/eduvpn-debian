@@ -1,3 +1,11 @@
+vpn-user-portal (2.3.2-1) stable; urgency=medium
+
+  * update to 2.3.2
+  * drop dependency on BaconQrCode
+  * use /usr/bin/qrencode instead
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 27 Jul 2020 09:30:22 +0200
+
 vpn-user-portal (2.3.1-1) stable; urgency=medium
 
   * update to 2.3.1

@@ -7,7 +7,6 @@ sudo apt-get -y install build-essential devscripts aptly equivs
 PACKAGE_LIST=(\
     vpn-ca \
     vpn-daemon \
-    BaconQrCode \
     php-jwt \
     php-otp-verifier \
     php-sqlite-migrate \
