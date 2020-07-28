@@ -1,2 +1,2 @@
 #!/bin/sh
-/usr/bin/find /var/lib/php/sessions -type f -mtime +0 -delete
+/usr/bin/find /var/lib/php/sessions -type f -name "sses_*" -mtime +0 -delete

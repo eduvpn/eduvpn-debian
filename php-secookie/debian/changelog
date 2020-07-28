@@ -1,3 +1,9 @@
+php-secookie (4.0.0-3) stable; urgency=medium
+
+  * fix cron to only delete our session files
+
+ -- François Kooman <fkooman@tuxed.net>  Tue, 28 Jul 2020 08:46:54 +0200
+
 php-secookie (4.0.0-2) stable; urgency=medium
 
   * add cron.daily to clean stale sessions
