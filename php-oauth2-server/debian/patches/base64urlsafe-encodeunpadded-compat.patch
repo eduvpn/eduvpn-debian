@@ -1,8 +1,8 @@
 diff --git a/src/LocalSigner.php b/src/LocalSigner.php
-index 24645b2..e5fa7c8 100644
+index ab83ba0..68595cc 100644
 --- a/src/LocalSigner.php
 +++ b/src/LocalSigner.php
-@@ -71,16 +71,16 @@ class LocalSigner implements SignerInterface
+@@ -70,16 +70,16 @@ class LocalSigner implements SignerInterface
      {
          // we add a JWT header, but this is just 'informative', it won't be
          // verified at all by the verifier...
@@ -23,7 +23,7 @@ index 24645b2..e5fa7c8 100644
  
          return $jwtHeader.'.'.$jwtPayload.'.'.$jwtSignature;
      }
-@@ -100,7 +100,7 @@ class LocalSigner implements SignerInterface
+@@ -99,7 +99,7 @@ class LocalSigner implements SignerInterface
  
          // we don't care at about the JWT header content, so we ignore it and
          // only use it because it is part of the signature...
@@ -59,12 +59,12 @@ index ff297e1..1c3327f 100644
          );
  
 diff --git a/tests/BearerValidatorTest.php b/tests/BearerValidatorTest.php
-index 4141965..4562bd0 100644
+index b8a7633..70b4a64 100644
 --- a/tests/BearerValidatorTest.php
 +++ b/tests/BearerValidatorTest.php
 @@ -75,7 +75,7 @@ class BearerValidatorTest extends TestCase
      {
-         $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1', new DateTime('2016-01-01'));
+         $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1');
  
 -        $providedAccessToken = Base64UrlSafe::encodeUnpadded(
 +        $providedAccessToken = \rtrim(Base64UrlSafe::encode(
@@ -96,7 +96,7 @@ index 4141965..4562bd0 100644
 -            );
 +            ), '=');
  
-             $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1', new DateTime('2016-01-01'));
+             $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1');
              $this->validator->validate(\sprintf('Bearer %s', $providedAccessToken));
 @@ -134,7 +134,7 @@ class BearerValidatorTest extends TestCase
              );
@@ -153,7 +153,7 @@ index 4141965..4562bd0 100644
              $this->validator->validate(\sprintf('Bearer %s', $providedAccessToken));
              $this->fail();
 diff --git a/tests/OAuthServerTest.php b/tests/OAuthServerTest.php
-index 8ef7448..69203a6 100644
+index 284bc2d..03c91ba 100644
 --- a/tests/OAuthServerTest.php
 +++ b/tests/OAuthServerTest.php
 @@ -161,7 +161,7 @@ class OAuthServerTest extends TestCase
@@ -321,10 +321,10 @@ index 8ef7448..69203a6 100644
 +        ), '=');
  
          try {
-             $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1', new DateTime('2016-01-01'));
+             $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1');
 @@ -518,7 +518,7 @@ class OAuthServerTest extends TestCase
          try {
-             $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1', new DateTime('2016-01-01'));
+             $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1');
  
 -            $providedCode = Base64UrlSafe::encodeUnpadded(
 +            $providedCode = \rtrim(Base64UrlSafe::encode(
@@ -360,7 +360,7 @@ index 8ef7448..69203a6 100644
                  [
 @@ -598,7 +598,7 @@ class OAuthServerTest extends TestCase
          try {
-             $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1', new DateTime('2016-01-01'));
+             $this->storage->storeAuthorization('foo', 'code-client', 'config', 'random_1');
  
 -            $providedCode = Base64UrlSafe::encodeUnpadded(
 +            $providedCode = \rtrim(Base64UrlSafe::encode(
@@ -378,15 +378,15 @@ index 8ef7448..69203a6 100644
                  [
 @@ -636,7 +636,7 @@ class OAuthServerTest extends TestCase
      {
-         $this->storage->storeAuthorization('foo', 'code-client-secret', 'config', 'random_1', new DateTime('2016-01-01'));
+         $this->storage->storeAuthorization('foo', 'code-client-secret', 'config', 'random_1');
  
 -        $providedRefreshToken = Base64UrlSafe::encodeUnpadded(
 +        $providedRefreshToken = \rtrim(Base64UrlSafe::encode(
              Json::encode(
                  [
                      'v' => OAuthServer::TOKEN_VERSION,
-@@ -648,7 +648,7 @@ class OAuthServerTest extends TestCase
-                     'expires_at' => '2017-01-01T00:00:00+00:00',
+@@ -647,7 +647,7 @@ class OAuthServerTest extends TestCase
+                     'scope' => 'config',
                  ]
              )
 -        );
@@ -394,7 +394,7 @@ index 8ef7448..69203a6 100644
  
          $tokenResponse = $this->server->postToken(
              [
-@@ -659,7 +659,7 @@ class OAuthServerTest extends TestCase
+@@ -658,7 +658,7 @@ class OAuthServerTest extends TestCase
              '123456'
          );
  
@@ -403,7 +403,7 @@ index 8ef7448..69203a6 100644
              Json::encode(
                  [
                      'v' => OAuthServer::TOKEN_VERSION,
-@@ -671,7 +671,7 @@ class OAuthServerTest extends TestCase
+@@ -670,7 +670,7 @@ class OAuthServerTest extends TestCase
                      'expires_at' => '2016-01-01T01:00:00+00:00',
                  ]
              )
