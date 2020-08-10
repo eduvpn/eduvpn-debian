@@ -1,3 +1,9 @@
+vpn-daemon (1.2.0-3) stable; urgency=medium
+
+  * update debian/watch to point to src.tuxed.net
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 10 Aug 2020 15:00:03 +0200
+
 vpn-daemon (1.2.0-2) stable; urgency=medium
 
   * update patch paths to certificates/key

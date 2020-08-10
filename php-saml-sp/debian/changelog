@@ -1,3 +1,9 @@
+php-saml-sp (0.5.3-2) stable; urgency=medium
+
+  * update debian/watch to point to src.tuxed.net
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 10 Aug 2020 15:00:02 +0200
+
 php-saml-sp (0.5.3-1) stable; urgency=medium
 
   * update to 0.5.3

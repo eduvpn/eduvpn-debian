@@ -1,3 +1,9 @@
+php-oauth2-server (6.0.1-2) stable; urgency=medium
+
+  * update debian/watch to point to src.tuxed.net
+
+ -- François Kooman <fkooman@tuxed.net>  Mon, 10 Aug 2020 15:00:01 +0200
+
 php-oauth2-server (6.0.1-1) stable; urgency=medium
 
   * update to 6.0.1

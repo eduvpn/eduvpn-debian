@@ -1,3 +1,2 @@
 version=4
-opts="pgpsigurlmangle=s/$/.asc/" \
-https://software.tuxed.net/php-json-signer/download.html files/php-json-signer-(.+)\.tar\.xz
+opts="pgpmode=auto" https://src.tuxed.net/@PACKAGE@ @PACKAGE@@ANY_VERSION@@ARCHIVE_EXT@

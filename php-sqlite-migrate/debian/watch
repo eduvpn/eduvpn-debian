@@ -1,3 +1,2 @@
 version=4
-opts="pgpsigurlmangle=s/$/.asc/" \
-https://software.tuxed.net/php-sqlite-migrate/download.html files/php-sqlite-migrate-(.+)\.tar\.xz
+opts="pgpmode=auto" https://src.tuxed.net/@PACKAGE@ @PACKAGE@@ANY_VERSION@@ARCHIVE_EXT@

@@ -1,3 +1,2 @@
 version=4
-opts="pgpsigurlmangle=s/$/.asc/" \
-https://github.com/letsconnectvpn/vpn-portal-artwork/releases /letsconnectvpn/vpn-portal-artwork/releases/download/(.+)/vpn-portal-artwork-LC-(?:.+)\.tar\.xz
+opts="pgpmode=auto" https://src.tuxed.net/@PACKAGE@ @PACKAGE@@ANY_VERSION@@ARCHIVE_EXT@

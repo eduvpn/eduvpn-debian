@@ -1,3 +1,9 @@
+php-json-signer (3.0.2-8) stable; urgency=medium
+
+  * update debian/watch to point to src.tuxed.net
+
+ -- Joost van Baal-Ilić <joostvb-eduvpn@ad1810.com>  Mon, 10 Aug 2020 15:00:01 +0200
+
 php-json-signer (3.0.2-7) stable; urgency=medium
 
   * debian/lintian-overrides: added: for the time being, we will not ship a
