@@ -20,6 +20,7 @@ Architecture: all
 Depends: 
  ${misc:Depends}, 
  php-date,
+ php-curl,
  php-dom,
  php-fkooman-secookie,
  php-constant-time
