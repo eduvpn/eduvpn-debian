@@ -1,4 +1,0 @@
-autoload.patch
-base64urlsafe-encodeunpadded-compat.patch
-composer.patch
-sodium.patch

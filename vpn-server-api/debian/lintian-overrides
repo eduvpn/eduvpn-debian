@@ -1,7 +1,0 @@
-vpn-server-api: binary-without-manpage usr/bin/vpn-server-api-housekeeping
-vpn-server-api: binary-without-manpage usr/bin/vpn-server-api-init
-vpn-server-api: binary-without-manpage usr/bin/vpn-server-api-stats
-vpn-server-api: binary-without-manpage usr/bin/vpn-server-api-status
-vpn-server-api: binary-without-manpage usr/bin/vpn-server-api-update-api-secrets
-vpn-server-api: binary-without-manpage usr/bin/vpn-server-api-update-ip
-vpn-server-api: binary-without-manpage usr/bin/vpn-server-api-disconnect-expired-certificates

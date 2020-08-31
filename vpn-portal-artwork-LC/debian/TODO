@@ -1,9 +1,0 @@
-- debian/install: couldn't vpn-admin-portal and vpn-user-portal consult something like
-/usr/share/vpn-portal-artwork-lc ?  it feels wrong we are writing in
-vpn-admin-portal and vpn-user-portal's directories (
-/usr/share/{vpn-user-portal,vpn-admin-portal} )
-
-- why are we at https://github.com/letsconnectvpn/vpn-portal-artwork while we're named
-  vpn-portal-artwork-LC !?
-
-- debian/copyright: fix this once there's a new upstream which _does_ ship license.

@@ -1,6 +1,0 @@
-#!/usr/bin/make -f
-%:
-	dh $@
-
-override_dh_auto_install:
-	$(MAKE) install DESTDIR=$$(pwd)/debian/vpn-daemon PREFIX=/usr

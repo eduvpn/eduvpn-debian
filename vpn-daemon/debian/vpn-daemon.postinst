@@ -1,4 +1,0 @@
-#!/bin/sh
-
-adduser --quiet --system --group --no-create-home --home /dev/null \
-    --gecos "VPN Daemon" vpn-daemon

@@ -1,6 +1,0 @@
-locale/*.php usr/share/vpn-user-portal/locale/eduVPN
-views/*.php usr/share/vpn-user-portal/views/eduVPN
-css/*.css usr/share/vpn-user-portal/web/css/eduVPN
-img/*.png usr/share/vpn-user-portal/web/img/eduVPN
-img/app/*.png usr/share/vpn-user-portal/web/img/eduVPN/app
-fonts/*.woff2 usr/share/vpn-user-portal/web/fonts/eduVPN
